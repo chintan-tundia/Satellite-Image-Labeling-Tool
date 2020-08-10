@@ -1,0 +1,688 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+</head>
+<link rel="shortcut icon" type="image/png" href="{% static 'favicon.ico' %}"/>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+<title>Select Images</title>
+<style>
+
+.container {
+    display: block;
+    position: absolute;
+    height: auto;
+    bottom: 0;
+    top: 80px;
+    left: 20%;
+    right: 0;
+}
+
+.left {
+    width: calc(30% - 10px);
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    height: auto;
+    display: block;
+    margin: 10px 0 10px 10px;
+}
+
+.right {
+    border-left: 1px solid gray;
+    margin: 10px 10px 10px calc(30% + 10px);
+    padding-left: 10px;
+}
+#imageList {
+    width: 100%;
+    margin-top: 0px;
+    margin-bottom: 10px;
+    height: 70%;
+}
+ #description{
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 20px;    
+ }
+
+</style>
+<script type="text/javascript">
+	//var image_name="Akola_Dry_1";
+	//var image_path="{% static '/Gmap/images/'%}/"+image_name+".jpg";
+</script>
+
+	<body>  
+
+    <center><h2>Explore Dataset </h2></center>    
+		<div class="container" id="container">
+            
+        	<div class="left"> 
+                <h4> <a href="labelfarmponds">< Go Back To Labeling</a> </h4>                
+				<label for="imageList"></label><select name="imageList" id="imageList" size="10" multiple></select>	
+                <label class="checkbox-inline"><input id="cb_zl18" type="checkbox" onchange="changeImageList()" value="">Zoom Level-18</label>
+                <label class="checkbox-inline"><input id="cb_zl19" type="checkbox" onchange="changeImageList()" value="">Zoom Level-19</label>                
+                <center><h5><b id="totalImages">Total Images: {{totalImages}}</b></h5></center>
+                <div id="description" style="display: none">
+                    SHORTCUTS:
+                    <ul>
+                        <!-- <li>
+                            Mouse WHEEL - zoom in/out image
+                        </li> -->
+                        <!-- <li>
+                            Mouse RIGHT BUTTON - pan image
+                        </li> -->
+                        <!-- <li>
+                            Arrows LEFT and RIGHT - cycle images
+                        </li> -->
+                        <li>
+                            Arrows Up and DOWN - cycle images
+                        </li>
+                        <!-- <li>
+                            Key DELETE - remove selected Bbox
+                        </li> -->
+                    </ul>
+
+                    <!-- <p>Version: 0.2.3 |  Copyright © 2018 Draining Sun.</p> -->
+                </div>
+                 <center>
+                    <div style="margin-top:10px">                        
+                        <a id='btnApprove' href="#" class="btn btn-success" >                   
+                            <span class="glyphicon glyphicon glyphicon-thumbs-up"></span> Approve
+                        </a>
+                        <a id='btnDisapprove' href="#" class="btn btn-warning">                   
+                            <span class="glyphicon glyphicon glyphicon-thumbs-down"></span> Disapprove
+                        </a>
+                        <a id='btnDelete' href="#" class="btn btn-danger">                   
+                            <span class="glyphicon glyphicon-remove"></span> Delete
+                        </a>
+                        <br/>
+                        <a id='toggleAnnotations' href="#" class="btn btn-default" style="margin-top:10px">                   
+                            <span id='eye' class="glyphicon glyphicon glyphicon-eye-close"></span> Toggle Annotations
+                        </a>
+                        <br>                                        
+                        <a id='downloadDataset' href="#" class="btn btn-default" style="margin-top:10px">
+                            <span id='eye' class="glyphicon glyphicon-download-alt"></span> Download Dataset
+                        </a>  
+                    </div>
+                </center>
+			</div>
+			 <div class="right" id="right">
+			 	<canvas id='canvas' width="640" height="640"></canvas>
+				<br/>
+				<form id='capture_form' name='capture_form' method="post"  action="ImageLabelingTool">
+		          <input name='imageName' placeholder='Enter Image Name' type="hidden" value="" id="imageName">
+                  <div style="height:100px">
+                    <div style="display:none;float:left;height:50px;">
+                        <p>Is Annotated? : <span id='is_annotated'> No </span> </p> 
+                    </div>
+                    <!-- <div style="height:30px;margin:5px auto;">
+                        <div style="float:left; margin-right:10px; height:17px;width:17px;border: 3px solid  black;background-color:cyan;border-style: ridge;">
+                            
+                        </div> 
+                        <div style="float:left;height:10px;width:200px;margin-right: 20px">
+                            <p> : Wet Farm Pond - Lined ({{ wfpl }})</p>
+                        </div> -->
+                    <!-- </div>
+                    <div style="height:50px;margin-left:30px;"> -->
+                        <!-- <div style="float:left; margin-right:10px; height:17px;width:17px;border: 3px solid  black;background-color:green;border-style: ridge;">
+                            
+                        </div> 
+                        <div style="float:left;height:10px;width:250px;">
+                            <p> : Wet Farm Pond - Unlined ({{ wfpu }})</p>
+                        </div>
+                    </div> -->
+                    <!-- <div style="height:30px;margin-left:margin:5px auto;">
+                        <div style="float:left; margin-right:10px; height:17px;width:17px;border: 3px solid  black;background-color:red;border-style: ridge;">
+                            
+                        </div> 
+                        <div style="float:left;height:10px;width:200px;margin-right: 20px">
+                            <p> : Dry Farm Pond - Lined ({{ dfpl }})</p>
+                        </div>  -->                       
+                    <!-- </div>
+                    <div style="float:left;height:50px;margin-left:1px;"> -->
+                        <!-- <div style="float:left; margin-right:10px; height:17px;width:17px;border: 3px solid black;background-color:yellow;border-style: ridge;">
+                            
+                        </div> 
+                        <div style="float:left;height:10px;width:250px;">
+                            <p> : Dry Farm Pond - Unlined ({{ dfpu }}) </p>
+                        </div>
+                    </div>  -->                    
+                
+                    <div class="checkbox">
+                      <label><input id="cb_wfpl" type="checkbox" value="" checked onchange="changeImageList()">Wet Farm Pond - Lined ({{wfpl}} instances) &nbsp;<span style="color:cyan" class="glyphicon glyphicon-stop"></span></label>
+                    </div>
+                    <div class="checkbox">
+                      <label><input id="cb_wfpu" type="checkbox"  value="" checked onchange="changeImageList()">Wet Farm Pond - Unlined ({{wfpu}} instances)&nbsp;<span style="color:green" class="glyphicon glyphicon-stop"></span></label>
+                    </div>
+                    <div class="checkbox">
+                      <label><input id="cb_dfpl" type="checkbox"  value="" checked onchange="changeImageList()">Dry Farm Pond - Lined ({{dfpl}} instances) &nbsp;<span style="color:red" class="glyphicon glyphicon-stop"></span></label>
+                    </div>
+                    <div class="checkbox">
+                      <label><input id="cb_dfpu" type="checkbox"  value="" checked onchange="changeImageList()">Dry Farm Pond - Unlined ({{dfpu}} instances) &nbsp;<span style="color:yellow" class="glyphicon glyphicon-stop"></span></label>
+                    </div>
+
+                    <div class="checkbox">
+                      <label><input id="cb_neg" type="checkbox" value="" checked onchange="changeImageList()">Negative Images ({{negImgs}}) </label>
+                    </div>
+                    <!-- <p> Negative Images ({{ negImgs }}) </p> -->                    
+                   <button id="selall" type="button" class="btn btn-link">Select All</button>
+                   <button id="clrall" type="button" class="btn btn-link">Clear All</button>
+
+                  </div>
+                  <div style="height:30px;width:60px;margin-left:30px">
+		             <!--  <input type="submit" id="btnSave" value="Annotate"/> -->
+		              <input type="hidden" name='canvasImg64' id="canvasImg64">
+                  </div>
+		          <br>
+                  
+		        <!--  <div id="output"><h5>latlong</h5></div>    -->
+		        </form>
+
+				<!-- <input type="button" value="Check" id='check' onclick="b64()"> -->
+			 </div>
+		</div>
+			
+		
+		
+	</body>
+</html>
+<script type="text/javascript">	
+	var imageList = document.getElementById("imageList")
+	var canvas = document.getElementById("canvas");
+	var ctx = canvas.getContext("2d");
+	var imageListIndex=0;
+    var annots='';
+    var showAnnotations=true;
+	canvas.width = 640;
+	canvas.height = 640;
+    // $('#cb_wfpl').click();
+    // $('#cb_wfpu').click();
+    // $('#cb_dfpl').click();
+    // $('#cb_dfpu').click();
+    // $('#cb_neg').click();
+	function setCanvasBackground()
+	{
+		var background = new Image();
+        var txtAnn = document.getElementById("is_annotated");
+        var selectedOption=imageList.options[imageListIndex];
+		selectedImgName=selectedOption.innerHTML;
+        var approveFlag=selectedOption.getAttribute("approveFlag")            
+        if(approveFlag=="true"){            
+            selectedOption.style.backgroundColor="rgba(0,255,0,0.3)"            
+            $('#btnApprove').hide()
+            $('#btnDisapprove').show()
+        }
+        else{
+            selectedOption.style.backgroundColor="rgba(240,173,78,0.3)"
+            $('#btnApprove').show()
+            $('#btnDisapprove').hide()
+        }        
+        txtAnn.innerHTML=imageList.options[imageListIndex].getAttribute('data');
+        imgLocation=imageList.options[imageListIndex].getAttribute('image_location');
+                
+        str="{% static 'Gmapv2/images/FarmPonds/' %}"+selectedImgName;
+        if(selectedImgName.includes("z19")){
+            str="{% static 'Gmapv2/images/FarmPonds/zoom19/' %}"+selectedImgName;    
+        }
+		var image_path=str; 
+		background.src = image_path;
+		// Make sure the image is loaded first otherwise nothing will draw.
+        //ctx.clearRect(0, 0, canvas.width, canvas.height)
+		background.onload = function(){		    
+            ctx.drawImage(background,0,0);   
+		    var canvasImg = canvas.toDataURL(); 
+		    var hidden = document.getElementById("canvasImg64");
+	        hidden.value=canvasImg;
+
+            $.ajax({
+                type:"POST",
+                    url: 'ajax/get_annotations',
+                    data: {                
+                        'image_name': selectedImgName               
+                    },
+                    dataType: 'json',
+                    success: function (data) {                
+                        annots=data.annotations;
+                        //console.log(annots)                                                
+                        setAnnotations();                        
+                    },         
+                    error: function(xhr, textStatus, errorThrown) {
+                        console.log(errorThrown)
+                        alert("Something went wrong.");
+                    }
+            });
+                    
+            
+
+
+		}
+		
+		var nameEle = document.getElementById("imageName");
+	    nameEle.value=selectedImgName;
+	}
+	function initialize()
+	{
+		loadImageNames()
+		setCanvasBackground()
+		listenKeyboard()
+	}
+	function changeImageList(){                
+        var neg ='0'
+        var wfpl='0'
+        var wfpu='0'
+        var dfpl='0'
+        var dfpu='0'
+        var zl18='0'
+        var zl19='0'
+
+        if(!$('#cb_zl18').is(":checked")&&
+           !$('#cb_zl19').is(":checked")){
+           $('#imageList').empty()
+           ctx.clearRect(0, 0, canvas.width, canvas.height)
+           return;
+        }
+        if(!$('#cb_wfpl').is(":checked")&&
+           !$('#cb_wfpu').is(":checked")&&
+           !$('#cb_dfpl').is(":checked")&&
+           !$('#cb_dfpu').is(":checked")&&
+           !$('#cb_neg').is(":checked")
+            ){
+           ctx.clearRect(0, 0, canvas.width, canvas.height)
+           $('#imageList').empty()
+           return;
+        }
+        if($('#cb_zl18').is(":checked")){
+            zl18='1'
+        }
+        if($('#cb_zl19').is(":checked")){
+            zl19='1'
+        }
+        if ($('#cb_wfpl').is(":checked"))
+        {
+          wfpl='1'         
+        }
+        if ($('#cb_wfpu').is(":checked"))
+        {
+          wfpu='1'
+        }
+        if ($('#cb_dfpl').is(":checked"))
+        {
+          dfpl='1'         
+        }
+        if ($('#cb_dfpu').is(":checked"))
+        {
+          dfpu='1'
+        }
+        if ($('#cb_neg').is(":checked"))
+        {
+          neg='1'
+        }
+        
+        $.ajax({
+                type:"POST",
+                    url: 'ajax/get_image_list',
+                    data: {                
+                        'neg':neg,
+                        'wfpl':wfpl,
+                        'wfpu':wfpu,
+                        'dfpl':dfpl,
+                        'dfpu':dfpu, 
+                        'zl18':zl18,
+                        'zl19':zl19            
+                    },
+                    dataType: 'json',
+                    success: function (data) {                                                                
+                        loadImageNamesbyJSON(data.images)
+                        totImages=data.totalImages;
+                        $('#totalImages').text("Total Images: "+totImages)                        
+                        $("#imageList")[0].selectedIndex = 0;
+                        imageListIndex = imageList.selectedIndex  
+                        setCanvasBackground()
+                    },         
+                    error: function(xhr, textStatus, errorThrown) {
+                        console.log(errorThrown)
+                        alert("Something went wrong.");
+                    }
+            });
+    }
+    function loadImageNamesbyJSON(json_imageList){
+        //console.log(json_imageList)                
+        $('#imageList').find('option').remove()
+        var imageList = document.getElementById("imageList")
+        arr_imageList=JSON.parse(json_imageList)        
+        let i=0;        
+        let option=null;
+        len=arr_imageList.length;
+
+        for(imgi=0;imgi<len;imgi++){
+            img=arr_imageList[imgi].fields
+            //console.log(img)
+            var imgName= img.image_name;            
+            isAnnotated=img.is_annotated;
+            isApproved=img.is_approved;            
+            option = document.createElement("option");
+            option.value = imgName;
+            option.innerHTML = imgName;            
+            option.setAttribute('image_location',img.image_location)
+            if(isAnnotated=="True"){
+                option.setAttribute('data',"Yes")
+            }
+            else{
+                option.setAttribute('data',"No")   
+            }
+            if(isApproved==true){
+                option.setAttribute('approveFlag',"true")
+                option.style.backgroundColor ="rgba(0,255,0,0.3)"                
+            }
+            else{
+                option.setAttribute('approveFlag',"false") 
+                option.style.backgroundColor="rgba(240,173,78,0.3)"  
+            }            
+            if (i === 0) {
+                option.selected = true
+            }
+            imageList.appendChild(option);
+            i++;
+        }
+        imageList.addEventListener("change", () => {
+            imageListIndex = imageList.selectedIndex  
+
+            setCanvasBackground()            
+        })
+    }
+
+    function loadImageNames()
+    {
+    	
+    	let i=0;
+    	//let imgName="";
+    	let option=null;
+
+    	{% for img in images %}   
+    		var imgName="{{ img.image_name }}";
+            isAnnotated="{{ img.is_annotated }}";
+            isApproved="{{ img.is_approved}}";
+    		option = document.createElement("option");
+    		option.value = imgName;
+            option.innerHTML = imgName;            
+            option.setAttribute('image_location',"{{ img.image_location }}")
+            if(isAnnotated=="True"){
+                option.setAttribute('data',"Yes")
+            }
+            else{
+                option.setAttribute('data',"No")   
+            }
+            if(isApproved=="True"){
+                option.setAttribute('approveFlag',"true")
+                option.style.backgroundColor ="rgba(0,255,0,0.3)"                
+            }
+            else{
+                option.setAttribute('approveFlag',"false") 
+                option.style.backgroundColor="rgba(240,173,78,0.3)"  
+            }            
+            if (i === 0) {
+            	option.selected = true
+            }
+        	imageList.appendChild(option);
+       		i++;
+    	{% endfor %} 
+    	imageList.addEventListener("change", () => {
+            imageListIndex = imageList.selectedIndex  
+
+            setCanvasBackground()            
+        }) 
+
+    }
+	function b64()
+	{
+		var canvastemp = document.getElementById('canvas');
+		alert(canvastemp.toDataURL())
+
+	}
+	const listenKeyboard = () => {
+        const imageList = document.getElementById("imageList")
+        const classList = document.getElementById("classList")
+
+        document.addEventListener("keydown", (event) => {
+            const key = event.keyCode || event.charCode            
+
+            if (key === 37) {
+                if (imageList.length > 1) {
+                    imageList.options[imageListIndex].selected = false
+
+                    if (imageListIndex === 0) {
+                        imageListIndex = imageList.length - 1
+                    } else {
+                        imageListIndex--
+                    }
+
+                    imageList.options[imageListIndex].selected = true
+                    imageList.selectedIndex = imageListIndex
+
+                    setCanvasBackground() 
+                    document.body.style.cursor = "default"
+                }
+
+                event.preventDefault()
+            }
+
+            if (key === 39) {
+                if (imageList.length > 1) {
+                    imageList.options[imageListIndex].selected = false
+
+                    if (imageListIndex === imageList.length - 1) {
+                        imageListIndex = 0
+                    } else {
+                        imageListIndex++
+                    }
+
+                    imageList.options[imageListIndex].selected = true
+                    imageList.selectedIndex = imageListIndex
+
+                   setCanvasBackground() 
+
+                    document.body.style.cursor = "default"
+                }
+
+                event.preventDefault()
+            }
+            
+        })
+    }
+    function setAnnotations(){
+        var wfpl="Wet Farm Pond - Lined";
+        var wfpu="Wet Farm Pond - Unlined";
+        var dfpl="Dry Farm Pond - Lined";
+        var dfpu="Dry Farm Pond - Unlined";
+        if (annots==-1) {
+          alert("Image not in database");                                             
+        }
+        else{                            
+            annotsp=JSON.parse(annots)   
+            /*if(annotsp.length<=0){
+                document.getElementById("btnSave").disabled = false;
+            } 
+            else{
+                document.getElementById("btnSave").disabled = false; 
+            } */ 
+            if(showAnnotations){        
+                $('#eye').removeClass('glyphicon-eye-open');
+                $('#eye').addClass('glyphicon-eye-close');
+        
+                for(i=0;i<annotsp.length;i++){
+                    ctx.lineWidth = 3;                    
+                    if(annotsp[i].class_label==wfpl){
+                        ctx.strokeStyle = "cyan";
+                        //ctx.fillStyle = "rgba(00,255,255,0.1)";
+                        ctx.lineWidth = 2;
+                        // ctx.strokeRect(annotsp[i].top_left_x, annotsp[i].top_left_y, annotsp[i].width, annotsp[i].height)
+                    } 
+                    if(annotsp[i].class_label==wfpu){
+                        ctx.strokeStyle = "green";
+                        //ctx.fillStyle = "rgba(00,255,00,0.1)";
+                        ctx.lineWidth = 2;
+                        // ctx.strokeRect(annotsp[i].top_left_x, annotsp[i].top_left_y, annotsp[i].width, annotsp[i].height)
+                    } 
+                    if(annotsp[i].class_label==dfpl){
+                        ctx.strokeStyle = "red";
+                        //ctx.fillStyle = "rgba(255,00,00,0.1)";
+                        ctx.lineWidth = 2;
+                        // ctx.strokeRect(annotsp[i].top_left_x, annotsp[i].top_left_y, annotsp[i].width, annotsp[i].height)
+                    } 
+                    if(annotsp[i].class_label==dfpu){
+                        ctx.strokeStyle = "yellow";
+                        //ctx.fillStyle = "rgba(255,255,00,0.1)";
+                        ctx.lineWidth = 2;
+                        // ctx.strokeRect(annotsp[i].top_left_x, annotsp[i].top_left_y, annotsp[i].width, annotsp[i].height)
+                    } 
+
+                    ctx.beginPath();
+                    geometryJSON=JSON.parse(annotsp[i].geometryJSON)
+                    var pixCoords=geometryJSON.pixelCoords;
+                    var totalPts=geometryJSON.pixelCoords.length;
+                    ctx.moveTo(pixCoords[0].x, pixCoords[0].y);
+                    for(pt=1;pt<totalPts;pt++){         
+                        ctx.lineTo(pixCoords[pt].x, pixCoords[pt].y);   
+                        ctx.stroke(); 
+                    }                                           
+                    ctx.lineTo(pixCoords[0].x, pixCoords[0].y);   
+                    ctx.stroke(); 
+                    ctx.closePath();
+                    //ctx.fill();
+
+                }
+            }
+            else{
+                $('#eye').removeClass('glyphicon-eye-close');
+                $('#eye').addClass('glyphicon-eye-open');
+            }
+        }
+    }
+    function deleteImageAndAnnotations(){
+        
+        var selectedOption=imageList.options[imageListIndex]
+        var selectedImgName=selectedOption.innerHTML;
+        $.ajax({
+                type:"POST",
+                    url: 'ajax/delete_image_and_annotations',
+                    data: {                
+                        'image_name': selectedImgName               
+                    },
+                    dataType: 'json',
+                    success: function (data) {
+                        if (data.status==1) {              
+                            imageList.removeChild(selectedOption)
+                            ctx.clearRect(0, 0, canvas.width, canvas.height);
+                            imageListIndex=0;
+                            setCanvasBackground()
+                        }
+                        if (data.status==-1) { 
+                            alert("Error Deleting File. File does not exist.")
+                        }
+                    },         
+                    error: function(xhr, textStatus, errorThrown) {
+                        console.log(errorThrown)
+                        alert("Something went wrong.");
+                    }
+            });
+    }
+    function approveImage(approveFlag){
+        var selectedOption=imageList.options[imageListIndex]
+        var selectedImgName=selectedOption.innerHTML;        
+        $.ajax({
+                type:"POST",
+                    url: 'ajax/approve_image',
+                    data: {                
+                        'image_name': selectedImgName,
+                        'approve_flag':approveFlag             
+                    },
+                    dataType: 'json',
+                    success: function (data) {
+                        if (data.status==1) {  
+                           //console.log(approveFlag) 
+                           if(approveFlag=="true"){
+                            selectedOption.setAttribute("approveFlag","true")
+                           }
+                           if(approveFlag=="false") {
+                            selectedOption.setAttribute("approveFlag","false")
+                           }                           
+                           setCanvasBackground()
+                        }
+                        if (data.status==-1) { 
+                            alert("Something went wrong")
+                        }
+                    },         
+                    error: function(xhr, textStatus, errorThrown) {
+                        console.log(errorThrown)
+                        alert("Something went wrong.");
+                    }
+            });
+    }
+    /*---------Event Listeners----------*/
+    $('#btnDelete').click(function(e){
+        var r = confirm("This sample with annotations and markers will be permanently deleted. Are you sure you want to delete?");
+          if (r == true) {
+            deleteImageAndAnnotations()
+          }        
+    })
+    $('#btnApprove').click(function(e){        
+        approveImage("true")
+    })
+    $('#btnDisapprove').click(function(e){          
+        approveImage("false")
+    })
+    $('#toggleAnnotations').click(function(e){
+        showAnnotations=!showAnnotations;        
+        setCanvasBackground();
+        setAnnotations();
+    })
+    $('#selall').click(function(e){        
+        $('#cb_wfpl').prop('checked',true)
+        $('#cb_wfpu').prop('checked',true)
+        $('#cb_dfpl').prop('checked',true)
+        $('#cb_dfpu').prop('checked',true)
+        $('#cb_neg').prop('checked',true)        
+        changeImageList()
+    })
+    $('#clrall').click(function(e){          
+        $('#cb_wfpl').prop('checked',false)
+        $('#cb_wfpu').prop('checked',false)
+        $('#cb_dfpl').prop('checked',false)
+        $('#cb_dfpu').prop('checked',false)
+        $('#cb_neg').prop('checked',false)
+        changeImageList()
+    })
+    $('#downloadDataset').click(function(e){
+        var zl18=0;
+        var zl19=0;
+        if(!$('#cb_zl18').is(":checked")&&
+           !$('#cb_zl19').is(":checked")){
+            return;
+        }
+        if($('#cb_zl18').is(":checked")){
+            zl18='1';
+            var href = "/Gmapv2/downloaddatasetfarmponds?zl=18";
+            //var href = "/Gmapv2/downloaddatasetfarmpondscsv?zl=18";
+        }
+        if($('#cb_zl19').is(":checked")){
+            zl19='1';
+            var href = "/Gmapv2/downloaddatasetfarmponds?zl=19";
+            //var href = "/Gmapv2/downloaddatasetfarmpondscsv?zl=19";
+        }
+        if($('#cb_zl18').is(":checked")&&
+           $('#cb_zl19').is(":checked")){            
+           //var href = "/Gmapv2/downloaddatasetfarmponds?zl=18_19";
+           var href = "/Gmapv2/downloaddatasetfarmpondscsv?zl=18_19";
+        }
+        
+            
+        window.location.href = href
+    })
+    /*-------Event Listeners End--------*/
+
+
+	initialize();
+</script>

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+    <meta content="utf-8" http-equiv="encoding">
+</head>
+<body>
+
+</body>
+</html>
+
+<script src="http://maps.google.com/maps/api/js?key=AIzaSyDwYUReYvB5CFnmNxt8NJe7PjRXMmBspws
+&callback=myMap&libraries=places,geometry&dummy=.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>		
+var districtMain = "Ahmednagar";
+var dataOfYear = "2015-16";
+var deptName = '';
+function addMarker(lat,lng,remark,date,photoname,work_name,work_code,work_type)
+{
+	var address='';
+	var res = date.split(" ");
+	var dateRecorded = res[0];
+	var timeRecorded = res[1];
+	var geocoder = new google.maps.Geocoder();
+  var latlng = new google.maps.LatLng(lat,lng);  
+	geocoder.geocode({'latLng': latlng}, function(results, status) {
+       if (status == google.maps.GeocoderStatus.OK) {
+       		var locality="";
+          var district="";
+          var state="";
+          var postalcode="";
+       		if (results[0]) {
+	            for (var ac = 0; ac < results[0].address_components.length; ac++) {
+	                var component = results[0].address_components[ac];
+
+	                switch(component.types[0]) {
+	                    case 'locality':
+	                        locality = component.long_name;
+	                        break;
+	                    case 'administrative_area_level_2':
+	                        district = component.short_name;
+	                        break;
+	                    case 'administrative_area_level_1':
+  	                    	state = component.long_name;
+  	                    	break;    
+	                    case 'postal_code':
+  	                    	postalcode = component.long_name;
+  	                    	break;
+	                }
+	            }
+
+	            if(locality!=""){
+	            	locality=locality+","
+	            }
+	            if(district!=""){
+	            	district=district+","
+	            }
+	            if(state!=""){
+	            	state=state+" "
+	            }	            
+	            address = locality + district + state + postalcode;
+	            $.ajax({
+                  type:"POST",
+                      url: 'ajax/save_js_data_to_db',
+                      data: {
+                          'lat':lat,
+                          'lng':lng,
+                          'remark':remark,
+                          'date_recorded':dateRecorded,
+                          'time_recorded':timeRecorded,
+                          'address':address,
+                          'work_name':work_name,
+                          'work_type':work_type, 
+                          'dept_name':deptName,
+                          'district':districtMain,                                                  
+                          'dataOfYear':dataOfYear
+                      },
+                      dataType: 'json',
+                      success: function (data) {                
+                          if (data.status==1) {
+                            console.log("");                            
+                          }
+                          else if(data.status==-1){
+                            console.log("Failed: "+data.lat+", "+ data.lng+", "+data.work_type);
+                          }
+                          // else{
+                          //   alert("Something went wrong.");
+                          // }
+                      },
+                      error: function(xhr, textStatus, errorThrown) {
+                      console.log("Something went wrong.");
+                      }
+    			    });
+        	}
+       }
+       else {
+        console.log("Geocoder failed: " + status)
+        alert("Something went wrong.[geocoder failed]");
+       }
+    })
+	 
+
+}
+// addMarker(19.05619410383319,74.65039407572952,"","2015-05-09 11:42:04.0","358870058321542_09052015_114220","कंपार्टमेंट बंडिंग","1","कंपार्टमेन्ट बंडीग");
+addMarker(19.318274053577355,75.21453931532285,"","2015-06-12 10:01:11.0","358416063272161_12062015_100147","शेवगाव नाला बंडीग फुटतुट GV132 /II/Id/ 2","52","जुन्या जलस्त्रोतांची दुरुस्ती ( माती नाला बांध / स");
+</script>

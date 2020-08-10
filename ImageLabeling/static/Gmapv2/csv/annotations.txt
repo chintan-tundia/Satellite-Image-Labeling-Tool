@@ -1,0 +1,1011 @@
+../Dataset/WellDataset_2019_12/images/Ahmednagar__18.69569_75.17186332999995_0.png 286,314,324,352,0
+../Dataset/WellDataset_2019_12/images/Ahmednagar__18.73959491_75.30047730000001_0.png 339,409,381,451,0
+../Dataset/WellDataset_2019_12/images/Ahmednagar__19.01653321_74.66003374000002_0.png 92,102,128,139,0 94,509,129,544,0 94,268,134,307,0
+../Dataset/WellDataset_2019_12/images/Ahmednagar__19.02880644_74.64938043000006_0.png 354,427,378,451,0 308,341,342,375,0
+../Dataset/WellDataset_2019_12/images/Ahmednagar__19.09668479_74.46658533000004_0.png 231,235,265,269,0 244,335,278,369,0 163,373,204,413,0
+../Dataset/WellDataset_2019_12/images/Ahmednagar__19.27096065_74.74844092000001_0.png 487,222,530,266,0 515,44,547,76,0 312,58,343,90,0 113,594,146,627,0
+../Dataset/WellDataset_2019_12/images/Ahmednagar__19.27214416_74.72538772000007_0.png 162,571,196,605,0 171,384,207,419,0 313,302,347,335,0 59,59,87,88,0
+../Dataset/WellDataset_2019_12/images/Ahmednagar__19.49480833_74.33599832999994_0.png 106,216,144,254,0
+../Dataset/WellDataset_2019_12/images/Ahmednagar__19.4965018_74.23690833_0.png 327,481,359,513,0 274,537,308,571,0
+../Dataset/WellDataset_2019_12/images/Ahmednagar__19.4992447_74.23801849000006_0.png 37,179,72,213,0
+../Dataset/WellDataset_2019_12/images/Ahmednagar_Bavi_18.6393084_75.25560746999997_0.png 562,462,611,512,0 305,309,343,347,0
+../Dataset/WellDataset_2019_12/images/Ahmednagar_Chondi_18.60810308_75.19376129_0.png 281,251,328,299,0
+../Dataset/WellDataset_2019_12/images/Ahmednagar_Dhond Pargaon_18.64499587_75.29584183999998_0.png 518,486,595,562,0 313,460,375,522,0
+../Dataset/WellDataset_2019_12/images/Ahmednagar_Digras_19.45201105_74.31731013000001_0.png 193,297,227,331,0
+../Dataset/WellDataset_2019_12/images/Ahmednagar_Digras_19.45201105_74.31731013000001_1.png 193,297,227,331,0
+../Dataset/WellDataset_2019_12/images/Ahmednagar_Hiwargaon Pathar_19.36106397_74.25894756000002_0.png 172,363,204,395,0 342,469,376,503,0
+../Dataset/WellDataset_2019_12/images/Ahmednagar_Karanji Bk._19.95855951_74.52418356999999_0.png 42,357,76,391,0 299,287,338,325,0
+../Dataset/WellDataset_2019_12/images/Ahmednagar_Karjule Harya_19.15945841_74.35631205000004_0.png 501,417,536,453,0 293,250,328,286,0
+../Dataset/WellDataset_2019_12/images/Ahmednagar_Khadambe Khurd_19.31007124_74.71375693999994_0.png 72,226,108,262,0 512,393,544,425,0 160,325,192,357,0
+../Dataset/WellDataset_2019_12/images/Ahmednagar_Khamgaon_18.69431007_75.21698775999994_0.png 38,539,72,573,0
+../Dataset/WellDataset_2019_12/images/Ahmednagar_Khamgaon_18.69525167_75.22061832999998_0.png 335,352,372,389,0
+../Dataset/WellDataset_2019_12/images/Ahmednagar_Khamgaon_18.69559833_75.22300832999997_1.png 349,315,386,352,0
+../Dataset/WellDataset_2019_12/images/Ahmednagar_Khamgaon_18.69735013_75.22033667999995_0.png 86,501,126,541,0
+../Dataset/WellDataset_2019_12/images/Ahmednagar_Madadgaon_19.04772342_74.85070493_0.png 361,495,408,542,0 269,497,306,534,0 249,345,298,393,0 99,209,140,250,0
+../Dataset/WellDataset_2019_12/images/Ahmednagar_Malunje_19.48691878_74.32080025999994_0.png 139,111,173,145,0
+../Dataset/WellDataset_2019_12/images/Ahmednagar_Mengalwadi_19.49851616_74.06227994999995_0.png 465,528,498,561,0 360,221,396,257,0
+../Dataset/WellDataset_2019_12/images/Ahmednagar_Panodi_19.48971806_74.34163983000008_0.png 168,130,206,168,0 71,42,111,82,0
+../Dataset/WellDataset_2019_12/images/Ahmednagar_Panodi_19.49067028_74.34072443000002_0.png 418,423,452,457,0
+../Dataset/WellDataset_2019_12/images/Ahmednagar_Parewadi_18.69890667_75.17634333000001_0.png 338,356,372,390,0
+../Dataset/WellDataset_2019_12/images/Ahmednagar_Patoda_18.69332207_75.23294611000006_0.png 516,119,549,151,0 279,278,322,320,0
+../Dataset/WellDataset_2019_12/images/Ahmednagar_Patoda_18.69479168_75.23267955999995_0.png 310,276,347,314,0
+../Dataset/WellDataset_2019_12/images/Ahmednagar_Patoda_18.69837167_75.23516332999998_0.png 319,314,363,358,0
+../Dataset/WellDataset_2019_12/images/Ahmednagar_Patoda_18.69950333_75.23465833_0.png 269,304,305,340,0
+../Dataset/WellDataset_2019_12/images/Ahmednagar_Patoda_18.70897224_75.22260611000002_0.png 186,273,228,315,0
+../Dataset/WellDataset_2019_12/images/Ahmednagar_Patoda_18.71534534_75.22923695999998_0.png 370,317,402,349,0
+../Dataset/WellDataset_2019_12/images/Ahmednagar_Pimpalgaon Depa_19.48445167_74.23705667000002_0.png 250,285,280,315,0
+../Dataset/WellDataset_2019_12/images/Ahmednagar_Ratnapur_18.71193257_75.24801236999997_0.png 299,301,331,333,0
+../Dataset/WellDataset_2019_12/images/Ahmednagar_Sangvi_18.69469214_75.24066328000004_0.png 240,387,280,427,0
+../Dataset/WellDataset_2019_12/images/Ahmednagar_Shirapur_19.4880453_74.23588261999998_0.png 105,388,135,418,0
+../Dataset/WellDataset_2019_12/images/Ahmednagar_Shirapur_19.48949654_74.23712658_0.png 213,147,253,186,0 399,276,435,313,0
+../Dataset/WellDataset_2019_12/images/Ahmednagar_Shirasgaon_19.46765215_74.05605407000007_0.png 301,366,342,407,0
+../Dataset/WellDataset_2019_12/images/Akola__20.21054441_77.11292720999995_0.png 361,166,390,194,0 153,464,179,490,0
+../Dataset/WellDataset_2019_12/images/Akola__20.4776864_76.89425999000002_0.png 327,292,361,326,0
+../Dataset/WellDataset_2019_12/images/Akola__20.48185341_76.88826990999996_0.png 332,330,369,366,0 214,470,256,512,0
+../Dataset/WellDataset_2019_12/images/Akola__20.48501561_76.79205518000003_0.png 98,118,165,186,0 333,486,369,522,0
+../Dataset/WellDataset_2019_12/images/Akola__20.48543071_76.79120553000007_0.png 427,294,474,341,0
+../Dataset/WellDataset_2019_12/images/Akola__20.49213454_76.80724512999996_0.png 305,321,345,361,0
+../Dataset/WellDataset_2019_12/images/Akola__20.50898121_76.78247712000007_0.png 309,84,339,114,0 274,321,299,347,0
+../Dataset/WellDataset_2019_12/images/Akola__20.60981918_77.23723149_0.png 258,536,302,580,0
+../Dataset/WellDataset_2019_12/images/Akola__20.61876123_77.24583774999996_0.png 227,492,280,544,0 291,302,325,336,0
+../Dataset/WellDataset_2019_12/images/Akola__20.63249393_77.02671463000001_0.png 452,393,494,435,0
+../Dataset/WellDataset_2019_12/images/Akola__20.63998213_77.25058395999997_0.png 192,432,232,472,0
+../Dataset/WellDataset_2019_12/images/Akola__20.72876337_77.57440939000003_0.png 206,218,240,252,0 354,418,388,452,0 416,232,463,280,0
+../Dataset/WellDataset_2019_12/images/Akola__21.19283665_76.98264638_0.png 273,261,300,289,0
+../Dataset/WellDataset_2019_12/images/Akola_Balapur_20.68672161_76.81862780000006_0.png 306,310,346,350,0
+../Dataset/WellDataset_2019_12/images/Akola_Bidgaon_20.62366363_77.45191208000006_0.png 361,296,392,327,0 465,372,514,421,0
+../Dataset/WellDataset_2019_12/images/Akola_Bodkha_20.4305806_76.93057407000003_0.png 447,412,493,458,0 251,133,302,183,0
+../Dataset/WellDataset_2019_12/images/Akola_Deulgaon_20.48521776_76.90550486999996_0.png 481,227,520,265,0 254,330,301,376,0
+../Dataset/WellDataset_2019_12/images/Akola_Dhonda Akhar_21.19010752_76.89539076999995_0.png 314,344,340,370,0
+../Dataset/WellDataset_2019_12/images/Akola_Goregaon Bk_20.61299278_76.91685074999998_0.png 376,364,412,400,0
+../Dataset/WellDataset_2019_12/images/Akola_Jamthi Bk._20.69985229_77.47526390999997_0.png 318,321,361,363,0
+../Dataset/WellDataset_2019_12/images/Akola_Januna_20.50048059_77.05520092000006_0.png 405,215,434,245,0 402,515,438,551,0 279,309,313,343,0
+../Dataset/WellDataset_2019_12/images/Akola_Kadoshi_20.7489188_76.82582236000007_0.png 295,290,332,327,0
+../Dataset/WellDataset_2019_12/images/Akola_Kadoshi_20.74898151_76.82590952999999_0.png 266,320,294,348,0
+../Dataset/WellDataset_2019_12/images/Akola_Kondala Zamre_20.15154683_77.12466102000008_0.png 367,319,412,363,0
+../Dataset/WellDataset_2019_12/images/Akola_Kurum_20.77926154_77.55495637000001_0.png 212,262,245,294,0
+../Dataset/WellDataset_2019_12/images/Akola_Mangrul_20.52145343_77.05937334999999_0.png 325,287,353,315,0
+../Dataset/WellDataset_2019_12/images/Akola_Mirzapur_20.52305757_77.06386091000002_0.png 195,546,219,569,0
+../Dataset/WellDataset_2019_12/images/Akola_Mirzapur_20.52546312_77.07065614999999_0.png 330,361,355,386,0
+../Dataset/WellDataset_2019_12/images/Akola_Mirzapur_20.531309_77.0597411_0.png 335,360,359,384,0
+../Dataset/WellDataset_2019_12/images/Akola_Mirzapur_20.53608105_77.06629865000002_0.png 315,278,339,302,0
+../Dataset/WellDataset_2019_12/images/Akola_Mirzapur_20.53762139_77.06327114999999_0.png 439,500,474,535,0 335,444,373,482,0 364,210,399,243,0
+../Dataset/WellDataset_2019_12/images/Akola_Mozari Budruk_20.58962528_77.23986838999997_0.png 288,306,319,338,0
+../Dataset/WellDataset_2019_12/images/Akola_Nimbi_20.46544283_77.04703710000001_0.png 471,208,508,244,0 133,486,177,530,0
+../Dataset/WellDataset_2019_12/images/Akola_Nipana_20.683289_77.19193332999998_0.png 433,9,473,49,0 119,345,147,373,0 325,319,357,351,0
+../Dataset/WellDataset_2019_12/images/Akola_Patur Nandapur_20.59862053_77.28488276000007_0.png 360,147,392,179,0 255,366,289,400,0
+../Dataset/WellDataset_2019_12/images/Akola_Rambhapur_20.70640042_77.18593693000003_0.png 213,139,260,185,0 391,509,423,541,0 232,471,266,505,0
+../Dataset/WellDataset_2019_12/images/Akola_Rambhapur_20.70771541_77.18411975999993_0.png 535,317,567,349,0 198,330,234,366,0
+../Dataset/WellDataset_2019_12/images/Akola_Selot_20.6610662_76.80769014999998_0.png 33,263,82,313,0 148,345,192,389,0
+../Dataset/WellDataset_2019_12/images/Akola_Shahapur_20.75354705_77.24255915000003_0.png 291,322,331,361,0
+../Dataset/WellDataset_2019_12/images/Akola_Shelu Wetal_20.71132997_77.34084153999993_0.png 347,397,405,455,0
+../Dataset/WellDataset_2019_12/images/Akola_Umardari_20.52873651_77.26573151000002_0.png 298,320,334,356,0
+../Dataset/WellDataset_2019_12/images/Akola_Umardari_20.5368631_77.26873135000005_0.png 48,536,83,571,0 341,276,374,309,0
+../Dataset/WellDataset_2019_12/images/Amravati__21.15848703_77.38572023000006_0.png 290,322,318,350,0
+../Dataset/WellDataset_2019_12/images/Amravati__21.40067621_78.26481723000006_0.png 357,405,375,423,0
+../Dataset/WellDataset_2019_12/images/Amravati__21.41184071_78.26279109000006_0.png 327,513,353,539,0
+../Dataset/WellDataset_2019_12/images/Amravati__21.41952267_78.18020778999994_0.png 343,375,371,403,0
+../Dataset/WellDataset_2019_12/images/Amravati__21.4260403_78.39131969999994_0.png 293,363,327,397,0
+../Dataset/WellDataset_2019_12/images/Amravati__21.43032335_76.91983081000001_0.png 113,535,150,572,0 375,326,411,361,0
+../Dataset/WellDataset_2019_12/images/Amravati__21.44223772_76.90093447000004_0.png 315,313,347,345,0
+../Dataset/WellDataset_2019_12/images/Amravati__21.44330307_76.89091542999995_0.png 208,297,236,325,0
+../Dataset/WellDataset_2019_12/images/Amravati__21.44628227_76.8934772_0.png 242,352,277,387,0
+../Dataset/WellDataset_2019_12/images/Amravati__21.45217245_76.89462243000003_0.png 85,389,117,421,0
+../Dataset/WellDataset_2019_12/images/Amravati__21.45341324_76.90012098_0.png 278,308,314,344,0
+../Dataset/WellDataset_2019_12/images/Amravati__21.45588402_76.89355636999994_0.png 475,474,507,506,0
+../Dataset/WellDataset_2019_12/images/Amravati__21.45886634_76.89656295999998_0.png 69,467,101,499,0
+../Dataset/WellDataset_2019_12/images/Amravati__21.48907106_77.04557049999994_0.png 295,373,327,405,0
+../Dataset/WellDataset_2019_12/images/Amravati__21.51865477_77.09486243000003_0.png 321,317,361,356,0
+../Dataset/WellDataset_2019_12/images/Amravati_Ambadi_21.50125496_76.84383017000005_0.png 296,296,327,326,0
+../Dataset/WellDataset_2019_12/images/Amravati_Dabka_21.35429467_76.71417065000003_0.png 305,286,335,316,0
+../Dataset/WellDataset_2019_12/images/Amravati_Jambu_21.49712025_77.05403064999996_0.png 382,347,418,383,0
+../Dataset/WellDataset_2019_12/images/Amravati_Jambu_21.49872331_77.05770185999995_0.png 105,473,139,507,0
+../Dataset/WellDataset_2019_12/images/Amravati_Karajgaon_21.41135333_78.19718667000006_0.png 304,327,328,351,0
+../Dataset/WellDataset_2019_12/images/Amravati_Kotha_21.50815015_77.08356036999999_0.png 308,164,340,196,0
+../Dataset/WellDataset_2019_12/images/Amravati_Kotha_21.50902018_77.08622033999995_0.png 478,257,520,299,0
+../Dataset/WellDataset_2019_12/images/Amravati_Kusumkot Bk._21.52290179_76.87162235999995_0.png 113,429,141,457,0
+../Dataset/WellDataset_2019_12/images/Amravati_Kusumkot Kh._21.51848445_76.87381941000001_0.png 170,322,206,358,0
+../Dataset/WellDataset_2019_12/images/Amravati_Mahamadpur_21.17488031_77.38582236000002_0.png 297,382,321,406,0
+../Dataset/WellDataset_2019_12/images/Amravati_Mandwa_21.52407613_76.91743759999997_0.png 290,346,317,373,0
+../Dataset/WellDataset_2019_12/images/Amravati_Morangana_21.39525965_78.27572572999998_0.png 411,290,440,319,0
+../Dataset/WellDataset_2019_12/images/Amravati_Palsona_21.47810821_78.17776277999997_0.png 366,347,397,379,0
+../Dataset/WellDataset_2019_12/images/Amravati_Pimpalkhuta_21.41607167_78.19279667_0.png 319,343,344,369,0
+../Dataset/WellDataset_2019_12/images/Amravati_Pimpalkhuta_21.42292938_78.26203538999994_0.png 350,389,372,411,0 378,284,398,304,0
+../Dataset/WellDataset_2019_12/images/Amravati_Porgavhan_21.43525701_78.43529250999995_0.png 288,329,312,353,0
+../Dataset/WellDataset_2019_12/images/Amravati_Rambag_21.4419807_76.88599610000006_0.png 106,267,138,299,0
+../Dataset/WellDataset_2019_12/images/Amravati_Sawalikheda_21.37387167_76.71565499999997_0.png 293,328,326,360,0
+../Dataset/WellDataset_2019_12/images/Amravati_Sawalikheda_21.38794122_76.70612449999999_0.png 308,338,342,372,0
+../Dataset/WellDataset_2019_12/images/Amravati_Talai_21.56692751_76.90329057999998_0.png 282,299,319,335,0
+../Dataset/WellDataset_2019_12/images/Amravati_Talai_21.56774539_76.90584276999994_0.png 269,309,297,337,0
+../Dataset/WellDataset_2019_12/images/Amravati_Talai_21.57337324_76.90181959000006_0.png 588,40,623,76,0 236,429,270,463,0
+../Dataset/WellDataset_2019_12/images/Amravati_Titamba._21.44322825_76.88579758000003_0.png 311,202,337,228,0
+../Dataset/WellDataset_2019_12/images/Amravati_Titamba._21.44410204_76.88532819_0.png 487,552,515,580,0
+../Dataset/WellDataset_2019_12/images/Amravati_Titamba._21.44508717_76.88875409000002_0.png 468,46,498,76,0 357,546,389,578,0
+../Dataset/WellDataset_2019_12/images/Aurangabad__19.53200484_75.50669863999997_0.png 277,321,312,355,0
+../Dataset/WellDataset_2019_12/images/Aurangabad__19.53250224_75.50347525000006_0.png 219,298,249,328,0
+../Dataset/WellDataset_2019_12/images/Aurangabad__19.53893833_75.55240000000003_0.png 380,323,412,354,0
+../Dataset/WellDataset_2019_12/images/Aurangabad__19.53984167_75.55606999999998_0.png 299,269,330,301,0
+../Dataset/WellDataset_2019_12/images/Aurangabad__19.54104667_75.55510000000004_0.png 384,344,416,376,0
+../Dataset/WellDataset_2019_12/images/Aurangabad__19.90293737_75.62118368999995_0.png 196,519,235,558,0 197,410,235,448,0
+../Dataset/WellDataset_2019_12/images/Aurangabad__19.942345_74.99201072000005_0.png 223,229,252,259,0 337,309,363,335,0
+../Dataset/WellDataset_2019_12/images/Aurangabad__20.11367163_74.76687072000004_0.png 406,168,446,208,0 370,258,415,304,0
+../Dataset/WellDataset_2019_12/images/Aurangabad__20.13311943_74.92570889000001_0.png 293,321,321,349,0 265,194,300,228,0
+../Dataset/WellDataset_2019_12/images/Aurangabad__20.16296876_74.77595554000004_0.png 154,291,193,329,0 441,212,478,250,0
+../Dataset/WellDataset_2019_12/images/Aurangabad__20.17434973_75.19517417999998_0.png 333,322,373,362,0
+../Dataset/WellDataset_2019_12/images/Aurangabad__20.19785615_74.82686420999994_0.png 300,366,345,412,0
+../Dataset/WellDataset_2019_12/images/Aurangabad__20.31370085_75.37300333999997_0.png 33,562,61,590,0 148,499,174,525,0 57,366,93,402,0 190,214,222,246,0
+../Dataset/WellDataset_2019_12/images/Aurangabad__20.31999833_75.67919832999996_0.png 98,256,135,293,0 281,254,324,297,0
+../Dataset/WellDataset_2019_12/images/Aurangabad__20.32166952_75.67949700999998_0.png 381,161,421,201,0 395,460,433,498,0 288,330,322,364,0 42,255,80,293,0
+../Dataset/WellDataset_2019_12/images/Aurangabad__20.4094745_75.37725799999998_0.png 536,180,577,222,0 299,288,324,314,0
+../Dataset/WellDataset_2019_12/images/Aurangabad__20.4094745_75.37725799999998_1.png 536,180,577,222,0 299,288,324,314,0
+../Dataset/WellDataset_2019_12/images/Aurangabad__20.42554575_75.26930626000001_0.png 252,352,286,386,0
+../Dataset/WellDataset_2019_12/images/Aurangabad__20.42568884_75.27051275999997_0.png 233,232,265,264,0
+../Dataset/WellDataset_2019_12/images/Aurangabad_Alapurwadi_20.0616743_74.84048428000006_0.png 579,266,620,306,0 328,306,369,348,0
+../Dataset/WellDataset_2019_12/images/Aurangabad_Alapurwadi_20.06633096_74.83579310999994_0.png 341,116,385,160,0 289,294,331,336,0 445,374,481,410,0 245,554,285,594,0
+../Dataset/WellDataset_2019_12/images/Aurangabad_Dhanora_20.06906856_75.60121268_0.png 220,6,258,44,0 314,482,348,516,0
+../Dataset/WellDataset_2019_12/images/Aurangabad_Gadhe Jalgaon_19.86009218_75.62048849000007_0.png 254,313,284,343,0
+../Dataset/WellDataset_2019_12/images/Aurangabad_Hadas Pimpalgaon_19.93202305_74.96301517999996_0.png 362,311,396,345,0
+../Dataset/WellDataset_2019_12/images/Aurangabad_Hilalpur_20.08079864_74.79926573_0.png 103,414,135,446,0 294,372,336,414,0
+../Dataset/WellDataset_2019_12/images/Aurangabad_Hilalpur_20.10901186_74.77552458000002_0.png 371,480,405,514,0 371,197,407,233,0
+../Dataset/WellDataset_2019_12/images/Aurangabad_Janephal_20.08185103_74.75939335999999_0.png 53,198,94,240,0 447,81,484,117,0 275,182,311,218,0 518,321,555,358,0 410,318,461,369,0
+../Dataset/WellDataset_2019_12/images/Aurangabad_Khandala_20.04648497_74.76889734999997_0.png 582,401,616,435,0
+../Dataset/WellDataset_2019_12/images/Aurangabad_Khandala_20.4678064_75.68921337999996_0.png 140,104,174,138,0 209,536,245,572,0
+../Dataset/WellDataset_2019_12/images/Aurangabad_Koli Bodkha_19.51159632_75.62068373_0.png 261,206,300,245,0
+../Dataset/WellDataset_2019_12/images/Aurangabad_Koli Bodkha_19.51290214_75.62217118000001_0.png 284,363,323,402,0
+../Dataset/WellDataset_2019_12/images/Aurangabad_Koli Bodkha_19.53041356_75.58433668999999_0.png 191,320,229,358,0
+../Dataset/WellDataset_2019_12/images/Aurangabad_Koradgaon_20.0860006_74.78703977999999_0.png 386,182,426,222,0 263,409,299,445,0
+../Dataset/WellDataset_2019_12/images/Aurangabad_Pimpla_20.61285816_75.85794723999993_0.png 365,304,388,327,0
+../Dataset/WellDataset_2019_12/images/Aurangabad_Raghunathpurwadi_20.04581325_74.88669457000003_0.png 295,302,331,338,0
+../Dataset/WellDataset_2019_12/images/Aurangabad_Raghunathpurwadi_20.05663596_74.84504797_0.png 433,106,489,162,0
+../Dataset/WellDataset_2019_12/images/Aurangabad_Sakegaon_20.12317707_74.95252198999992_0.png 381,250,415,284,0 209,122,241,154,0
+../Dataset/WellDataset_2019_12/images/Aurangabad_Sakegaon_20.12336315_74.94942265999998_0.png 282,332,316,366,0
+../Dataset/WellDataset_2019_12/images/Aurangabad_Shekta_19.91164371_75.62294481000004_0.png 433,397,465,429,0
+../Dataset/WellDataset_2019_12/images/Aurangabad_Shibghat_20.43194196_75.27394513000002_0.png 260,515,302,557,0
+../Dataset/WellDataset_2019_12/images/Aurangabad_Solnapur_19.51541519_75.45552638000004_0.png 488,257,520,289,0 334,281,363,309,0 265,207,295,237,0 43,211,80,247,0
+../Dataset/WellDataset_2019_12/images/Aurangabad_Thergaon_19.55280718_75.56207356999994_0.png 72,250,103,281,0 417,410,456,449,0
+../Dataset/WellDataset_2019_12/images/Aurangabad_Tidhi_19.91845667_74.77154667000002_0.png 441,44,475,78,0
+../Dataset/WellDataset_2019_12/images/Aurangabad_Umbarkheda_20.366076_75.22352897999997_0.png 556,291,588,323,0 325,274,367,316,0
+../Dataset/WellDataset_2019_12/images/Aurangabad_Umbarkheda_20.37229156_75.21991537999997_0.png 526,243,559,275,0 172,87,202,117,0 533,423,559,449,0 124,500,157,532,0
+../Dataset/WellDataset_2019_12/images/Aurangabad_Wadhod_20.43255061_75.37092467000002_0.png 387,436,435,484,0 307,169,341,203,0
+../Dataset/WellDataset_2019_12/images/Aurangabad_Wadji_19.51874351_75.57692894000002_0.png 560,564,600,605,0 238,65,270,97,0 253,192,281,220,0
+../Dataset/WellDataset_2019_12/images/Aurangabad_Wadji_19.5258829_75.57725239000001_0.png 220,279,268,327,0
+../Dataset/WellDataset_2019_12/images/Aurangabad_Wadji_20.09586275_74.75333357_0.png 508,366,552,410,0 161,47,193,79,0 136,318,172,354,0
+../Dataset/WellDataset_2019_12/images/Aurangabad_Warkhedi Bk._20.59685523_75.74374622999994_0.png 289,308,319,338,0
+../Dataset/WellDataset_2019_12/images/Beed__18.94977461_75.81037871000001_0.png 582,109,634,161,0 275,252,298,276,0 15,267,70,321,0
+../Dataset/WellDataset_2019_12/images/Beed__18.968183_75.75795355000002_0.png 400,60,453,112,0 387,267,426,307,0 422,550,463,592,0 82,493,127,539,0
+../Dataset/WellDataset_2019_12/images/Beed__18.97810491_76.04587751999998_0.png 337,352,364,379,0
+../Dataset/WellDataset_2019_12/images/Beed__18.98121377_76.02687622000008_0.png 478,111,517,149,0 232,387,282,437,0 105,477,152,523,0
+../Dataset/WellDataset_2019_12/images/Beed__18.98750729_76.02337526999997_0.png 305,107,355,157,0 377,365,415,403,0 146,501,192,547,0
+../Dataset/WellDataset_2019_12/images/Beed__19.0300717_76.08311159000004_0.png 107,267,165,325,0 519,330,573,384,0 331,313,381,363,0
+../Dataset/WellDataset_2019_12/images/Beed__19.03670119_75.79494291000003_0.png 59,9,129,79,0 359,492,410,543,0
+../Dataset/WellDataset_2019_12/images/Beed__19.08147555_75.49982937000004_0.png 403,17,450,65,0 505,450,555,500,0
+../Dataset/WellDataset_2019_12/images/Beed_Aher Nimgaon_19.03704213_75.79121983000005_0.png 232,20,279,66,0 461,575,512,625,0
+../Dataset/WellDataset_2019_12/images/Beed_Aher Nimgaon_19.03962734_75.78256521999992_0.png 407,279,439,311,0 268,430,296,458,0
+../Dataset/WellDataset_2019_12/images/Beed_Baheghavan_18.97976581_76.06502436000005_0.png 315,548,365,599,0 303,318,362,377,0 410,127,452,169,0 305,75,346,116,0
+../Dataset/WellDataset_2019_12/images/Beed_Beed_19.00305113_75.71960100000001_0.png 316,298,368,350,0
+../Dataset/WellDataset_2019_12/images/Beed_Chincholi_18.89459922_75.01353223000001_0.png 303,234,347,278,0
+../Dataset/WellDataset_2019_12/images/Beed_Chincholi Mali_18.9920093_75.81685083000002_0.png 389,341,442,395,0
+../Dataset/WellDataset_2019_12/images/Beed_Chincholi Mali_18.9939582_75.81684667000002_0.png 384,250,427,294,0 207,362,261,416,0
+../Dataset/WellDataset_2019_12/images/Beed_Chincholi Mali_18.99571721_75.81602592000002_0.png 304,106,368,170,0
+../Dataset/WellDataset_2019_12/images/Beed_Harishchandra pimpri_19.04067961_76.08522796_0.png 342,176,390,224,0 384,347,429,393,0 385,424,432,470,0
+../Dataset/WellDataset_2019_12/images/Beed_Harishchandra pimpri_19.04311976_76.08498153000005_0.png 267,320,315,368,0
+../Dataset/WellDataset_2019_12/images/Beed_Harishchandra pimpri_19.04495831_76.08347041000002_0.png 206,113,256,163,0 358,435,403,481,0
+../Dataset/WellDataset_2019_12/images/Beed_Kanadi Kh._18.85989716_75.01938644999996_0.png 257,370,320,434,0
+../Dataset/WellDataset_2019_12/images/Beed_Kolharwadi_18.92251749_75.78250265999998_0.png 494,160,549,216,0
+../Dataset/WellDataset_2019_12/images/Beed_Kolharwadi_18.92283384_75.78791460000002_0.png 105,116,159,170,0 518,448,576,506,0 182,381,250,449,0
+../Dataset/WellDataset_2019_12/images/Beed_Koregaon_18.76041826_75.99915465000004_0.png 144,55,188,99,0 448,516,490,558,0
+../Dataset/WellDataset_2019_12/images/Beed_Koregaon_18.76153465_76.00156134999997_0.png 342,329,389,375,0
+../Dataset/WellDataset_2019_12/images/Beed_Palwan_18.98384588_75.71263988999999_0.png 536,168,584,216,0 351,262,389,300,0 230,338,267,374,0 46,390,80,424,0
+../Dataset/WellDataset_2019_12/images/Beed_Rajuri Ghodka_18.97086015_75.8150597_0.png 270,74,317,120,0
+../Dataset/WellDataset_2019_12/images/Beed_Rajuri Ghodka_18.97431192_75.81598699000006_0.png 461,106,503,148,0 502,202,553,254,0 197,527,237,567,0
+../Dataset/WellDataset_2019_12/images/Beed_Rajuri Ghodka_18.97692982_75.81703226000002_0.png 241,56,281,96,0 311,152,355,196,0 207,232,255,280,0 470,254,510,294,0 237,382,283,428,0 231,532,289,590,0
+../Dataset/WellDataset_2019_12/images/Beed_Rambag_21.44215416_76.88543733000006_0.png 314,337,344,367,0
+../Dataset/WellDataset_2019_12/images/Beed_Samnapur_18.93097588_75.78146506999997_0.png 477,208,508,240,0 394,122,431,160,0 447,424,487,464,0 161,393,209,441,0
+../Dataset/WellDataset_2019_12/images/Beed_Samnapur_18.93567181_75.78232172000003_0.png 191,36,239,84,0 295,282,354,340,0 399,539,448,587,0
+../Dataset/WellDataset_2019_12/images/Beed_Samnapur_18.93942657_75.78081359999999_0.png 166,269,210,313,0 204,130,252,178,0 316,335,366,385,0 385,440,441,496,0 300,523,356,579,0 261,464,318,522,0
+../Dataset/WellDataset_2019_12/images/Beed_Samnapur_18.9412061_75.78017798999997_0.png 240,163,294,217,0 435,455,486,507,0
+../Dataset/WellDataset_2019_12/images/Beed_Shidode_19.03380585_75.77512894000006_0.png 82,415,120,453,0 265,426,315,476,0 457,562,486,592,0 483,404,531,452,0
+../Dataset/WellDataset_2019_12/images/Beed_Shirapur_18.89407818_75.0091109_0.png 336,401,379,444,0
+../Dataset/WellDataset_2019_12/images/Beed_Umri_18.75292861_75.99781796000002_0.png 392,383,431,421,0
+../Dataset/WellDataset_2019_12/images/Beed_Umri_18.76913853_76.02207245_0.png 336,210,382,256,0 202,416,245,460,0
+../Dataset/WellDataset_2019_12/images/Beed_Umri_18.77689135_76.02560935999998_0.png 293,361,342,411,0 317,444,363,490,0
+../Dataset/WellDataset_2019_12/images/Beed_Vaitagwadi_18.79482178_75.74395000999993_0.png 525,287,570,331,0 443,362,481,400,0
+../Dataset/WellDataset_2019_12/images/Beed_Wasanwadi_19.0324291_75.72188219999998_0.png 355,353,408,407,0
+../Dataset/WellDataset_2019_12/images/Bhandara__20.69370106_79.59834770999998_0.png 57,353,85,381,0
+../Dataset/WellDataset_2019_12/images/Bhandara__20.73362667_79.533455_0.png 321,274,343,296,0
+../Dataset/WellDataset_2019_12/images/Bhandara__20.73650333_79.53601666999998_0.png 293,317,319,343,0
+../Dataset/WellDataset_2019_12/images/Bhandara__20.73650333_79.53601666999998_1.png 291,314,319,342,0
+../Dataset/WellDataset_2019_12/images/Bhandara__20.96178617_79.82893962000003_0.png 316,214,348,246,0 192,493,218,519,0
+../Dataset/WellDataset_2019_12/images/Bhandara__21.09833986_80.05068943000003_0.png 60,352,88,380,0
+../Dataset/WellDataset_2019_12/images/Bhandara__21.09843148_80.04960922999999_0.png 464,390,492,418,0 -261,-7,-229,24,0
+../Dataset/WellDataset_2019_12/images/Bhandara__21.10540037_80.04360433_0.png 330,285,354,309,0
+../Dataset/WellDataset_2019_12/images/Bhandara_Gondi_20.92087914_79.84600926999997_0.png 285,332,319,366,0
+../Dataset/WellDataset_2019_12/images/Bhandara_Koka_21.19541903_79.78708555999992_0.png 301,314,333,346,0
+../Dataset/WellDataset_2019_12/images/Bhandara_Kolara_20.93291177_79.90116314_0.png 578,84,616,123,0 112,471,145,504,0
+../Dataset/WellDataset_2019_12/images/Bhandara_Kolara_20.93291336_79.90127338000002_0.png 540,87,572,119,0 72,475,94,497,0
+../Dataset/WellDataset_2019_12/images/Bhandara_Kolari_20.94863638_79.88227770000003_0.png 306,266,336,296,0
+../Dataset/WellDataset_2019_12/images/Bhandara_Mangali_20.95174313_79.80662942000004_0.png 377,345,405,373,0
+../Dataset/WellDataset_2019_12/images/Bhandara_Murmadi_20.966308_79.89406434_0.png 338,406,366,434,0 209,299,233,323,0
+../Dataset/WellDataset_2019_12/images/Bhandara_Murmadi_20.96640228_79.89404526999999_0.png 348,446,376,474,0 213,333,243,363,0
+../Dataset/WellDataset_2019_12/images/Bhandara_Rawanwadi_21.05014072_79.71446694999997_0.png 283,303,311,331,0
+../Dataset/WellDataset_2019_12/images/Bhandara_Rawanwadi_21.05014072_79.71446694999997_1.png 282,300,314,332,0
+../Dataset/WellDataset_2019_12/images/Bhandara_Rawanwadi_21.05931393_79.71699435999994_0.png 104,436,134,466,0
+../Dataset/WellDataset_2019_12/images/Bhandara_Sawargaon_21.09975577_80.04784366000001_0.png 400,524,426,550,0
+../Dataset/WellDataset_2019_12/images/Bhandara_Usaragondi_21.14373217_79.72483170999999_0.png 327,359,353,385,0
+../Dataset/WellDataset_2019_12/images/Bhandara_Usaragondi_21.14374804_79.72453543000006_0.png 436,363,464,391,0
+../Dataset/WellDataset_2019_12/images/Buldhana__20.34377828_76.22418682_0.png 294,176,338,221,0 161,528,209,576,0
+../Dataset/WellDataset_2019_12/images/Buldhana__20.52519449_76.24982047999993_0.png 19,90,59,130,0 164,492,194,522,0 288,209,332,253,0 579,456,623,500,0
+../Dataset/WellDataset_2019_12/images/Buldhana__20.52538721_76.25164681000001_0.png 401,194,455,248,0 145,532,189,576,0
+../Dataset/WellDataset_2019_12/images/Buldhana__20.52774903_76.25190047000001_0.png 528,162,562,196,0 348,456,390,498,0
+../Dataset/WellDataset_2019_12/images/Buldhana__20.52910028_76.25300348999997_0.png 85,477,135,527,0 176,145,224,193,0
+../Dataset/WellDataset_2019_12/images/Buldhana_Bhadola_20.52518833_76.24571441_0.png 225,404,267,446,0 372,458,408,494,0
+../Dataset/WellDataset_2019_12/images/Buldhana_Bhadola_20.52671932_76.24525532000007_0.png 76,292,124,340,0 489,426,535,472,0
+../Dataset/WellDataset_2019_12/images/Buldhana_Bramhapuri_20.44320675_76.24964372_0.png 65,158,103,196,0
+../Dataset/WellDataset_2019_12/images/Buldhana_Bramhapuri_20.44506844_76.24913142000003_0.png 57,219,113,275,0
+../Dataset/WellDataset_2019_12/images/Buldhana_Bramhapuri_20.44897445_76.24847548000002_0.png 228,319,268,359,0
+../Dataset/WellDataset_2019_12/images/Buldhana_Bramhapuri_20.45313222_76.24848500000007_0.png 188,185,230,227,0 405,482,443,520,0
+../Dataset/WellDataset_2019_12/images/Buldhana_Panhera Pr.Malkapur_20.89700651_76.26953073000004_0.png 518,509,548,539,0 141,292,177,328,0
+../Dataset/WellDataset_2019_12/images/Chandarpur__19.84866333_79.68757167000001_0.png 270,316,304,350,0
+../Dataset/WellDataset_2019_12/images/Chandarpur__20.04616833_79.45312166999997_0.png 251,211,283,243,0
+../Dataset/WellDataset_2019_12/images/Chandarpur__20.33520981_78.84402224999997_0.png 297,320,331,355,0
+../Dataset/WellDataset_2019_12/images/Chandarpur__20.35832985_79.47522469_0.png 365,358,393,386,0
+../Dataset/WellDataset_2019_12/images/Chandarpur__20.35848903_79.47591033000003_0.png 108,422,135,450,0
+../Dataset/WellDataset_2019_12/images/Chandarpur__20.43617564_79.35957477_0.png 300,338,332,370,0
+../Dataset/WellDataset_2019_12/images/Chandarpur__20.44961333_79.20558167000002_0.png 302,390,338,426,0
+../Dataset/WellDataset_2019_12/images/Chandarpur__20.48212_79.18849499999999_0.png 292,305,326,339,0
+../Dataset/WellDataset_2019_12/images/Chandarpur__20.51838_79.23894667000002_0.png 419,318,451,350,0
+../Dataset/WellDataset_2019_12/images/Chandarpur_Chak Nimbala_20.04573023_79.463437_0.png 478,134,517,174,0
+../Dataset/WellDataset_2019_12/images/Chandarpur_Chak Nimbala_20.0459284_79.4720893_0.png 366,324,393,350,0
+../Dataset/WellDataset_2019_12/images/Chandarpur_Chak Nimbala_20.04604436_79.46370642_0.png 386,265,412,291,0
+../Dataset/WellDataset_2019_12/images/Chandarpur_Chorgaon_20.06801122_79.37730250000004_0.png 337,329,362,354,0
+../Dataset/WellDataset_2019_12/images/Chandarpur_Deulgaon_20.70666062_79.77226665_0.png 307,410,329,432,0
+../Dataset/WellDataset_2019_12/images/Chandarpur_Dhonda Mandwa_19.58842611_79.11278469000001_0.png 315,308,357,350,0
+../Dataset/WellDataset_2019_12/images/Chandarpur_Dhonda Mandwa_19.59231296_79.10784891999992_0.png 299,36,324,61,0 144,159,185,200,0
+../Dataset/WellDataset_2019_12/images/Chandarpur_Dhonda Mandwa_19.5950896_79.11267455999996_0.png 403,363,445,405,0
+../Dataset/WellDataset_2019_12/images/Chandarpur_Dighori_19.87245314_79.72240510999995_0.png 512,413,550,450,0
+../Dataset/WellDataset_2019_12/images/Chandarpur_Futana Mokasa_19.86878815_79.70897501000002_0.png 128,288,163,322,0
+../Dataset/WellDataset_2019_12/images/Chandarpur_Khandala_20.51845833_79.24225833000003_0.png 376,268,414,306,0
+../Dataset/WellDataset_2019_12/images/Chandarpur_Khapari Chak_19.81514479_79.71549772000003_0.png 392,433,433,474,0
+../Dataset/WellDataset_2019_12/images/Chandarpur_Mahalgaon_20.56652198_79.35436500000003_0.png 255,121,304,170,0
+../Dataset/WellDataset_2019_12/images/Chandarpur_Palasgaon_20.35825949_79.47147466000001_0.png 161,434,190,462,0
+../Dataset/WellDataset_2019_12/images/Chandarpur_Pauni_20.33222919_78.83806184000002_0.png 524,173,560,209,0 93,407,129,443,0
+../Dataset/WellDataset_2019_12/images/Chandarpur_Pauni_20.34513902_78.84525133_0.png 402,364,445,406,0
+../Dataset/WellDataset_2019_12/images/Chandarpur_Pombhurna_19.86846139_79.63210033999997_0.png 395,419,429,453,0
+../Dataset/WellDataset_2019_12/images/Chandarpur_Rampur Zadikar_19.91820623_79.61403335_0.png 223,296,256,330,0 139,380,176,416,0
+../Dataset/WellDataset_2019_12/images/Chandarpur_Sawari_20.43294667_79.18302833000007_0.png 316,307,354,345,0
+../Dataset/WellDataset_2019_12/images/Chandarpur_Sawari_20.44386248_79.18340283999999_0.png 496,452,529,484,0
+../Dataset/WellDataset_2019_12/images/Chandarpur_Sonegaon_20.51180085_79.24666833000003_0.png 349,158,389,198,0
+../Dataset/WellDataset_2019_12/images/Chandarpur_Wadala_20.60255556_79.48739466000006_0.png 403,490,441,528,0
+../Dataset/WellDataset_2019_12/images/Dhule__20.96810228_74.60459292999997_0.png 362,423,400,462,0
+../Dataset/WellDataset_2019_12/images/Dhule__21.24026288_74.68481925000003_0.png 245,318,277,350,0
+../Dataset/WellDataset_2019_12/images/Dhule__21.24473746_74.65281735999997_0.png 469,292,504,327,0
+../Dataset/WellDataset_2019_12/images/Dhule__21.25281246_74.64887601999999_0.png 132,108,178,154,0
+../Dataset/WellDataset_2019_12/images/Dhule__21.48052905_75.06010684_0.png 352,259,386,294,0
+../Dataset/WellDataset_2019_12/images/Dhule__21.48279219_75.06506051999997_0.png 555,101,602,147,0 148,415,184,451,0
+../Dataset/WellDataset_2019_12/images/Dhule__21.4862316_75.05801259999998_0.png 184,192,206,214,0
+../Dataset/WellDataset_2019_12/images/Dhule_Anjanvihire_21.24115303_74.59704280999995_0.png 430,127,464,160,0 325,262,363,301,0
+../Dataset/WellDataset_2019_12/images/Dhule_Daul_21.35569776_74.58513474999995_0.png 315,475,350,510,0 452,552,482,582,0
+../Dataset/WellDataset_2019_12/images/Dhule_Deobhane_21.00335341_74.74955496000007_0.png 414,469,458,512,0
+../Dataset/WellDataset_2019_12/images/Dhule_Dhandhane_20.99458011_74.75323121999998_0.png 296,305,334,342,0
+../Dataset/WellDataset_2019_12/images/Dhule_Dhandhane_21.00094637_74.75007017000007_0.png 507,142,543,178,0
+../Dataset/WellDataset_2019_12/images/Dhule_Dhandhane_21.00164029_74.75020973999995_0.png 455,419,489,453,0
+../Dataset/WellDataset_2019_12/images/Dhule_Jamnya Pada_21.48542237_75.06850408000003_0.png 170,129,216,176,0
+../Dataset/WellDataset_2019_12/images/Dhule_Jamnya Pada_21.48933595_75.07538438000006_0.png 300,244,340,283,0
+../Dataset/WellDataset_2019_12/images/Dhule_Jamnya Pada_21.49210238_75.05743079000001_0.png 339,256,372,289,0
+../Dataset/WellDataset_2019_12/images/Dhule_Kampur_21.25684841_74.61632363000001_0.png 487,382,534,428,0
+../Dataset/WellDataset_2019_12/images/Dhule_Lauki_21.40931276_74.94003511999995_0.png 183,281,221,319,0
+../Dataset/WellDataset_2019_12/images/Dhule_Lauki_21.4180204_74.93922296999995_0.png 280,324,317,361,0
+../Dataset/WellDataset_2019_12/images/Dhule_Mandane_21.35518062_74.58523869999999_0.png 257,402,294,438,0 413,345,444,375,0 275,266,313,304,0
+../Dataset/WellDataset_2019_12/images/Dhule_Natwade_21.37740716_74.95611415000008_0.png 121,178,153,211,0 421,388,445,412,0
+../Dataset/WellDataset_2019_12/images/Dhule_Natwade_21.37795045_74.95536566999999_0.png 398,393,434,429,0
+../Dataset/WellDataset_2019_12/images/Dhule_Panakhed_21.50700976_75.01472581999997_0.png 418,364,450,396,0
+../Dataset/WellDataset_2019_12/images/Dhule_Parsamal_21.21905574_74.72546020999994_0.png 370,296,416,343,0
+../Dataset/WellDataset_2019_12/images/Dhule_Parsamal_21.23922587_74.73384386999999_0.png 553,531,584,563,0 509,382,555,429,0 433,336,467,369,0 418,63,457,102,0 296,489,332,524,0 148,500,196,547,0 126,407,179,460,0 68,184,98,213,0
+../Dataset/WellDataset_2019_12/images/Dhule_Patan_21.25329214_74.74194232000002_0.png 127,158,172,202,0
+../Dataset/WellDataset_2019_12/images/Dhule_Rahimpur_21.30546986_74.63113322999993_0.png 295,302,330,337,0
+../Dataset/WellDataset_2019_12/images/Dhule_Vakwad_21.54249308_74.97554374000003_0.png 276,331,310,365,0
+../Dataset/WellDataset_2019_12/images/Dhule_Varud_21.18563883_74.86673158000008_0.png 418,322,455,359,0
+../Dataset/WellDataset_2019_12/images/Dhule_Varzadi_21.22276733_74.60741374999998_0.png 537,237,575,275,0 111,474,149,512,0
+../Dataset/WellDataset_2019_12/images/Dhule_Wadi_21.14156853_74.55373429999997_0.png 146,393,198,433,0
+../Dataset/WellDataset_2019_12/images/Gadchiroli__19.05756686_80.07477913000002_0.png 317,339,347,369,0
+../Dataset/WellDataset_2019_12/images/Gadchiroli__19.87321245_80.43093799999997_0.png 326,291,354,319,0
+../Dataset/WellDataset_2019_12/images/Gadchiroli__20.434915_80.11107833000005_0.png 315,341,340,366,0
+../Dataset/WellDataset_2019_12/images/Gadchiroli__20.49800746_80.22799980000002_0.png 73,46,105,78,0
+../Dataset/WellDataset_2019_12/images/Gadchiroli__20.54467333_80.04384333000007_0.png 303,296,335,328,0
+../Dataset/WellDataset_2019_12/images/Gadchiroli__20.54588395_80.04292076000002_0.png 255,353,282,381,0
+../Dataset/WellDataset_2019_12/images/Gadchiroli__20.57160838_80.04449954999995_0.png 344,344,369,370,0
+../Dataset/WellDataset_2019_12/images/Gadchiroli__20.65763774_80.07592391000003_0.png 607,427,637,457,0 302,345,326,369,0
+../Dataset/WellDataset_2019_12/images/Gadchiroli__20.65978247_80.07220484999993_0.png 316,326,342,352,0
+../Dataset/WellDataset_2019_12/images/Gadchiroli__20.66015308_80.06911072000003_0.png 287,321,312,347,0
+../Dataset/WellDataset_2019_12/images/Gadchiroli__20.66019209_80.06889961000002_0.png 359,333,391,365,0
+../Dataset/WellDataset_2019_12/images/Gadchiroli__20.66019209_80.06889961000002_1.png 361,331,395,365,0
+../Dataset/WellDataset_2019_12/images/Gadchiroli_Alenga m_19.64150381_80.28739724000002_0.png 352,363,380,390,0
+../Dataset/WellDataset_2019_12/images/Gadchiroli_Arattondi_20.54973088_80.03308253_0.png 111,345,139,373,0 292,256,320,284,0
+../Dataset/WellDataset_2019_12/images/Gadchiroli_Chikhali_20.55959658_80.05501872000002_0.png 233,477,259,503,0
+../Dataset/WellDataset_2019_12/images/Gadchiroli_Chikhali_20.57069293_80.05079309000007_0.png 307,312,327,332,0
+../Dataset/WellDataset_2019_12/images/Gadchiroli_Chikhali Tukum_20.55870557_80.05551756_0.png 520,434,548,462,0
+../Dataset/WellDataset_2019_12/images/Gadchiroli_Chikhali Tukum_20.55870557_80.05551756_1.png 47,117,75,145,0
+../Dataset/WellDataset_2019_12/images/Gadchiroli_Chikhali Tukum_20.5639901_80.05827851999993_0.png 276,342,304,370,0
+../Dataset/WellDataset_2019_12/images/Gadchiroli_Chikhali Tukum_20.5639901_80.05827851999993_1.png 278,344,301,368,0
+../Dataset/WellDataset_2019_12/images/Gadchiroli_Dongar Sawangi_20.38964594_79.96765432000007_0.png 209,382,237,410,0
+../Dataset/WellDataset_2019_12/images/Gadchiroli_Gaderi_19.81676213_80.29125369000008_0.png 130,274,163,306,0
+../Dataset/WellDataset_2019_12/images/Gadchiroli_Govindgao_19.10812292_80.11486835000005_0.png 345,329,368,352,0
+../Dataset/WellDataset_2019_12/images/Gadchiroli_Kinhala_20.5781925_80.02864226999998_0.png 436,517,464,545,0
+../Dataset/WellDataset_2019_12/images/Gadchiroli_Mosam s_19.32652667_80.03416666999999_0.png 275,245,301,270,0
+../Dataset/WellDataset_2019_12/images/Gadchiroli_Pathargota_20.50494381_80.04531627999995_0.png 86,526,108,549,0 359,342,383,366,0
+../Dataset/WellDataset_2019_12/images/Gadchiroli_Pathargota_20.50624_80.05743000000007_0.png 310,303,342,335,0
+../Dataset/WellDataset_2019_12/images/Gadchiroli_Ravanwadi_20.65457976_80.05372506000003_0.png 446,127,470,151,0 35,303,62,331,0
+../Dataset/WellDataset_2019_12/images/Gadchiroli_Ravanwadi_20.65843212_80.06023957000002_0.png 560,165,588,193,0 324,312,351,338,0 45,357,71,383,0
+../Dataset/WellDataset_2019_12/images/Gadchiroli_Ravanwadi_20.67577518_80.06756568000003_0.png 18,319,48,349,0
+../Dataset/WellDataset_2019_12/images/Gadchiroli_Ravanwadi_20.67767388_80.06974832000003_0.png 298,339,326,367,0 172,154,201,182,0
+../Dataset/WellDataset_2019_12/images/Gadchiroli_Ravanwadi_20.67803873_80.06930968999995_0.png 75,600,110,634,0 464,487,487,509,0 339,303,360,323,0
+../Dataset/WellDataset_2019_12/images/Gadchiroli_Ravanwadi_20.67806131_80.06934991999992_0.png 449,491,475,517,0 321,311,351,341,0
+../Dataset/WellDataset_2019_12/images/Gadchiroli_Shankarnagar_20.491145_80.06100666999998_0.png 302,339,328,365,0
+../Dataset/WellDataset_2019_12/images/Gadchiroli_Shankarnagar_20.49586167_80.05384832999994_0.png 308,373,334,398,0
+../Dataset/WellDataset_2019_12/images/Gadchiroli_Vairagad_20.4294066_80.10484853000003_0.png 263,450,293,480,0
+../Dataset/WellDataset_2019_12/images/Gadchiroli_Vihirgaon_20.57187483_80.05188114999999_0.png 437,241,460,265,0 240,480,271,512,0
+../Dataset/WellDataset_2019_12/images/Gadchiroli_Wadsakala_20.01419667_80.42208167000001_0.png 326,347,356,377,0
+../Dataset/WellDataset_2019_12/images/Gadchiroli_Wadsakala_20.01419667_80.42208167000001_1.png 324,347,358,381,0
+../Dataset/WellDataset_2019_12/images/Gadchiroli_Wadsakala_20.01419667_80.42208167000001_2.png 328,350,353,376,0
+../Dataset/WellDataset_2019_12/images/Gondiya__20.86482857_80.46403228999998_0.png 358,375,385,402,0
+../Dataset/WellDataset_2019_12/images/Gondiya__21.24833134_80.60973480000007_0.png 328,384,349,406,0
+../Dataset/WellDataset_2019_12/images/Gondiya__21.31725845_79.91584499999999_0.png 309,314,330,334,0
+../Dataset/WellDataset_2019_12/images/Gondiya_Asordi_21.32405431_80.34748979999995_0.png 404,228,432,256,0 250,491,281,523,0
+../Dataset/WellDataset_2019_12/images/Gondiya_Chichtola_21.22560402_80.30805975999999_0.png 286,361,312,387,0
+../Dataset/WellDataset_2019_12/images/Gondiya_Fukimeta_21.32298065_80.34574425000005_0.png 394,281,415,302,0 417,396,437,415,0
+../Dataset/WellDataset_2019_12/images/Gondiya_Jamkhari_21.33466157_80.35203526999999_0.png 273,245,293,265,0
+../Dataset/WellDataset_2019_12/images/Gondiya_Khosetola_21.27437155_80.29644215999997_0.png 449,356,471,378,0
+../Dataset/WellDataset_2019_12/images/Gondiya_Khosetola_21.27555187_80.29512927999997_0.png 543,503,561,521,0
+../Dataset/WellDataset_2019_12/images/Gondiya_Nangtola_21.34388157_80.36160412999993_0.png 406,364,427,386,0
+../Dataset/WellDataset_2019_12/images/Hingoli__19.64839901_77.34118732000002_0.png 475,218,540,282,0 162,422,209,470,0
+../Dataset/WellDataset_2019_12/images/Hingoli__19.64990208_77.34212845000002_0.png 358,387,417,447,0
+../Dataset/WellDataset_2019_12/images/Hingoli__19.6500635_77.34730007000007_0.png 510,384,543,417,0 476,35,541,100,0 221,558,273,610,0
+../Dataset/WellDataset_2019_12/images/Hingoli__19.68471895_77.35499482_0.png 85,388,129,432,0 430,271,494,335,0
+../Dataset/WellDataset_2019_12/images/Hingoli__19.69145839_77.31137088000003_0.png 468,358,519,409,0
+../Dataset/WellDataset_2019_12/images/Hingoli__19.69212595_77.34438634999992_0.png 313,268,365,320,0
+../Dataset/WellDataset_2019_12/images/Hingoli__19.70941991_77.24761906999993_0.png 449,333,489,373,0
+../Dataset/WellDataset_2019_12/images/Hingoli__19.77477927_76.98788906999994_0.png 312,93,346,127,0 361,174,399,212,0 368,363,408,403,0 424,531,458,565,0
+../Dataset/WellDataset_2019_12/images/Hingoli__19.77610584_76.98245997000004_0.png 441,287,488,333,0
+../Dataset/WellDataset_2019_12/images/Hingoli__19.77617399_76.98230708999995_0.png 492,314,543,366,0
+../Dataset/WellDataset_2019_12/images/Hingoli__19.81693886_77.05928487999995_0.png 47,217,106,275,0 540,341,590,391,0
+../Dataset/WellDataset_2019_12/images/Hingoli__19.82706265_77.06990410999992_0.png 320,315,361,355,0
+../Dataset/WellDataset_2019_12/images/Hingoli_Arati_19.6360917_77.34593526000003_0.png 263,127,299,163,0 373,444,404,476,0
+../Dataset/WellDataset_2019_12/images/Hingoli_Bibgavhan_19.65255556_77.35275204000004_0.png 338,181,389,232,0
+../Dataset/WellDataset_2019_12/images/Hingoli_Bibgavhan_19.65424118_77.35313350000001_0.png 322,116,378,172,0 256,399,301,443,0
+../Dataset/WellDataset_2019_12/images/Hingoli_Bibgavhan_19.65645911_77.35489139000003_0.png 65,454,135,524,0 509,253,565,309,0
+../Dataset/WellDataset_2019_12/images/Hingoli_Bibgavhan_19.66008945_77.35848856000007_0.png 228,305,278,355,0
+../Dataset/WellDataset_2019_12/images/Hingoli_Bibgavhan_19.66061902_77.35556144999998_0.png 295,300,339,344,0
+../Dataset/WellDataset_2019_12/images/Hingoli_Bibgavhan_19.66163739_77.35550035999995_0.png 174,307,227,360,0 295,178,349,233,0
+../Dataset/WellDataset_2019_12/images/Hingoli_Chorjawala_19.83364748_77.07466140999998_0.png 384,445,422,482,0
+../Dataset/WellDataset_2019_12/images/Hingoli_Dhanora J._19.6952531_77.34138089999999_0.png 182,574,236,627,0 378,19,447,88,0
+../Dataset/WellDataset_2019_12/images/Hingoli_Digras_19.65658728_77.07586114000003_0.png 281,186,334,238,0 259,436,302,478,0
+../Dataset/WellDataset_2019_12/images/Hingoli_Digras K._19.65002642_77.07199306999996_0.png 57,52,111,106,0 369,87,434,153,0
+../Dataset/WellDataset_2019_12/images/Hingoli_Digras K._19.65230212_77.07270676000007_0.png 437,199,481,243,0 182,488,248,554,0
+../Dataset/WellDataset_2019_12/images/Hingoli_Digras K._19.65939309_77.07522676999997_0.png 534,345,569,380,0
+../Dataset/WellDataset_2019_12/images/Hingoli_Giroli_19.76219743_77.00700993999999_0.png 474,266,526,318,0
+../Dataset/WellDataset_2019_12/images/Hingoli_Giroli_19.76885864_76.99362581000003_0.png 555,540,588,573,0
+../Dataset/WellDataset_2019_12/images/Hingoli_Giroli_19.77103674_76.99199117_0.png 178,303,221,347,0 489,370,539,420,0
+../Dataset/WellDataset_2019_12/images/Hingoli_Jintur_19.77281791_76.98839600999997_0.png 189,337,228,376,0
+../Dataset/WellDataset_2019_12/images/Hingoli_Kalamnuri_19.68229424_77.31295804000001_0.png 241,197,330,285,0
+../Dataset/WellDataset_2019_12/images/Hingoli_Malegaon_19.64167828_77.34672512999998_0.png 337,49,383,95,0 180,109,243,173,0 44,265,105,325,0
+../Dataset/WellDataset_2019_12/images/Hingoli_Malhivara_19.8400375_77.16680541000005_0.png 129,157,200,228,0 412,387,469,443,0
+../Dataset/WellDataset_2019_12/images/Hingoli_Malselu_19.85555136_77.13053403999993_0.png 479,150,529,200,0 130,205,178,253,0 112,469,173,529,0
+../Dataset/WellDataset_2019_12/images/Hingoli_Malselu_19.85641163_77.13061952999999_0.png 99,549,147,597,0 448,496,495,544,0 116,42,166,92,0 279,233,330,285,0
+../Dataset/WellDataset_2019_12/images/Hingoli_Nandura_19.80426155_77.05741450000005_0.png 381,419,425,463,0 180,281,224,325,0
+../Dataset/WellDataset_2019_12/images/Hingoli_Nandura_19.80571765_77.05494150000004_0.png 64,228,113,278,0 512,454,567,510,0
+../Dataset/WellDataset_2019_12/images/Hingoli_Nandura_19.80690818_77.05306810000002_0.png 69,311,114,357,0 149,273,189,313,0 496,240,539,282,0
+../Dataset/WellDataset_2019_12/images/Hingoli_Narsi_19.73864758_77.01614730000006_0.png 64,230,133,298,0 470,228,523,280,0
+../Dataset/WellDataset_2019_12/images/Hingoli_Narsi_19.7445945_77.01454985999999_0.png 433,297,484,349,0
+../Dataset/WellDataset_2019_12/images/Hingoli_Narsi Namdev_19.76251857_77.00913537999998_0.png 352,406,389,442,0
+../Dataset/WellDataset_2019_12/images/Jalgaon__20.62720992_75.2332126_0.png 433,67,457,91,0 288,282,322,316,0
+../Dataset/WellDataset_2019_12/images/Jalgaon__20.79199985_75.03270199999997_0.png 400,493,434,527,0 273,411,311,449,0 299,309,329,339,0
+../Dataset/WellDataset_2019_12/images/Jalgaon__20.80253511_75.13252581999996_0.png 302,325,342,365,0
+../Dataset/WellDataset_2019_12/images/Jalgaon__20.80851559_75.06613345999995_0.png 65,479,97,511,0 264,319,298,353,0
+../Dataset/WellDataset_2019_12/images/Jalgaon__20.85137645_75.17355298999996_0.png 436,254,468,286,0 313,310,341,338,0
+../Dataset/WellDataset_2019_12/images/Jalgaon__20.97621408_75.95334738999998_0.png 428,220,462,254,0
+../Dataset/WellDataset_2019_12/images/Jalgaon__20.99473614_75.16937299000006_0.png 281,324,311,354,0
+../Dataset/WellDataset_2019_12/images/Jalgaon__21.0015755_75.16602298999999_0.png 293,341,339,387,0
+../Dataset/WellDataset_2019_12/images/Jalgaon__21.2752061_75.58111357000007_0.png 289,319,321,351,0
+../Dataset/WellDataset_2019_12/images/Jalgaon_Bilkhede_20.98522365_75.17952190999995_0.png 323,329,356,361,0
+../Dataset/WellDataset_2019_12/images/Jalgaon_Borkheda_21.0375513_76.29017632_0.png 364,517,397,551,0
+../Dataset/WellDataset_2019_12/images/Jalgaon_Devali_21.03677049_75.12018875000001_0.png 320,297,362,339,0
+../Dataset/WellDataset_2019_12/images/Jalgaon_Dheku Bk._20.9896114_75.15007295999999_0.png 266,143,315,193,0
+../Dataset/WellDataset_2019_12/images/Jalgaon_Dheku Khurd_20.99114596_75.16814780999994_0.png 446,414,482,450,0 440,119,481,160,0
+../Dataset/WellDataset_2019_12/images/Jalgaon_Dheku Khurd_20.99319838_75.1759475_0.png 271,327,321,377,0
+../Dataset/WellDataset_2019_12/images/Jalgaon_Galwade Bk._21.07217388_75.01039939999998_0.png 314,316,348,350,0
+../Dataset/WellDataset_2019_12/images/Jalgaon_Kurhe Kh._21.03926191_75.14271058999998_0.png 412,350,448,386,0
+../Dataset/WellDataset_2019_12/images/Jalgaon_Kurhe Kh._21.03930305_75.14355318000003_0.png 415,98,451,134,0 99,367,135,403,0 541,452,573,484,0
+../Dataset/WellDataset_2019_12/images/Jalgaon_Kurhe Kh._21.03937131_75.14397368999994_0.png 386,475,422,511,0 262,130,292,160,0
+../Dataset/WellDataset_2019_12/images/Jalgaon_Kurhe Kh._21.03937228_75.15045136000003_0.png 271,297,304,329,0
+../Dataset/WellDataset_2019_12/images/Jalgaon_Kurhe Kh._21.03955211_75.14330182999993_0.png 512,201,544,233,0 196,472,224,500,0
+../Dataset/WellDataset_2019_12/images/Jalgaon_Kurhe Kh._21.04020705_75.14517152999997_0.png 237,370,265,398,0
+../Dataset/WellDataset_2019_12/images/Jalgaon_Kurhe Kh._21.04618319_75.14158565000002_0.png 278,274,311,308,0
+../Dataset/WellDataset_2019_12/images/Jalgaon_Lon Kh._21.09282513_74.93200589000003_0.png 283,379,314,411,0
+../Dataset/WellDataset_2019_12/images/Jalgaon_Pimpale Bk._21.03201844_74.99626386_0.png 291,349,322,381,0
+../Dataset/WellDataset_2019_12/images/Jalgaon_Pimpale Bk._21.03535317_75.00369052999997_0.png 292,299,324,331,0
+../Dataset/WellDataset_2019_12/images/Jalgaon_Pimpalgaon Bk._20.61039704_75.51067_0.png 303,349,344,391,0
+../Dataset/WellDataset_2019_12/images/Jalgaon_Rajuri Bk._20.62246915_75.44826222000006_0.png 384,407,419,442,0
+../Dataset/WellDataset_2019_12/images/Jalgaon_Rajuri Kh._20.62569111_75.45139361999998_0.png 349,361,390,403,0
+../Dataset/WellDataset_2019_12/images/Jalgaon_Sawade Pr. Chandsar_20.96538566_75.45453041999997_0.png 242,238,282,278,0
+../Dataset/WellDataset_2019_12/images/Jalgaon_Shirsode_20.8884943_75.03529788000003_0.png 376,352,423,400,0 259,71,296,107,0
+../Dataset/WellDataset_2019_12/images/Jalgaon_Susari_20.98774062_75.89440620999994_0.png 537,284,583,330,0
+../Dataset/WellDataset_2019_12/images/Jalgaon_Takarkhede_21.03700886_75.18391803999998_0.png 340,276,371,306,0 169,478,206,514,0
+../Dataset/WellDataset_2019_12/images/Jalgaon_Takarkhede_21.03994669_75.16727794999997_0.png 535,341,557,363,0 293,330,325,362,0
+../Dataset/WellDataset_2019_12/images/Jalgaon_Takarkhede_21.04317027_75.16859693000004_0.png 155,439,190,473,0
+../Dataset/WellDataset_2019_12/images/Jalgaon_Talonde Pr. Dehere_20.47164424_74.85316654000007_0.png 108,487,155,534,0 527,342,571,386,0
+../Dataset/WellDataset_2019_12/images/Jalgaon_Vaghode_21.0253299_74.99728841000001_0.png 287,354,312,380,0
+../Dataset/WellDataset_2019_12/images/Jalgaon_Vyavhardal_21.01154653_75.17759969999997_0.png 300,294,330,324,0
+../Dataset/WellDataset_2019_12/images/Jalgaon_Walwadi Bk._20.71369833_75.20515499999999_0.png 395,350,428,384,0
+../Dataset/WellDataset_2019_12/images/Jalgaon_Walwadi Bk._20.723245_75.19939833000001_0.png 276,321,314,359,0
+../Dataset/WellDataset_2019_12/images/Jalgaon_Walwadi Kh._20.72170798_75.19749262999994_0.png 355,287,406,339,0
+../Dataset/WellDataset_2019_12/images/Jalna__19.5425528_76.25436437000008_0.png 90,284,127,322,0 360,410,395,446,0
+../Dataset/WellDataset_2019_12/images/Jalna__19.55026115_76.23396972_0.png 341,113,373,145,0 291,339,332,381,0
+../Dataset/WellDataset_2019_12/images/Jalna__19.70454026_76.39557308000008_0.png 289,330,316,357,0
+../Dataset/WellDataset_2019_12/images/Jalna__20.09381167_75.85157666999999_0.png 522,201,562,241,0 307,314,341,348,0 88,424,129,466,0
+../Dataset/WellDataset_2019_12/images/Jalna__20.10065_75.85489000000007_0.png 177,396,218,438,0
+../Dataset/WellDataset_2019_12/images/Jalna__20.12115116_75.97181058000001_0.png 378,505,416,543,0 313,239,345,271,0
+../Dataset/WellDataset_2019_12/images/Jalna__20.27547771_75.70173446000001_0.png 305,294,337,326,0 378,381,422,425,0
+../Dataset/WellDataset_2019_12/images/Jalna__20.28686464_75.71455985_0.png 86,345,120,379,0 435,287,469,321,0
+../Dataset/WellDataset_2019_12/images/Jalna__20.29196287_75.70062729999995_0.png 241,175,273,207,0 289,304,321,336,0
+../Dataset/WellDataset_2019_12/images/Jalna__20.29470615_75.70444416999999_0.png 237,280,267,310,0 290,315,328,353,0
+../Dataset/WellDataset_2019_12/images/Jalna__20.31114945_75.75559303_0.png 170,77,194,101,0 426,103,450,127,0 213,438,247,472,0 130,578,160,608,0
+../Dataset/WellDataset_2019_12/images/Jalna__20.48002417_75.89312687000006_0.png 409,67,437,95,0 268,442,290,464,0 280,544,299,562,0
+../Dataset/WellDataset_2019_12/images/Jalna_Bachegaon_19.49460021_75.91204990000006_0.png 408,178,439,209,0 381,352,416,387,0
+../Dataset/WellDataset_2019_12/images/Jalna_Ibrahimpur_20.25283536_75.72964867999997_0.png 731,-188,768,-152,0 -232,-91,-193,-53,0 -197,127,-163,161,0 476,88,505,117,0 255,435,303,483,0
+../Dataset/WellDataset_2019_12/images/Jalna_Ibrahimpur_20.25345421_75.72771201_0.png 525,372,563,410,0 488,153,526,191,0 138,424,178,464,0 93,535,128,569,0
+../Dataset/WellDataset_2019_12/images/Jalna_Khandvi_19.53559969_76.25765442_0.png 275,236,306,266,0
+../Dataset/WellDataset_2019_12/images/Jalna_Khandvi_19.53876221_76.25761936000004_0.png 491,163,523,195,0 95,77,130,111,0
+../Dataset/WellDataset_2019_12/images/Jalna_Khandvi_19.53877167_76.25827860000004_0.png 243,163,278,199,0
+../Dataset/WellDataset_2019_12/images/Jalna_Khandvi_19.53932843_76.25900337999997_0.png 554,320,593,358,0
+../Dataset/WellDataset_2019_12/images/Jalna_Khandvi_19.53936382_76.25722558999996_0.png 242,318,275,350,0
+../Dataset/WellDataset_2019_12/images/Jalna_Khandvi_19.53955437_76.25658539999995_0.png 481,392,512,424,0
+../Dataset/WellDataset_2019_12/images/Jalna_Khandvi_19.53964538_76.25996108000004_0.png 196,445,237,487,0
+../Dataset/WellDataset_2019_12/images/Jalna_Khedgaon_19.7317583_75.69723470999998_0.png 536,174,564,202,0 218,406,253,440,0
+../Dataset/WellDataset_2019_12/images/Jalna_Lingewadi_20.22916531_75.83503159999998_0.png 123,145,161,184,0 141,30,181,70,0 266,201,314,248,0 474,207,510,243,0
+../Dataset/WellDataset_2019_12/images/Jalna_Malkheda_20.2745361_75.70395052999993_0.png 223,289,255,321,0 271,204,313,246,0 251,526,291,566,0
+../Dataset/WellDataset_2019_12/images/Jalna_Muthad_20.26365808_75.72474331000001_0.png 366,354,401,388,0
+../Dataset/WellDataset_2019_12/images/Jalna_Naigaon P. Se_19.8435226_76.33109996000007_0.png 48,575,88,615,0 216,178,254,216,0
+../Dataset/WellDataset_2019_12/images/Jalna_Palaskheda Pimpale_20.11012041_75.91689494000002_0.png 262,315,302,353,0
+../Dataset/WellDataset_2019_12/images/Jalna_Palaskheda Pimpale_20.11228105_75.91599450000001_0.png 312,205,346,239,0
+../Dataset/WellDataset_2019_12/images/Jalna_Palaskheda Thombari_20.09687167_75.84110667000004_0.png 290,304,330,344,0 264,356,293,384,0 148,431,185,467,0
+../Dataset/WellDataset_2019_12/images/Jalna_Palaskheda Thombari_20.09955529_75.84162967999998_0.png 175,191,214,229,0
+../Dataset/WellDataset_2019_12/images/Jalna_Palaskheda Thombari_20.10207946_75.83983804000002_0.png 538,233,574,269,0 336,366,377,406,0 156,261,193,299,0
+../Dataset/WellDataset_2019_12/images/Jalna_Palaskheda Thombari_20.10240902_75.84081833000005_0.png 174,364,206,396,0
+../Dataset/WellDataset_2019_12/images/Jalna_Palaskheda Thombari_20.10347167_75.85112333000006_0.png 271,302,306,338,0 339,438,369,468,0
+../Dataset/WellDataset_2019_12/images/Jalna_Pewa_19.78649101_76.44101992000003_0.png 420,317,454,351,0 568,425,606,463,0
+../Dataset/WellDataset_2019_12/images/Jalna_Pewa_19.78843214_76.4420179_0.png 297,316,335,354,0
+../Dataset/WellDataset_2019_12/images/Jalna_Sirasgaon_19.52090295_76.23115517999997_0.png 290,89,327,125,0 279,529,315,565,0
+../Dataset/WellDataset_2019_12/images/Jalna_Wadhod tangda_20.48649174_75.89026022000007_0.png 236,544,262,570,0 136,248,161,272,0 385,249,415,279,0
+../Dataset/WellDataset_2019_12/images/Jalna_Wadhona_20.05685599_76.01524781_0.png 241,551,291,601,0
+../Dataset/WellDataset_2019_12/images/Jalna_Wadi Bk._20.31613394_75.7655691_0.png 134,438,168,472,0
+../Dataset/WellDataset_2019_12/images/Kolhapur__16.90147392_73.93490895000002_0.png 392,354,432,393,0
+../Dataset/WellDataset_2019_12/images/Kolhapur_Alate_16.77461397_74.40335903999994_0.png 82,52,120,90,0
+../Dataset/WellDataset_2019_12/images/Kolhapur_Jakhale_16.83562414_74.20434413999999_0.png 355,199,413,257,0 110,245,153,288,0
+../Dataset/WellDataset_2019_12/images/Kolhapur_Jakhale_16.83570667_74.20442500000001_0.png 72,275,121,323,0
+../Dataset/WellDataset_2019_12/images/Kolhapur_Kekhale_16.83484004_74.19416924000006_0.png 317,251,364,299,0 146,449,186,489,0
+../Dataset/WellDataset_2019_12/images/Kolhapur_Kekhale_16.83492424_74.19396312000003_0.png 223,484,261,522,0 396,291,436,331,0
+../Dataset/WellDataset_2019_12/images/Kolhapur_Kekhale_16.835335_74.19376999999997_0.png 467,450,508,490,0
+../Dataset/WellDataset_2019_12/images/Kolhapur_Khatangale_16.67190687_74.08054628000002_0.png 452,202,489,238,0 373,381,427,435,0 241,338,282,380,0 68,113,109,155,0
+../Dataset/WellDataset_2019_12/images/Kolhapur_Pimpalwadi_16.4941626_74.08559893999995_0.png 168,290,199,322,0
+../Dataset/WellDataset_2019_12/images/Kolhapur_Tekoli_16.89753705_73.91701917_0.png 498,443,535,480,0
+../Dataset/WellDataset_2019_12/images/Latur__18.12627792_76.58652617999996_0.png 126,66,176,117,0
+../Dataset/WellDataset_2019_12/images/Latur__18.28247211_77.12724213000001_0.png 441,277,488,323,0
+../Dataset/WellDataset_2019_12/images/Latur_Ambegaon_18.60918239_77.00758943000005_0.png 248,323,290,365,0
+../Dataset/WellDataset_2019_12/images/Latur_Atnoor_18.53453799_77.25771459999999_0.png 48,396,86,434,0
+../Dataset/WellDataset_2019_12/images/Latur_Atnoor_18.53819386_77.26036266000006_0.png 125,152,206,233,0
+../Dataset/WellDataset_2019_12/images/Latur_Dhondihipparga_18.33143487_77.18506695999997_0.png 293,271,329,307,0
+../Dataset/WellDataset_2019_12/images/Latur_Jagalpur Bk._18.63602557_77.07582509999997_0.png 299,163,355,219,0
+../Dataset/WellDataset_2019_12/images/Latur_Latur_18.40424333_76.56560958_0.png 508,496,578,566,0
+../Dataset/WellDataset_2019_12/images/Latur_Rawnkola_18.59257076_77.26375196999993_0.png 330,343,387,399,0
+../Dataset/WellDataset_2019_12/images/Latur_Satala Bk_18.36786586_76.93329305999998_0.png 99,274,155,330,0 515,451,583,520,0
+../Dataset/WellDataset_2019_12/images/Nagpur__21.0643434_78.78010444000006_0.png 428,292,460,323,0
+../Dataset/WellDataset_2019_12/images/Nagpur__21.37682827_78.64605112999993_0.png 299,295,334,330,0
+../Dataset/WellDataset_2019_12/images/Nagpur_Chikhali_21.11269573_78.62836744000003_0.png 380,131,418,169,0
+../Dataset/WellDataset_2019_12/images/Nagpur_Khandala[Bk]_21.38981286_78.56248329999994_0.png 270,409,294,432,0 523,254,557,289,0
+../Dataset/WellDataset_2019_12/images/Nagpur_Kharsoli_21.0416389_79.10963566999999_0.png 432,297,459,325,0 389,420,417,448,0
+../Dataset/WellDataset_2019_12/images/Nagpur_Nawegaon_21.02589659_79.14098753000007_0.png 113,273,140,300,0 536,245,567,277,0 455,512,482,538,0
+../Dataset/WellDataset_2019_12/images/Nagpur_Pendhari_20.97428166_79.16144678_0.png 409,440,454,485,0
+../Dataset/WellDataset_2019_12/images/Nagpur_Satnavari_21.13228167_78.807185_0.png 406,347,432,373,0
+../Dataset/WellDataset_2019_12/images/Nagpur_Sonegaon_21.26627522_78.45750051000005_0.png 272,158,290,175,0 326,163,344,181,0
+../Dataset/WellDataset_2019_12/images/Nagpur_Sonoli_21.36779016_78.60526768_0.png 206,446,239,479,0
+../Dataset/WellDataset_2019_12/images/Nagpur_Sonoli_21.36848419_78.60303352000005_0.png 344,296,379,331,0
+../Dataset/WellDataset_2019_12/images/Nanded__18.32157966_77.37911110999994_0.png 332,223,390,281,0
+../Dataset/WellDataset_2019_12/images/Nanded__18.39932769_77.50826086000006_0.png 168,376,212,420,0
+../Dataset/WellDataset_2019_12/images/Nanded__18.39932769_77.50826086000006_1.png 168,376,212,420,0
+../Dataset/WellDataset_2019_12/images/Nanded__18.40400431_77.51026133999994_0.png 246,354,304,412,0
+../Dataset/WellDataset_2019_12/images/Nanded__18.40574137_77.4992158_0.png 522,351,582,411,0
+../Dataset/WellDataset_2019_12/images/Nanded__18.61532633_77.29232681999997_0.png 228,396,288,456,0
+../Dataset/WellDataset_2019_12/images/Nanded__18.95786851_77.77206366999997_0.png 329,316,370,356,0
+../Dataset/WellDataset_2019_12/images/Nanded__18.98853309_77.61872629000004_0.png 160,80,215,134,0 281,382,325,426,0
+../Dataset/WellDataset_2019_12/images/Nanded__19.0777284_77.77646835999997_0.png 290,435,331,475,0
+../Dataset/WellDataset_2019_12/images/Nanded__19.10526667_77.47748333000004_0.png 421,194,463,236,0
+../Dataset/WellDataset_2019_12/images/Nanded__19.17676322_77.21444881000002_0.png 401,364,455,418,0
+../Dataset/WellDataset_2019_12/images/Nanded__19.1805575_77.22563730000002_0.png 346,161,373,187,0 278,349,315,387,0
+../Dataset/WellDataset_2019_12/images/Nanded__19.18813463_77.21465215_0.png 458,275,495,311,0 504,403,548,447,0 223,348,257,382,0
+../Dataset/WellDataset_2019_12/images/Nanded__19.28072287_77.27905290000001_0.png 337,366,388,418,0
+../Dataset/WellDataset_2019_12/images/Nanded__19.29644326_77.27551231000007_0.png 110,164,136,190,0
+../Dataset/WellDataset_2019_12/images/Nanded__19.30741684_77.26201104000006_0.png 400,337,442,378,0
+../Dataset/WellDataset_2019_12/images/Nanded__19.32610579_77.78485863000003_0.png 254,308,309,362,0
+../Dataset/WellDataset_2019_12/images/Nanded__19.33363104_77.37878374000002_0.png 315,233,354,271,0
+../Dataset/WellDataset_2019_12/images/Nanded__19.3383437_77.65240992999998_0.png 281,292,317,328,0
+../Dataset/WellDataset_2019_12/images/Nanded__19.44165525_77.56204847999993_0.png 319,361,368,409,0
+../Dataset/WellDataset_2019_12/images/Nanded__19.44465007_77.51957507999998_0.png 302,277,336,311,0
+../Dataset/WellDataset_2019_12/images/Nanded__19.60737975_77.47730909000006_0.png 322,299,363,341,0
+../Dataset/WellDataset_2019_12/images/Nanded__19.87493059_78.08589376999998_0.png 354,296,389,330,0
+../Dataset/WellDataset_2019_12/images/Nanded__19.87638257_78.09414778999997_0.png 321,295,366,341,0
+../Dataset/WellDataset_2019_12/images/Nanded_Amrapur_19.24667373_77.40154232999998_0.png 432,492,476,536,0 494,292,535,333,0 404,236,446,278,0 171,164,217,211,0
+../Dataset/WellDataset_2019_12/images/Nanded_Chinchordi_19.36534833_77.92315667000003_0.png 334,284,368,318,0
+../Dataset/WellDataset_2019_12/images/Nanded_Chinchordi_19.37120667_77.92434000000003_0.png 314,271,356,313,0
+../Dataset/WellDataset_2019_12/images/Nanded_Dhawaji Tanda_19.82902865_78.13472449000005_0.png 327,293,365,331,0
+../Dataset/WellDataset_2019_12/images/Nanded_Dudhad_19.31812352_77.82879980000007_0.png 247,363,292,409,0
+../Dataset/WellDataset_2019_12/images/Nanded_Dudhad_19.33201038_77.82090403000007_0.png 330,314,365,348,0
+../Dataset/WellDataset_2019_12/images/Nanded_Ekdhari_19.37371333_77.91666499999997_0.png 253,266,299,312,0
+../Dataset/WellDataset_2019_12/images/Nanded_Kamtha Bk_19.27760782_77.31524564000006_0.png 343,321,385,364,0
+../Dataset/WellDataset_2019_12/images/Nanded_Khadki_19.27187491_77.32517912000003_0.png 403,386,435,418,0
+../Dataset/WellDataset_2019_12/images/Nanded_Kinitanda_18.40506199_77.49364474999993_0.png 139,261,195,317,0 233,446,288,500,0
+../Dataset/WellDataset_2019_12/images/Nanded_Kot Bazar_18.89237639_77.24434618999999_0.png 86,363,130,407,0 112,254,161,302,0
+../Dataset/WellDataset_2019_12/images/Nanded_Loni Kh._19.28177002_77.42362988000002_0.png 112,520,146,554,0 301,281,333,313,0
+../Dataset/WellDataset_2019_12/images/Nanded_Nagmarpalli_18.30863785_77.52315477000002_0.png 90,370,140,420,0
+../Dataset/WellDataset_2019_12/images/Nanded_Navandi_18.80651333_77.43957999999998_0.png 263,376,314,426,0
+../Dataset/WellDataset_2019_12/images/Nanded_Pangri_18.978929_77.73455343_0.png 306,323,361,379,0
+../Dataset/WellDataset_2019_12/images/Nanded_Pangri_19.37153517_77.59193478999998_0.png 223,178,256,210,0
+../Dataset/WellDataset_2019_12/images/Nanded_Pomnala_19.19399778_77.72780915999999_0.png 269,308,313,352,0
+../Dataset/WellDataset_2019_12/images/Nanded_Sawargaon_19.09878913_77.64943520999998_0.png 422,495,459,531,0
+../Dataset/WellDataset_2019_12/images/Nanded_Somthana P.U._19.05778378_77.67923631999997_0.png 202,487,248,533,0
+../Dataset/WellDataset_2019_12/images/Nanded_Somur_18.33723331_77.48816095000006_0.png 210,302,254,346,0
+../Dataset/WellDataset_2019_12/images/Nanded_Sonari_19.35686557_77.78665955999998_0.png 275,302,320,348,0
+../Dataset/WellDataset_2019_12/images/Nanded_Takalgaon_19.07348751_77.34190510999997_0.png 225,151,279,205,0 341,409,395,463,0
+../Dataset/WellDataset_2019_12/images/Nanded_Takarala_19.30029859_77.71497195000006_0.png 1,196,37,232,0 305,333,351,379,0
+../Dataset/WellDataset_2019_12/images/Nanded_Talni_19.62412202_77.52666219000002_0.png 287,346,313,372,0 325,314,353,342,0
+../Dataset/WellDataset_2019_12/images/Nanded_Umra_19.85516359_77.98626267999998_0.png 446,123,489,165,0 243,478,286,522,0
+../Dataset/WellDataset_2019_12/images/Nandurbar__21.22592349_74.01624977000006_0.png 428,246,457,275,0 421,361,451,392,0
+../Dataset/WellDataset_2019_12/images/Nandurbar__21.27096641_74.06227934999993_0.png 342,312,383,354,0
+../Dataset/WellDataset_2019_12/images/Nandurbar__21.32654232_74.37413904000005_0.png 284,340,316,372,0
+../Dataset/WellDataset_2019_12/images/Nandurbar__21.33559578_74.47086321000006_0.png 538,486,571,520,0 535,300,568,332,0
+../Dataset/WellDataset_2019_12/images/Nandurbar__21.35028032_74.32087447000004_0.png 430,351,464,385,0 289,307,325,343,0
+../Dataset/WellDataset_2019_12/images/Nandurbar__21.38028593_74.13201898_0.png 291,307,327,343,0
+../Dataset/WellDataset_2019_12/images/Nandurbar__21.46537896_74.55677880999997_0.png 281,226,316,262,0 108,32,139,63,0
+../Dataset/WellDataset_2019_12/images/Nandurbar__21.482005_74.56411832999993_0.png 329,383,351,405,0
+../Dataset/WellDataset_2019_12/images/Nandurbar__21.50757073_74.60833773000002_0.png 462,377,512,427,0
+../Dataset/WellDataset_2019_12/images/Nandurbar__21.61413308_74.58978038999999_0.png 553,377,585,409,0 296,281,337,323,0
+../Dataset/WellDataset_2019_12/images/Nandurbar__21.62166594_74.59720553_0.png 148,115,192,159,0 285,301,329,345,0
+../Dataset/WellDataset_2019_12/images/Nandurbar__21.63361814_74.60510142999999_0.png 117,182,158,224,0 295,167,331,203,0
+../Dataset/WellDataset_2019_12/images/Nandurbar__21.65002406_74.24248338000007_0.png 299,313,331,345,0
+../Dataset/WellDataset_2019_12/images/Nandurbar__21.7301147_73.93290780000007_0.png 317,326,347,356,0 103,361,136,393,0
+../Dataset/WellDataset_2019_12/images/Nandurbar__21.7594406_73.96049579999999_0.png 275,326,299,350,0
+../Dataset/WellDataset_2019_12/images/Nandurbar__21.80187971_74.25107866000008_0.png 329,385,358,414,0
+../Dataset/WellDataset_2019_12/images/Nandurbar_Bhagdari_21.80581449_74.01340708999999_0.png 155,217,181,243,0
+../Dataset/WellDataset_2019_12/images/Nandurbar_Borzar_21.02443019_73.84284576999994_0.png 276,329,308,361,0
+../Dataset/WellDataset_2019_12/images/Nandurbar_Gadwani_21.7103351_74.08966132_0.png 416,287,450,321,0
+../Dataset/WellDataset_2019_12/images/Nandurbar_Gadwani_21.71634854_74.10212142_0.png 66,546,121,602,0
+../Dataset/WellDataset_2019_12/images/Nandurbar_Gadwani_21.71949359_74.07648270999994_0.png 322,374,362,414,0 509,426,546,463,0
+../Dataset/WellDataset_2019_12/images/Nandurbar_Gadwani_21.71972525_74.09947106000004_0.png 469,452,503,486,0
+../Dataset/WellDataset_2019_12/images/Nandurbar_Gadwani_21.71985279_74.08224111000004_0.png 484,321,530,367,0
+../Dataset/WellDataset_2019_12/images/Nandurbar_Gadwani_21.72257215_74.10035203999996_0.png 154,320,188,354,0 395,342,438,384,0
+../Dataset/WellDataset_2019_12/images/Nandurbar_Hol T. Ranale_21.37911568_74.40725146_0.png 38,465,79,507,0 463,262,497,296,0
+../Dataset/WellDataset_2019_12/images/Nandurbar_Jaavade-t-haveli_21.64663167_74.64794499999994_0.png 394,269,439,315,0
+../Dataset/WellDataset_2019_12/images/Nandurbar_Kalambu_21.4751099_74.55651038999997_0.png 343,184,388,228,0
+../Dataset/WellDataset_2019_12/images/Nandurbar_Kalambu_21.48054832_74.54520035999997_0.png 545,450,572,478,0 299,350,334,386,0
+../Dataset/WellDataset_2019_12/images/Nandurbar_Kanjala_21.81210704_74.02968198999997_0.png 417,244,445,272,0
+../Dataset/WellDataset_2019_12/images/Nandurbar_Kanjala_21.81328383_74.02951110999993_0.png 261,289,291,319,0
+../Dataset/WellDataset_2019_12/images/Nandurbar_Kanjala_21.82179159_74.02521989000002_0.png 264,195,286,217,0
+../Dataset/WellDataset_2019_12/images/Nandurbar_Kanjala_21.82271447_74.03582000000006_0.png 249,278,287,316,0
+../Dataset/WellDataset_2019_12/images/Nandurbar_Kolde_21.15114766_73.88411617999998_0.png 240,357,290,407,0
+../Dataset/WellDataset_2019_12/images/Nandurbar_Malpur_21.41289002_74.06532351999999_0.png 293,354,340,402,0
+../Dataset/WellDataset_2019_12/images/Nandurbar_Panbari_21.73741333_74.12348167000005_0.png 558,209,584,235,0
+../Dataset/WellDataset_2019_12/images/Nandurbar_Raipur_21.0623685_73.84278770000003_0.png 323,346,343,366,0
+../Dataset/WellDataset_2019_12/images/Nandurbar_Rajale_21.27442276_74.41306143999998_0.png 86,68,127,109,0 449,121,476,149,0 303,467,346,511,0
+../Dataset/WellDataset_2019_12/images/Nandurbar_Sawakheda_21.57398206_74.54515156000002_0.png 351,345,379,373,0
+../Dataset/WellDataset_2019_12/images/Nandurbar_Shrikhed_21.64612481_74.60526228999993_0.png 86,324,121,359,0
+../Dataset/WellDataset_2019_12/images/Nandurbar_Ukalapani_21.03410955_73.84204731_0.png 441,212,473,244,0 202,397,232,427,0
+../Dataset/WellDataset_2019_12/images/Nashik__19.94338864_74.02230815000007_0.png 109,20,146,56,0 580,415,614,449,0
+../Dataset/WellDataset_2019_12/images/Nashik__19.94422973_74.00174084000002_0.png 424,471,452,500,0 164,421,205,463,0 112,420,143,451,0 169,110,207,149,0 337,247,378,289,0
+../Dataset/WellDataset_2019_12/images/Nashik__19.95253939_74.04489653999997_0.png 572,260,609,297,0 303,336,341,374,0 18,461,55,497,0
+../Dataset/WellDataset_2019_12/images/Nashik__19.95601551_74.04655359999992_0.png 390,350,418,378,0
+../Dataset/WellDataset_2019_12/images/Nashik__19.98306833_74.05549270000006_0.png 235,129,265,159,0 439,160,472,194,0
+../Dataset/WellDataset_2019_12/images/Nashik__19.98478156_74.07343294999998_0.png 290,223,321,254,0
+../Dataset/WellDataset_2019_12/images/Nashik__20.091732_73.42128709999997_0.png 435,441,473,479,0
+../Dataset/WellDataset_2019_12/images/Nashik__20.16772282_73.79745968999998_0.png 116,74,150,107,0 318,246,342,270,0 269,283,296,310,0 274,482,309,518,0
+../Dataset/WellDataset_2019_12/images/Nashik__20.36963047_73.68034409999996_0.png 504,238,534,268,0 312,293,340,321,0
+../Dataset/WellDataset_2019_12/images/Nashik__20.4347721_74.15577170000006_0.png 572,378,601,407,0 442,566,492,617,0 413,457,444,488,0 364,526,395,557,0 242,352,268,378,0 426,298,463,335,0 164,216,189,241,0 232,25,265,58,0 443,30,465,51,0
+../Dataset/WellDataset_2019_12/images/Nashik__20.44320105_74.59281479000003_0.png 539,319,573,353,0 392,422,422,451,0
+../Dataset/WellDataset_2019_12/images/Nashik__20.518505_74.15698167000005_0.png 336,338,370,372,0
+../Dataset/WellDataset_2019_12/images/Nashik__20.51887357_73.76567324999996_0.png 552,364,575,388,0 101,407,139,445,0 279,358,314,393,0
+../Dataset/WellDataset_2019_12/images/Nashik__20.52972428_74.13257489_0.png 315,305,339,329,0
+../Dataset/WellDataset_2019_12/images/Nashik__20.5444664_74.14091256999995_0.png 338,470,368,500,0 286,310,320,344,0
+../Dataset/WellDataset_2019_12/images/Nashik__20.56018667_74.11526333000006_0.png 341,457,375,491,0
+../Dataset/WellDataset_2019_12/images/Nashik_Chinchale Khair_19.71731638_73.50636516999998_0.png 352,397,386,431,0
+../Dataset/WellDataset_2019_12/images/Nashik_Chinchale Khair_19.72567767_73.50675558_0.png 422,350,451,379,0
+../Dataset/WellDataset_2019_12/images/Nashik_Chinchave_20.36532444_74.31726831000003_0.png 303,251,330,279,0
+../Dataset/WellDataset_2019_12/images/Nashik_Chinchave_20.37958627_74.34448864000001_0.png 267,363,294,391,0 375,420,411,456,0 412,201,446,235,0 465,69,505,109,0
+../Dataset/WellDataset_2019_12/images/Nashik_Daregaonwani_20.42094515_73.87580725999999_0.png 411,271,445,305,0 308,382,336,410,0
+../Dataset/WellDataset_2019_12/images/Nashik_Deola_20.4400328_74.15694710000002_0.png 298,332,324,358,0
+../Dataset/WellDataset_2019_12/images/Nashik_Deothan_20.337865_73.70506999999998_0.png 322,289,352,319,0
+../Dataset/WellDataset_2019_12/images/Nashik_Dongargaon_20.46347777_74.35135233999995_0.png 308,326,331,348,0
+../Dataset/WellDataset_2019_12/images/Nashik_Dongargaon_20.46510359_74.34885413999996_0.png 495,180,520,204,0 317,300,350,332,0
+../Dataset/WellDataset_2019_12/images/Nashik_Dongarshet_20.19233946_73.48003951999999_0.png 403,162,439,198,0 486,335,519,369,0 480,451,517,487,0 284,211,316,243,0
+../Dataset/WellDataset_2019_12/images/Nashik_Galwad_20.4767158_73.58166237_0.png 399,244,436,280,0 211,417,256,463,0
+../Dataset/WellDataset_2019_12/images/Nashik_Gigaon_20.55372607_74.62119538000002_0.png 387,221,423,257,0 289,448,336,495,0
+../Dataset/WellDataset_2019_12/images/Nashik_Hanmantpada_20.39378629_74.04618856000002_0.png 245,285,273,313,0 41,537,67,563,0
+../Dataset/WellDataset_2019_12/images/Nashik_Jamale_20.42552713_73.79274207000003_0.png 283,318,321,356,0
+../Dataset/WellDataset_2019_12/images/Nashik_Kharde_20.42771676_74.09928377000006_0.png 234,341,269,375,0 283,464,322,503,0
+../Dataset/WellDataset_2019_12/images/Nashik_Khoripada_20.41979131_73.80957134000005_0.png 338,328,373,362,0
+../Dataset/WellDataset_2019_12/images/Nashik_Kundane Kanashi_20.45213119_73.90854625999998_0.png 309,294,344,328,0
+../Dataset/WellDataset_2019_12/images/Nashik_Maidara Dhanoshi_19.66548942_73.78533763999997_0.png 98,254,146,302,0 316,357,349,390,0
+../Dataset/WellDataset_2019_12/images/Nashik_Nimbale_20.23950817_74.32988522000005_0.png 592,113,634,155,0 512,523,550,561,0 122,252,155,284,0 350,413,386,449,0
+../Dataset/WellDataset_2019_12/images/Nashik_Nimbale_20.24528167_74.33227999999997_0.png 376,296,421,342,0
+../Dataset/WellDataset_2019_12/images/Nashik_Rasegaon_20.14366061_73.75231638000002_0.png 432,104,461,132,0 106,565,142,601,0 71,73,108,110,0
+../Dataset/WellDataset_2019_12/images/Nashik_Rasegaon_20.14597102_73.75188677000006_0.png 490,33,527,71,0
+../Dataset/WellDataset_2019_12/images/Nashik_Sangavi_20.39794355_74.34674867000001_0.png 602,305,628,330,0 324,219,358,253,0 316,383,343,410,0 42,539,69,566,0
+../Dataset/WellDataset_2019_12/images/Nashik_Savaki Lohoner_20.52120163_74.15150812000002_0.png 229,276,257,304,0
+../Dataset/WellDataset_2019_12/images/Nashik_Sayane Bk_20.56268062_74.60767819_0.png 298,239,339,281,0
+../Dataset/WellDataset_2019_12/images/Nashik_Shirsondi_20.42910046_74.41456018999997_0.png 214,242,247,274,0
+../Dataset/WellDataset_2019_12/images/Nashik_Shrirampur_19.98221612_74.07767055_0.png 385,306,421,342,0
+../Dataset/WellDataset_2019_12/images/Nashik_Shrirampur_20.4377584_74.21117645999993_0.png 330,107,358,135,0 372,243,394,265,0 105,551,133,579,0 240,461,266,487,0
+../Dataset/WellDataset_2019_12/images/Nashik_Talegaon Dindori_20.1348676_73.82185221999998_0.png 207,494,232,520,0 362,123,392,153,0 101,526,131,556,0 274,239,318,283,0
+../Dataset/WellDataset_2019_12/images/Nashik_Talegaon Dindori_20.13560323_73.80831712999998_0.png 108,457,137,485,0 39,444,91,496,0 276,329,312,365,0
+../Dataset/WellDataset_2019_12/images/Nashik_Talwade_19.94802885_74.04688680000004_0.png 369,403,405,439,0
+../Dataset/WellDataset_2019_12/images/Nashik_Umbarpada Digar_20.4488735_73.76450833000001_0.png 7,576,36,604,0 305,286,338,318,0 555,228,590,262,0
+../Dataset/WellDataset_2019_12/images/Nashik_Wasali_19.62990788_73.73509194999997_0.png 309,450,347,488,0
+../Dataset/WellDataset_2019_12/images/Nashik_Wasali_19.64583587_73.73287381_0.png 135,580,163,608,0 52,122,102,172,0 427,85,464,122,0 544,401,581,438,0
+../Dataset/WellDataset_2019_12/images/Palghar__19.69933577_73.21884922000004_0.png 321,357,345,381,0
+../Dataset/WellDataset_2019_12/images/Palghar__19.69937617_73.21925154999997_0.png 170,373,197,399,0
+../Dataset/WellDataset_2019_12/images/Palghar__19.7401385_73.41911476999996_0.png 345,531,379,565,0 350,433,386,469,0
+../Dataset/WellDataset_2019_12/images/Palghar__19.80818734_73.11002370000006_0.png 351,282,382,313,0
+../Dataset/WellDataset_2019_12/images/Palghar__19.80824918_73.11019134000003_0.png 285,302,324,340,0
+../Dataset/WellDataset_2019_12/images/Palghar_Kalamkhand_19.70715233_73.03978418999998_0.png 294,305,322,333,0
+../Dataset/WellDataset_2019_12/images/Palghar_Kiniste_19.73423726_73.41617707_0.png 265,165,287,187,0 388,343,436,391,0
+../Dataset/WellDataset_2019_12/images/Palghar_Koshimshet_19.85721965_73.39650025000003_0.png 218,308,260,350,0
+../Dataset/WellDataset_2019_12/images/Palghar_Koshimshet_19.85723731_73.39638222999997_0.png 261,317,300,357,0
+../Dataset/WellDataset_2019_12/images/Palghar_Lakshiminagar_19.97244874_73.37515886000006_0.png 428,263,461,297,0 219,335,254,369,0
+../Dataset/WellDataset_2019_12/images/Parbhani__18.88093832_76.80337764000001_0.png 396,585,442,631,0 153,47,207,101,0
+../Dataset/WellDataset_2019_12/images/Parbhani__18.99172333_76.54605283000001_0.png 222,359,264,401,0 394,370,446,422,0
+../Dataset/WellDataset_2019_12/images/Parbhani__19.08732627_76.70826791000002_0.png 279,332,317,370,0
+../Dataset/WellDataset_2019_12/images/Parbhani__19.17042667_77.14755166999998_0.png 253,340,285,372,0
+../Dataset/WellDataset_2019_12/images/Parbhani__19.17837926_76.54574350999997_0.png 309,391,343,425,0
+../Dataset/WellDataset_2019_12/images/Parbhani__19.28508797_76.44547411000008_0.png 449,321,496,368,0
+../Dataset/WellDataset_2019_12/images/Parbhani__19.38834612_76.70761668_0.png 308,58,330,80,0 279,368,307,396,0
+../Dataset/WellDataset_2019_12/images/Parbhani__19.49940389_76.38514293000003_0.png 317,128,343,154,0 334,370,364,400,0
+../Dataset/WellDataset_2019_12/images/Parbhani__19.50563401_76.39470331000007_0.png 160,328,188,356,0
+../Dataset/WellDataset_2019_12/images/Parbhani_Ambegaon Chaharun_19.30586484_76.55712595_0.png 286,290,322,326,0
+../Dataset/WellDataset_2019_12/images/Parbhani_Arvi_19.36108859_76.70457508999993_0.png 332,331,360,359,0
+../Dataset/WellDataset_2019_12/images/Parbhani_Bori_19.51177769_76.69526103999999_0.png 305,282,325,302,0 510,332,538,361,0
+../Dataset/WellDataset_2019_12/images/Parbhani_Chincholi Kale_19.54153959_76.64023614000007_0.png 195,265,240,310,0 465,203,507,246,0 471,364,518,411,0
+../Dataset/WellDataset_2019_12/images/Parbhani_Deulgaon Awachar_19.28736739_76.58937024_0.png 421,351,454,384,0
+../Dataset/WellDataset_2019_12/images/Parbhani_Devsadi_19.54085297_76.87295530999995_0.png 550,386,590,426,0 517,92,570,145,0 60,437,104,480,0
+../Dataset/WellDataset_2019_12/images/Parbhani_Govindpur_19.19393932_77.05426590000002_0.png 585,195,625,235,0 38,368,81,411,0
+../Dataset/WellDataset_2019_12/images/Parbhani_Hadgaon Kh_19.48025497_76.36910764000004_0.png 304,175,341,213,0 307,423,338,453,0
+../Dataset/WellDataset_2019_12/images/Parbhani_Hadgaon Kh_19.49793344_76.3915078_0.png 258,395,292,428,0 411,279,445,313,0
+../Dataset/WellDataset_2019_12/images/Parbhani_Kaudgaon tarf singanapur_19.26072376_76.72072598_0.png 275,320,303,348,0
+../Dataset/WellDataset_2019_12/images/Parbhani_Kharba_19.34807098_76.50940910999998_0.png 482,309,524,351,0
+../Dataset/WellDataset_2019_12/images/Parbhani_Khavne Pimpri_19.36868813_76.34399794000001_0.png 423,226,465,268,0 201,301,238,338,0 462,440,500,478,0
+../Dataset/WellDataset_2019_12/images/Parbhani_Kolhawadi_19.34879532_76.58309563_0.png 327,317,358,349,0
+../Dataset/WellDataset_2019_12/images/Parbhani_Kolhawadi_19.35017031_76.58699780999996_0.png 326,339,365,379,0
+../Dataset/WellDataset_2019_12/images/Parbhani_Kothala_19.38178922_76.58941540000001_0.png 138,385,173,420,0
+../Dataset/WellDataset_2019_12/images/Parbhani_Lohigram Tanda_19.08392056_76.58076581_0.png 452,330,492,370,0
+../Dataset/WellDataset_2019_12/images/Parbhani_Manwat Road_19.34648979_76.52449001000002_0.png 387,389,419,421,0
+../Dataset/WellDataset_2019_12/images/Parbhani_Manwat Road_19.360154_76.52781903000005_0.png 376,240,416,281,0
+../Dataset/WellDataset_2019_12/images/Parbhani_Manwat Rural_19.33094456_76.52103946_0.png 511,278,551,318,0 277,308,307,337,0
+../Dataset/WellDataset_2019_12/images/Parbhani_Narsapur tarf_19.32933167_76.70124667000005_0.png 297,327,325,355,0
+../Dataset/WellDataset_2019_12/images/Parbhani_Pimpalgaon likha_19.1383453_77.09880752999993_0.png 298,290,336,328,0
+../Dataset/WellDataset_2019_12/images/Parbhani_Pimprala Kh._19.48565787_76.39987229000008_0.png 236,371,275,410,0
+../Dataset/WellDataset_2019_12/images/Parbhani_Pimprala Kh._19.48571843_76.40147191000005_0.png 378,307,442,371,0
+../Dataset/WellDataset_2019_12/images/Parbhani_Pimprala Kh._19.49662216_76.39346937999994_0.png 271,197,313,239,0 520,478,556,514,0
+../Dataset/WellDataset_2019_12/images/Parbhani_Sarangapur_19.37114796_76.69269929999996_0.png 227,456,258,487,0
+../Dataset/WellDataset_2019_12/images/Parbhani_Sawali_19.27148667_76.57741667000005_0.png 281,292,326,338,0
+../Dataset/WellDataset_2019_12/images/Parbhani_Sawargaon Kh_19.28009952_76.59127661000002_0.png 275,284,306,315,0
+../Dataset/WellDataset_2019_12/images/Parbhani_Tamaswadi_19.14738309_76.62137274999998_0.png 273,458,308,493,0
+../Dataset/WellDataset_2019_12/images/Parbhani_Tidi Pimpalgaon_19.36108803_76.46018903999993_0.png 352,74,390,112,0 284,339,315,370,0
+../Dataset/WellDataset_2019_12/images/Parbhani_Vadi_19.73235665_76.49360260000003_0.png 359,95,400,135,0 303,221,349,267,0 343,462,390,510,0
+../Dataset/WellDataset_2019_12/images/Parbhani_Zari_19.31386571_76.44166321_0.png 390,152,435,196,0 268,464,303,500,0
+../Dataset/WellDataset_2019_12/images/Pune__18.17133251_74.84835190000001_0.png 168,556,231,619,0 425,4,490,68,0 302,65,356,119,0 174,250,228,304,0 51,319,109,377,0 4,423,49,469,0
+../Dataset/WellDataset_2019_12/images/Pune__18.22819634_74.77817815999992_0.png 449,420,493,464,0 225,504,274,554,0 344,279,402,338,0
+../Dataset/WellDataset_2019_12/images/Pune__18.24713_74.69045499999993_0.png 349,280,393,324,0
+../Dataset/WellDataset_2019_12/images/Pune__18.2941121_74.23595403000002_0.png 24,371,118,465,0
+../Dataset/WellDataset_2019_12/images/Pune__18.3453504_73.8062572_0.png 276,280,326,330,0
+../Dataset/WellDataset_2019_12/images/Pune__18.66431938_73.60648833000005_0.png 384,374,443,433,0
+../Dataset/WellDataset_2019_12/images/Pune__18.66432318_73.60663059000001_0.png 334,382,382,430,0
+../Dataset/WellDataset_2019_12/images/Pune__18.66432318_73.60663059000001_1.png 335,383,383,431,0
+../Dataset/WellDataset_2019_12/images/Pune__19.2652896_73.87233751999997_0.png 13,474,66,526,0 346,332,375,361,0 452,434,483,466,0 514,276,554,315,0 591,376,632,417,0
+../Dataset/WellDataset_2019_12/images/Pune__19.26622172_73.87276751000002_0.png 351,82,384,115,0 200,108,232,140,0
+../Dataset/WellDataset_2019_12/images/Pune_Brahmanghar_18.15495794_73.76227442000004_0.png 346,484,388,526,0 297,310,329,342,0
+../Dataset/WellDataset_2019_12/images/Pune_Dhamankhel_19.17126874_73.87946293999994_0.png 488,415,525,451,0 277,483,314,520,0 312,221,366,274,0
+../Dataset/WellDataset_2019_12/images/Pune_Ghera Sinhagad_18.3640572_73.78573879999999_0.png 256,357,294,395,0
+../Dataset/WellDataset_2019_12/images/Pune_Gokhali_18.0908158_74.99242830000003_0.png 356,295,404,343,0
+../Dataset/WellDataset_2019_12/images/Pune_Jankshan_18.09859644_74.77796472_0.png 575,568,620,614,0
+../Dataset/WellDataset_2019_12/images/Pune_Khanapur_19.17646047_73.89263935999998_0.png 403,188,441,226,0 203,252,243,292,0 439,460,501,522,0
+../Dataset/WellDataset_2019_12/images/Pune_Khandale_18.75757363_74.21547864000001_0.png 336,487,378,530,0 376,279,420,323,0
+../Dataset/WellDataset_2019_12/images/Pune_Kodit Kh._18.34220842_73.97396207999998_0.png 478,394,508,424,0
+../Dataset/WellDataset_2019_12/images/Pune_Kolvihire_18.25018151_74.19700841999997_0.png 383,187,430,235,0 287,522,336,570,0
+../Dataset/WellDataset_2019_12/images/Pune_Kunjirwadi_18.48044408_74.07358541000008_0.png 291,517,344,569,0
+../Dataset/WellDataset_2019_12/images/Pune_Malad Gaon_18.37556861_74.59949625000002_0.png 345,314,393,362,0 172,109,225,163,0 379,84,436,142,0 404,552,437,586,0
+../Dataset/WellDataset_2019_12/images/Pune_Metpilaware_18.26241529_73.63722863999999_0.png 219,239,288,309,0 412,420,486,494,0
+../Dataset/WellDataset_2019_12/images/Pune_Naygaon_18.35852966_74.23662122999997_0.png 330,82,371,124,0 465,183,504,221,0 402,354,463,416,0 95,455,139,499,0 258,521,318,581,0
+../Dataset/WellDataset_2019_12/images/Pune_Nhavi_18.18239476_74.87826251000001_0.png 292,131,345,184,0 364,354,408,398,0 389,464,419,495,0
+../Dataset/WellDataset_2019_12/images/Pune_Nilakanth_18.09713776_73.83334556_0.png 464,373,511,421,0
+../Dataset/WellDataset_2019_12/images/Pune_Nimgaon Mhalungi_18.69659567_74.22479019000002_0.png 285,299,320,333,0 131,222,175,266,0
+../Dataset/WellDataset_2019_12/images/Pune_Nivangan_18.06365651_73.67447848000006_0.png 328,282,360,314,0
+../Dataset/WellDataset_2019_12/images/Pune_Panvadi_18.27367767_74.00982504000001_0.png 416,303,464,351,0
+../Dataset/WellDataset_2019_12/images/Pune_Phadalewadi_19.02664191_73.76703528999997_0.png 357,396,419,459,0
+../Dataset/WellDataset_2019_12/images/Pune_Pimpalgaon Joga_19.31339369_73.92159530000004_0.png 74,455,113,495,0
+../Dataset/WellDataset_2019_12/images/Pune_Pimpari Pendhar_19.21224876_74.06950970000003_0.png 75,195,106,227,0 300,240,337,276,0 417,312,450,345,0 497,483,529,515,0
+../Dataset/WellDataset_2019_12/images/Pune_Poundhawadi_18.2471375_74.74416790999999_0.png 338,319,375,357,0
+../Dataset/WellDataset_2019_12/images/Pune_Sarola_18.16952552_73.96743889000004_0.png 289,327,321,359,0
+../Dataset/WellDataset_2019_12/images/Pune_Savargaon_19.13432961_73.89813268_0.png 347,229,385,267,0
+../Dataset/WellDataset_2019_12/images/Pune_Shelgaon_18.10580452_74.84091543_0.png 496,58,553,116,0 379,367,412,401,0 109,370,159,420,0
+../Dataset/WellDataset_2019_12/images/Pune_Surwad_18.01148264_74.99436652999998_0.png 460,394,513,448,0
+../Dataset/WellDataset_2019_12/images/Pune_Tarade_18.45255581_74.09708567999996_0.png 528,463,596,531,0 287,544,349,606,0 232,468,283,520,0 233,370,287,424,0 154,418,203,468,0 52,451,107,507,0 340,307,391,357,0 265,15,304,55,0 93,211,153,271,0
+../Dataset/WellDataset_2019_12/images/Pune_Vakilwasti_17.99789476_74.99087192000002_0.png 229,219,300,291,0
+../Dataset/WellDataset_2019_12/images/Pune_Vanpuri_18.37568671_74.0676009_0.png 554,126,611,184,0 17,444,72,500,0 182,461,231,511,0 200,338,269,408,0 275,228,341,294,0
+../Dataset/WellDataset_2019_12/images/Pune_Varude_18.80096439_74.19062345999998_0.png 7,5,54,53,0 363,386,412,436,0
+../Dataset/WellDataset_2019_12/images/Pune_Varvand_18.43679543_74.41631114000006_0.png 45,148,118,220,0
+../Dataset/WellDataset_2019_12/images/Raigadh_Belaghar_18.26357754_73.14438300000006_0.png 189,103,221,135,0 303,325,335,357,0
+../Dataset/WellDataset_2019_12/images/Raigadh_Bhutiwali_18.97356667_73.28364833_0.png 267,291,307,331,0
+../Dataset/WellDataset_2019_12/images/Raigadh_Bhutiwali_18.97371755_73.28336732000002_0.png 411,351,428,367,0 369,353,409,394,0
+../Dataset/WellDataset_2019_12/images/Raigadh_Borgaon Kh._18.94306632_73.26517371_0.png 331,396,376,440,0
+../Dataset/WellDataset_2019_12/images/Raigadh_Gaulwadi_18.03912558_73.08340600999998_0.png 403,403,441,441,0
+../Dataset/WellDataset_2019_12/images/Raigadh_Morsade_18.02416479_73.54828197000006_0.png 68,297,116,345,0
+../Dataset/WellDataset_2019_12/images/Raigadh_Nigdi_18.03825468_73.07520559_0.png 152,438,196,482,0
+../Dataset/WellDataset_2019_12/images/Raigadh_Nigdi_18.0432745_73.06106315_0.png 244,146,278,180,0
+../Dataset/WellDataset_2019_12/images/Raigadh_Olman_19.10330729_73.44879921999996_0.png 355,470,388,502,0
+../Dataset/WellDataset_2019_12/images/Raigadh_Pohi_19.090549_73.39219600000001_0.png 279,288,349,358,0
+../Dataset/WellDataset_2019_12/images/Raigadh_Pohi_19.09262877_73.39718315999994_0.png 499,283,538,321,0
+../Dataset/WellDataset_2019_12/images/Ratnagiri__17.48436267_73.46630209_0.png 452,217,472,237,0 286,322,318,354,0
+../Dataset/WellDataset_2019_12/images/Ratnagiri_Adoor_17.38744668_73.20997346000001_0.png 67,261,99,293,0 303,312,323,332,0
+../Dataset/WellDataset_2019_12/images/Ratnagiri_Hedali_17.68319833_73.45233832999998_0.png 412,183,440,211,0
+../Dataset/WellDataset_2019_12/images/Ratnagiri_Hedali_17.68937233_73.44467832999999_0.png 353,261,371,279,0
+../Dataset/WellDataset_2019_12/images/Ratnagiri_Kadam Wadi_17.40707123_73.19945330999997_0.png 600,254,620,274,0 476,312,512,348,0
+../Dataset/WellDataset_2019_12/images/Ratnagiri_Kadam Wadi_17.40985301_73.19964494999999_0.png 421,285,449,313,0
+../Dataset/WellDataset_2019_12/images/Ratnagiri_Khandala_17.23579383_73.26874436000003_0.png 338,408,380,450,0
+../Dataset/WellDataset_2019_12/images/Ratnagiri_Kond Karul_17.40620115_73.19104928000002_0.png 227,133,259,165,0
+../Dataset/WellDataset_2019_12/images/Ratnagiri_Muslondi_17.35991967_73.23455056_0.png 403,329,441,367,0
+../Dataset/WellDataset_2019_12/images/Ratnagiri_Veral_17.69008333_73.44237999999996_0.png 251,337,275,361,0
+../Dataset/WellDataset_2019_12/images/Ratnagiri_Watad_17.2357905_73.2709787_0.png 117,391,159,433,0
+../Dataset/WellDataset_2019_12/images/Sangli__16.9485053_74.96012291_0.png 141,366,171,396,0 133,468,165,500,0 217,502,259,544,0
+../Dataset/WellDataset_2019_12/images/Sangli__17.01919067_75.10359943000003_0.png 267,299,329,361,0
+../Dataset/WellDataset_2019_12/images/Sangli__17.10564074_74.97588369999994_0.png 346,159,403,216,0 281,351,365,435,0
+../Dataset/WellDataset_2019_12/images/Sangli__17.11181333_75.00979832999997_0.png 317,273,397,353,0 135,450,204,520,0
+../Dataset/WellDataset_2019_12/images/Sangli__17.20540338_75.52990483999997_0.png 332,241,395,305,0
+../Dataset/WellDataset_2019_12/images/Sangli_Bambavade_17.09273677_74.50378806000003_0.png 507,289,560,342,0
+../Dataset/WellDataset_2019_12/images/Sangli_Bambavade_17.09283071_74.50414408000006_0.png 375,334,419,378,0
+../Dataset/WellDataset_2019_12/images/Sangli_Chorochi_17.15409219_75.01664819999996_0.png 320,523,396,599,0 258,88,332,162,0
+../Dataset/WellDataset_2019_12/images/Sangli_Chorochi_17.15419579_75.02771666000001_0.png 359,245,424,311,0
+../Dataset/WellDataset_2019_12/images/Sangli_Chorochi_17.15442032_75.00259073999996_0.png 412,132,497,216,0 148,438,211,500,0
+../Dataset/WellDataset_2019_12/images/Sangli_Chorochi_17.15518765_75.04277532000003_0.png 300,240,381,320,0
+../Dataset/WellDataset_2019_12/images/Sangli_Chorochi_17.15518765_75.04277532000003_1.png 324,263,366,305,0
+../Dataset/WellDataset_2019_12/images/Sangli_Chorochi_17.16323797_75.05046386999993_0.png 132,207,216,291,0 517,448,595,526,0
+../Dataset/WellDataset_2019_12/images/Sangli_Chudekhindi_17.12862287_75.01590558999999_0.png 341,271,397,327,0
+../Dataset/WellDataset_2019_12/images/Sangli_Chudekhindi_17.12866964_75.01585664999993_0.png 364,293,414,343,0
+../Dataset/WellDataset_2019_12/images/Sangli_Daribadachi_17.03822241_75.41666609000004_0.png 273,326,318,370,0
+../Dataset/WellDataset_2019_12/images/Sangli_Darikonur_17.02623813_75.38625533999993_0.png 438,197,504,263,0 93,127,152,187,0
+../Dataset/WellDataset_2019_12/images/Sangli_Devikhindi_17.38431882_74.67815141999995_0.png 333,336,389,392,0
+../Dataset/WellDataset_2019_12/images/Sangli_Dhalewadi_17.09128916_74.97365365999997_0.png 252,276,303,327,0
+../Dataset/WellDataset_2019_12/images/Sangli_Dhalewadi_17.09724167_74.97786999999994_0.png 535,377,600,443,0 186,347,262,423,0
+../Dataset/WellDataset_2019_12/images/Sangli_Dhalgaon_17.09036597_74.99194542999999_0.png 304,327,368,390,0
+../Dataset/WellDataset_2019_12/images/Sangli_Dhavadwadi_17.12631567_75.06036569000003_0.png 301,32,350,81,0 138,567,177,607,0
+../Dataset/WellDataset_2019_12/images/Sangli_Jambhulwadi_17.12652713_75.05268332000003_0.png 212,138,262,188,0
+../Dataset/WellDataset_2019_12/images/Sangli_Kalambi_16.91138206_74.69940801000007_0.png 302,295,365,359,0
+../Dataset/WellDataset_2019_12/images/Sangli_Khilegoan_16.95862952_74.98319122999999_0.png 263,281,353,371,0
+../Dataset/WellDataset_2019_12/images/Sangli_Kokale_16.99379113_75.00495152000008_0.png 433,234,483,285,0
+../Dataset/WellDataset_2019_12/images/Sangli_Kokale_16.99607304_75.00230940000006_0.png 475,204,512,241,0 338,259,400,322,0
+../Dataset/WellDataset_2019_12/images/Sangli_Lakdewadi_17.14396795_75.42007334999994_0.png 482,136,526,180,0 363,426,415,478,0 289,283,359,353,0
+../Dataset/WellDataset_2019_12/images/Sangli_Lakdewadi_17.14403859_75.41989534000004_0.png 418,441,494,517,0 345,299,432,385,0 539,152,597,210,0
+../Dataset/WellDataset_2019_12/images/Sangli_Lakdewadi_17.14415906_75.42022793000001_0.png 231,354,299,422,0 411,198,474,260,0 305,495,363,553,0
+../Dataset/WellDataset_2019_12/images/Sangli_Masalwadi_17.39077403_74.95438074000003_0.png 179,545,221,587,0 87,103,131,147,0 385,44,439,98,0 400,318,454,373,0
+../Dataset/WellDataset_2019_12/images/Sangli_Masalwadi_17.39220869_74.94942674000004_0.png 448,190,513,254,0 155,391,233,469,0
+../Dataset/WellDataset_2019_12/images/Sangli_Pare_17.23367833_75.23651167000003_0.png 321,328,373,380,0
+../Dataset/WellDataset_2019_12/images/Sangli_Pratapur_17.13067765_75.05836793000003_0.png 506,104,551,149,0 298,7,358,68,0 70,562,134,626,0
+../Dataset/WellDataset_2019_12/images/Sangli_Salekari_17.03254754_75.29099438000003_0.png 348,285,385,322,0
+../Dataset/WellDataset_2019_12/images/Sangli_Sandagewadi_17.09797762_74.48856946000001_0.png 90,478,152,540,0 412,109,485,181,0
+../Dataset/WellDataset_2019_12/images/Sangli_Shedyal_17.03748665_75.31675384999994_0.png 559,4,626,70,0 245,536,314,604,0 405,309,478,381,0 78,188,157,267,0
+../Dataset/WellDataset_2019_12/images/Sangli_Shelkewadi_17.07766732_74.90223859000002_0.png 242,165,291,213,0
+../Dataset/WellDataset_2019_12/images/Sangli_Utagi_17.18301805_75.49188587000003_0.png 391,357,446,412,0
+../Dataset/WellDataset_2019_12/images/Sangli_Vithalwadi_17.24184937_75.63864252999997_0.png 563,418,624,478,0 553,105,606,157,0 473,11,522,61,0
+../Dataset/WellDataset_2019_12/images/Satara__17.43502864_74.17526924999993_0.png 395,73,443,121,0 259,236,302,278,0
+../Dataset/WellDataset_2019_12/images/Satara__17.44081796_74.17895807000002_0.png 319,262,369,312,0
+../Dataset/WellDataset_2019_12/images/Satara__17.45150667_74.21930832999999_0.png 286,302,331,346,0
+../Dataset/WellDataset_2019_12/images/Satara__17.7192511_73.91631613999994_0.png 264,310,314,360,0
+../Dataset/WellDataset_2019_12/images/Satara__17.77884667_74.19844499999999_0.png 426,195,469,237,0
+../Dataset/WellDataset_2019_12/images/Satara__17.79409167_74.23455332999993_0.png 428,368,488,428,0 232,295,313,377,0
+../Dataset/WellDataset_2019_12/images/Satara__17.9236111_73.96371449000003_0.png 272,328,316,372,0
+../Dataset/WellDataset_2019_12/images/Satara__17.929865_74.30183166999996_0.png 320,369,374,423,0
+../Dataset/WellDataset_2019_12/images/Satara__17.9670549_74.48744472999999_0.png 55,399,89,433,0 525,21,565,61,0 425,105,465,145,0 304,194,339,228,0 122,340,167,384,0 392,432,420,460,0 222,488,264,530,0 353,552,391,590,0
+../Dataset/WellDataset_2019_12/images/Satara__17.96803322_74.48737438_0.png 391,165,433,207,0 99,393,145,439,0 547,403,592,447,0 396,272,449,326,0 446,485,496,535,0 319,564,378,624,0
+../Dataset/WellDataset_2019_12/images/Satara__18.01188584_74.19270860000006_0.png 357,421,415,479,0
+../Dataset/WellDataset_2019_12/images/Satara__18.03316156_74.06603573999996_0.png 568,45,614,91,0 672,330,730,388,0 449,567,489,607,0
+../Dataset/WellDataset_2019_12/images/Satara_Aljapur_17.90875748_74.24965493000002_0.png 332,344,376,388,0
+../Dataset/WellDataset_2019_12/images/Satara_Aljapur_17.91450653_74.24986820000004_0.png 223,264,269,310,0
+../Dataset/WellDataset_2019_12/images/Satara_Banugadewadi_17.47882645_74.17363223000007_0.png 228,86,286,144,0 331,122,394,186,0 319,371,384,435,0
+../Dataset/WellDataset_2019_12/images/Satara_Banugadewadi_17.47921225_74.17343297000002_0.png 180,73,218,111,0 305,237,356,287,0 406,276,464,334,0 400,532,450,582,0
+../Dataset/WellDataset_2019_12/images/Satara_Barad_17.94125173_74.58159926000008_0.png 144,390,209,456,0
+../Dataset/WellDataset_2019_12/images/Satara_Barad_17.94508662_74.59025062_0.png 62,221,146,305,0 549,399,610,459,0
+../Dataset/WellDataset_2019_12/images/Satara_Bhadali Kh._17.93283844_74.47886304999997_0.png 325,70,355,100,0 41,468,89,516,0
+../Dataset/WellDataset_2019_12/images/Satara_Bodkewadi_17.87784867_74.42068274000007_0.png 312,311,346,345,0
+../Dataset/WellDataset_2019_12/images/Satara_Degaon_17.62392833_74.06744333000006_0.png 215,301,250,335,0
+../Dataset/WellDataset_2019_12/images/Satara_Degaon_17.64717667_74.06383667_0.png 288,270,322,304,0
+../Dataset/WellDataset_2019_12/images/Satara_Dhangarwadi_17.58051177_74.06301461999999_0.png 483,99,525,141,0 284,330,329,374,0
+../Dataset/WellDataset_2019_12/images/Satara_Gaikwadwadi_17.47849981_74.19897024_0.png 492,296,552,356,0 382,290,430,338,0
+../Dataset/WellDataset_2019_12/images/Satara_Gosavewadi_17.46120437_74.17864635000001_0.png 481,289,516,323,0 281,293,321,333,0
+../Dataset/WellDataset_2019_12/images/Satara_Jawalwadi_17.5267888_74.11546499999997_0.png 78,454,116,492,0 97,272,119,294,0 407,227,447,267,0 333,77,371,115,0
+../Dataset/WellDataset_2019_12/images/Satara_Kapashi_17.94757274_74.26096337000001_0.png 310,325,352,367,0
+../Dataset/WellDataset_2019_12/images/Satara_Kival_17.40931881_74.19325933000005_0.png 313,316,363,366,0
+../Dataset/WellDataset_2019_12/images/Satara_Mirgaon_17.97247823_74.36577333000002_0.png 270,330,337,396,0
+../Dataset/WellDataset_2019_12/images/Satara_Padali_17.47604047_74.18823997000004_0.png 328,264,376,312,0
+../Dataset/WellDataset_2019_12/images/Satara_Saskal_17.91977754_74.47350950999999_0.png 261,297,328,363,0
+../Dataset/WellDataset_2019_12/images/Satara_Satara_17.65476884_74.02405204000002_0.png 103,287,153,337,0
+../Dataset/WellDataset_2019_12/images/Satara_Shereshindewadi_17.949165_74.57426333000001_0.png 348,500,419,572,0 289,251,353,315,0
+../Dataset/WellDataset_2019_12/images/Satara_Sonavadi_17.63401662_73.92568185000005_0.png 227,314,277,364,0
+../Dataset/WellDataset_2019_12/images/Satara_Sonwadi Bk._17.95391588_74.49523135000004_0.png 258,247,304,293,0 301,529,341,569,0
+../Dataset/WellDataset_2019_12/images/Satara_Sonwadi Bk._17.97097797_74.47595849999993_0.png 372,29,414,71,0 260,545,295,579,0
+../Dataset/WellDataset_2019_12/images/Satara_Vagheri_17.36151767_74.24824203999992_0.png 273,290,318,334,0 61,387,109,435,0
+../Dataset/WellDataset_2019_12/images/Satara_Vinchurni_17.91238167_74.43508999999995_0.png 276,297,322,343,0
+../Dataset/WellDataset_2019_12/images/Satara_Vinchurni_17.93269333_74.44103332999998_0.png 309,333,371,395,0
+../Dataset/WellDataset_2019_12/images/Satara_Wathar Nimbalkar_17.93113667_74.37805166999999_0.png 289,341,337,389,0
+../Dataset/WellDataset_2019_12/images/Sindhudurg_Bhalawal_15.85339536_73.89541811999993_0.png 134,271,185,323,0
+../Dataset/WellDataset_2019_12/images/Sindhudurg_Ghanegadwadi_16.43587166_73.75299267000003_0.png 515,379,541,405,0 151,379,181,409,0
+../Dataset/WellDataset_2019_12/images/Sindhudurg_Jambharmala_15.959122_73.73560900000007_0.png 305,303,347,345,0
+../Dataset/WellDataset_2019_12/images/Sindhudurg_Khambale_16.4277918_73.75666189999993_0.png 259,178,287,206,0
+../Dataset/WellDataset_2019_12/images/Sindhudurg_Khambale_16.42898739_73.76157935000003_0.png 281,229,303,252,0 214,471,231,488,0 453,408,479,434,0
+../Dataset/WellDataset_2019_12/images/Sindhudurg_Khambale_16.42912189_73.75613350999993_0.png 373,233,391,251,0 464,437,488,461,0
+../Dataset/WellDataset_2019_12/images/Sindhudurg_Khambale_16.4294512_73.75753362_0.png 111,123,137,149,0 157,578,173,594,0
+../Dataset/WellDataset_2019_12/images/Sindhudurg_Kusur_16.54810599_73.74324173000002_0.png 309,358,330,379,0
+../Dataset/WellDataset_2019_12/images/Sindhudurg_Niravade_15.88022992_73.76441970999997_0.png 367,227,412,271,0
+../Dataset/WellDataset_2019_12/images/Sindhudurg_Sonali_16.51758724_73.75075364999998_0.png 307,243,335,270,0 306,407,333,435,0
+../Dataset/WellDataset_2019_12/images/Sindhudurg_Sonali_16.52036145_73.75314518999994_0.png 320,478,342,500,0
+../Dataset/WellDataset_2019_12/images/Solapur__17.58298067_75.91052594999996_0.png 257,365,303,411,0
+../Dataset/WellDataset_2019_12/images/Solapur__17.59748514_75.91994226999998_0.png 443,422,529,508,0
+../Dataset/WellDataset_2019_12/images/Solapur__17.62340568_75.99057061999997_0.png 322,444,388,510,0
+../Dataset/WellDataset_2019_12/images/Solapur__17.6236583_75.98836827000002_0.png 379,392,449,462,0
+../Dataset/WellDataset_2019_12/images/Solapur__17.62635549_75.98727914000006_0.png 178,303,248,373,0
+../Dataset/WellDataset_2019_12/images/Solapur__17.64888997_75.82194918999994_0.png 270,367,320,417,0
+../Dataset/WellDataset_2019_12/images/Solapur__17.64963887_75.80321234000007_0.png 384,539,446,601,0
+../Dataset/WellDataset_2019_12/images/Solapur__17.64993373_75.80509536_0.png 374,454,414,495,0 452,318,526,391,0
+../Dataset/WellDataset_2019_12/images/Solapur__17.65480816_75.82105244000002_0.png 356,394,418,457,0
+../Dataset/WellDataset_2019_12/images/Solapur__17.65641972_75.82884895000007_0.png 536,442,588,494,0
+../Dataset/WellDataset_2019_12/images/Solapur__17.66356222_75.83986583000001_0.png 493,254,541,302,0
+../Dataset/WellDataset_2019_12/images/Solapur__17.66730251_75.84287483000003_0.png 500,500,544,543,0
+../Dataset/WellDataset_2019_12/images/Solapur__17.6845028_75.86620983_0.png 78,499,166,587,0
+../Dataset/WellDataset_2019_12/images/Solapur_Yetnal_17.61065607_75.99929842999995_0.png 414,410,465,461,0
+../Dataset/WellDataset_2019_12/images/Solapur_Yetnal_17.61065607_75.99929842999995_1.png 414,410,465,461,0
+../Dataset/WellDataset_2019_12/images/Solapur_Yetnal_17.61647084_76.00042580000002_0.png 225,292,289,356,0
+../Dataset/WellDataset_2019_12/images/Solapur_Yetnal_17.62135098_75.99449537999999_0.png 538,426,596,484,0 59,178,111,230,0
+../Dataset/WellDataset_2019_12/images/Thane__19.37509573_73.27394690000006_0.png 388,200,428,240,0 335,487,386,537,0
+../Dataset/WellDataset_2019_12/images/Thane_Ambeshiv Bk_19.19633345_73.25728963000006_0.png 261,527,296,562,0
+../Dataset/WellDataset_2019_12/images/Thane_Chavare_19.24300563_73.27687188000004_0.png 393,389,527,523,0
+../Dataset/WellDataset_2019_12/images/Thane_Diwanpada_19.35560756_73.7521514_0.png 313,407,362,457,0
+../Dataset/WellDataset_2019_12/images/Thane_Jambhivali Tarf Kunde_19.47083267_73.16158517999997_0.png 304,344,340,379,0
+../Dataset/WellDataset_2019_12/images/Thane_Kakadpada_19.3718257_73.27362768_0.png 429,398,469,439,0
+../Dataset/WellDataset_2019_12/images/Thane_Kakadpada_19.37354694_73.27759388000004_0.png 241,285,285,329,0
+../Dataset/WellDataset_2019_12/images/Thane_Lenad Bk._19.38405225_73.36137097999995_0.png 187,487,224,524,0
+../Dataset/WellDataset_2019_12/images/Thane_Poi_19.22578953_73.27735609000001_0.png 390,112,426,148,0
+../Dataset/WellDataset_2019_12/images/Thane_Vaishakhare_19.318925_73.63101832999996_0.png 303,323,351,371,0
+../Dataset/WellDataset_2019_12/images/Usmanabad__17.75375626_76.67616949_0.png 232,361,280,409,0
+../Dataset/WellDataset_2019_12/images/Usmanabad__17.86870833_76.01005832999999_0.png 265,335,324,393,0 332,393,392,453,0
+../Dataset/WellDataset_2019_12/images/Usmanabad__17.87782971_76.01355151999996_0.png 314,437,367,489,0
+../Dataset/WellDataset_2019_12/images/Usmanabad__17.87897875_76.01639492000004_0.png 209,318,282,392,0
+../Dataset/WellDataset_2019_12/images/Usmanabad__17.96108068_76.08512429000007_0.png 446,124,497,175,0
+../Dataset/WellDataset_2019_12/images/Usmanabad__17.96323333_75.93296166999994_0.png 255,256,325,326,0
+../Dataset/WellDataset_2019_12/images/Usmanabad__17.96610683_76.09008793999999_0.png 406,558,461,614,0 318,278,371,332,0
+../Dataset/WellDataset_2019_12/images/Usmanabad__17.96952691_76.07579504_0.png 350,188,407,244,0
+../Dataset/WellDataset_2019_12/images/Usmanabad__18.00639_76.02417833000004_0.png 255,315,303,363,0
+../Dataset/WellDataset_2019_12/images/Usmanabad__18.21044136_76.08779088000006_0.png 453,129,520,195,0 292,436,362,506,0
+../Dataset/WellDataset_2019_12/images/Usmanabad__18.44086922_75.35099665000007_0.png 360,113,427,181,0 315,275,364,325,0 363,360,410,406,0 457,532,500,574,0 399,444,451,496,0
+../Dataset/WellDataset_2019_12/images/Usmanabad__18.44109658_75.35376167999993_0.png 577,248,633,304,0 16,372,80,436,0
+../Dataset/WellDataset_2019_12/images/Usmanabad__18.44446466_75.36200944999996_0.png 276,325,341,391,0
+../Dataset/WellDataset_2019_12/images/Usmanabad__18.46273323_75.48545932000002_0.png 227,465,289,527,0
+../Dataset/WellDataset_2019_12/images/Usmanabad_Arni_18.30014422_76.23145758999999_0.png 230,267,280,317,0
+../Dataset/WellDataset_2019_12/images/Usmanabad_Bavi_18.51207511_75.56444255999997_0.png 63,124,118,180,0 258,386,298,426,0 465,460,522,516,0
+../Dataset/WellDataset_2019_12/images/Usmanabad_Bembli_18.13251824_76.20485168999994_0.png 85,123,134,171,0 564,405,609,451,0 259,521,307,569,0
+../Dataset/WellDataset_2019_12/images/Usmanabad_Bhadachiwadi_18.31223622_76.0502679_0.png 299,315,355,371,0
+../Dataset/WellDataset_2019_12/images/Usmanabad_Bhikar Sangvi_17.7828408_76.65354202000003_0.png 242,307,356,421,0
+../Dataset/WellDataset_2019_12/images/Usmanabad_Dhagpimpri_18.20793248_75.51336853999999_0.png 333,323,371,361,0
+../Dataset/WellDataset_2019_12/images/Usmanabad_Donja_18.39660167_75.37353000000007_0.png 339,254,389,304,0 216,312,264,360,0
+../Dataset/WellDataset_2019_12/images/Usmanabad_Donja_18.39769655_75.37532585999998_0.png 179,60,255,136,0 177,320,219,362,0 351,452,409,510,0 306,517,354,565,0
+../Dataset/WellDataset_2019_12/images/Usmanabad_Gikhali_18.62804413_75.67554834999999_0.png 165,313,209,357,0 319,307,368,355,0
+../Dataset/WellDataset_2019_12/images/Usmanabad_Gugalgaon_17.91594071_76.62129617999994_0.png 192,435,240,483,0 308,312,358,362,0
+../Dataset/WellDataset_2019_12/images/Usmanabad_Khamaswadi_18.40165384_76.05184381999993_0.png 291,288,331,328,0
+../Dataset/WellDataset_2019_12/images/Usmanabad_Khandeshwar wadi_18.50226674_75.4547301_0.png 442,497,489,543,0 343,491,404,551,0 232,392,281,442,0 117,479,167,529,0
+../Dataset/WellDataset_2019_12/images/Usmanabad_Kilaj_17.90941636_76.28848091999998_0.png 392,313,431,353,0 253,363,304,415,0
+../Dataset/WellDataset_2019_12/images/Usmanabad_Lasona_18.25095187_76.25552633999996_0.png 294,319,358,383,0
+../Dataset/WellDataset_2019_12/images/Usmanabad_Naiknagar_17.74621482_76.47446073000003_0.png 259,265,313,319,0
+../Dataset/WellDataset_2019_12/images/Usmanabad_Nali_18.60555472_75.50933007000003_0.png 41,477,95,531,0 528,326,594,392,0 301,302,351,352,0
+../Dataset/WellDataset_2019_12/images/Usmanabad_Nali_18.60759681_75.51455241999997_0.png 341,289,385,333,0
+../Dataset/WellDataset_2019_12/images/Usmanabad_Pakhrud_18.62282413_75.53499751999993_0.png 240,192,293,246,0 270,444,336,510,0
+../Dataset/WellDataset_2019_12/images/Usmanabad_Patsangvi_18.49563282_75.50400042000001_0.png 109,216,168,274,0 321,313,371,363,0
+../Dataset/WellDataset_2019_12/images/Usmanabad_Pimpala Kh._17.87236122_76.01439482_0.png 532,331,609,408,0 52,224,124,296,0
+../Dataset/WellDataset_2019_12/images/Usmanabad_Pimpala Kh._17.88327333_75.99861499999997_0.png 237,202,320,286,0 288,315,354,381,0 262,438,329,506,0
+../Dataset/WellDataset_2019_12/images/Usmanabad_Sardewadi_17.91933891_76.12969162000002_0.png 301,291,351,341,0
+../Dataset/WellDataset_2019_12/images/Usmanabad_Sardewadi_17.91975006_76.12644008999996_0.png 292,542,344,594,0 131,271,187,327,0
+../Dataset/WellDataset_2019_12/images/Usmanabad_Sardewadi_17.92054495_76.12467929000002_0.png 332,318,384,370,0
+../Dataset/WellDataset_2019_12/images/Usmanabad_Sarola_18.55704373_75.82121825000002_0.png 346,236,386,276,0
+../Dataset/WellDataset_2019_12/images/Usmanabad_Takali_18.33115243_75.52039964999994_0.png 316,352,358,394,0
+../Dataset/WellDataset_2019_12/images/Vashim__20.13243251_76.95267568999998_0.png 75,374,115,414,0 377,441,415,479,0
+../Dataset/WellDataset_2019_12/images/Vashim__20.13321817_76.94411207999997_0.png 502,53,548,99,0 35,545,69,579,0
+../Dataset/WellDataset_2019_12/images/Vashim__20.13370964_76.94861975999993_0.png 248,301,284,337,0
+../Dataset/WellDataset_2019_12/images/Vashim__20.13572853_76.94081757000004_0.png 252,250,290,288,0 399,382,431,414,0
+../Dataset/WellDataset_2019_12/images/Vashim__20.14255055_76.93370485000003_0.png 204,436,244,476,0
+../Dataset/WellDataset_2019_12/images/Vashim__20.14332634_76.93904079000004_0.png 284,114,336,166,0 336,533,378,575,0
+../Dataset/WellDataset_2019_12/images/Vashim__20.14369467_76.93732238999996_0.png 395,282,435,322,0
+../Dataset/WellDataset_2019_12/images/Vashim__20.15480793_77.23198280999998_0.png 292,269,330,307,0
+../Dataset/WellDataset_2019_12/images/Vashim__20.15540186_77.22918415999993_0.png 481,245,509,273,0 136,427,170,461,0
+../Dataset/WellDataset_2019_12/images/Vashim__20.15858566_77.2346245_0.png 191,229,247,285,0 327,445,360,477,0
+../Dataset/WellDataset_2019_12/images/Vashim__20.19726598_77.09462394000002_0.png 497,525,544,571,0
+../Dataset/WellDataset_2019_12/images/Vashim__20.20028124_77.09072291999996_0.png 555,350,593,388,0
+../Dataset/WellDataset_2019_12/images/Vashim__20.40696682_77.46929912999997_0.png 155,517,182,544,0
+../Dataset/WellDataset_2019_12/images/Vashim__20.5238475_77.58246947999999_0.png 208,316,252,360,0 221,449,259,487,0
+../Dataset/WellDataset_2019_12/images/Vashim_Amgavhan_20.38872274_77.41618239000002_0.png 189,232,229,272,0 492,525,530,563,0
+../Dataset/WellDataset_2019_12/images/Vashim_Amgavhan_20.393547_77.43741157_0.png 324,407,364,447,0
+../Dataset/WellDataset_2019_12/images/Vashim_Borwha bk._20.38598403_77.41380827_0.png 177,144,213,180,0 372,506,414,548,0
+../Dataset/WellDataset_2019_12/images/Vashim_Ekamba_20.37589541_77.41538959000002_0.png 373,257,395,279,0
+../Dataset/WellDataset_2019_12/images/Vashim_Ekamba_20.37691191_77.41632776000006_0.png 256,332,291,366,0
+../Dataset/WellDataset_2019_12/images/Vashim_Ekamba_20.38485379_77.40981854999995_0.png 289,409,325,445,0
+../Dataset/WellDataset_2019_12/images/Vashim_Ghata Pr. Shirpur_20.16253548_76.89065112000003_0.png 533,348,563,378,0 217,307,249,339,0 411,124,445,158,0
+../Dataset/WellDataset_2019_12/images/Vashim_Ghata Pr. Shirpur_20.16604782_76.89023397999995_0.png 85,201,115,231,0 512,390,540,418,0
+../Dataset/WellDataset_2019_12/images/Vashim_Girda_20.42036284_77.48474378000003_0.png 409,316,451,358,0
+../Dataset/WellDataset_2019_12/images/Vashim_Girda_20.42149253_77.48796290999996_0.png 350,377,388,415,0
+../Dataset/WellDataset_2019_12/images/Vashim_Inza_20.5124055_77.58998835_0.png 96,33,124,61,0 30,477,74,521,0 569,551,610,592,0
+../Dataset/WellDataset_2019_12/images/Vashim_Jamthi_20.14778576_76.93508397999994_0.png 185,175,217,207,0 312,182,346,216,0 342,539,380,577,0
+../Dataset/WellDataset_2019_12/images/Vashim_Jamthi_20.15047941_76.93359682999994_0.png 178,141,228,191,0 284,532,312,560,0
+../Dataset/WellDataset_2019_12/images/Vashim_Khadi_20.37068887_77.4170775_0.png 114,129,136,151,0 369,465,389,485,0
+../Dataset/WellDataset_2019_12/images/Vashim_Nainy_20.39183262_77.50577765000003_0.png 259,327,303,371,0
+../Dataset/WellDataset_2019_12/images/Vashim_Sakra_20.15926661_77.22890276999999_0.png 214,524,260,570,0
+../Dataset/WellDataset_2019_12/images/Vashim_Sattar Sawngi_20.38421087_77.42630254999995_0.png 332,497,394,559,0
+../Dataset/WellDataset_2019_12/images/Vashim_Surkandi_20.08123529_77.16544251000005_0.png 374,207,412,245,0
+../Dataset/WellDataset_2019_12/images/Vashim_Takali Bk._20.64019857_77.50904063000007_0.png 218,435,255,471,0 332,160,370,198,0
+../Dataset/WellDataset_2019_12/images/Vashim_Tandali_20.54393037_77.52576234999992_0.png 351,348,376,373,0
+../Dataset/WellDataset_2019_12/images/Vashim_Waghi Bk._20.12460453_76.95688238000002_0.png 446,399,484,437,0
+../Dataset/WellDataset_2019_12/images/Vashim_Yevta_20.50927181_77.59462331999998_0.png 258,314,288,344,0
+../Dataset/WellDataset_2019_12/images/Vashim_Yevta_20.5102413_77.60034913999993_0.png 295,286,325,316,0 219,410,251,442,0
+../Dataset/WellDataset_2019_12/images/Vashim_Yevta_20.51725819_77.58368280000002_0.png 301,300,358,356,0
+../Dataset/WellDataset_2019_12/images/Vashim_Yevta_20.52090327_77.58084968000003_0.png 327,344,364,380,0
+../Dataset/WellDataset_2019_12/images/Vashim_Yevta_20.52306987_77.58021936_0.png 355,311,405,361,0
+../Dataset/WellDataset_2019_12/images/Wardha__20.99274407_78.34236710000005_0.png 233,185,287,239,0
+../Dataset/WellDataset_2019_12/images/Wardha__21.015973_78.32718899999998_0.png 294,289,352,347,0
+../Dataset/WellDataset_2019_12/images/Wardha__21.01616579_78.32568436999998_0.png 405,295,447,337,0
+../Dataset/WellDataset_2019_12/images/Wardha__21.01703238_78.33172113_0.png 381,486,417,522,0
+../Dataset/WellDataset_2019_12/images/Wardha__21.01976144_78.32782404_0.png 468,544,508,584,0 346,286,386,326,0
+../Dataset/WellDataset_2019_12/images/Wardha__21.11210708_78.12963648000004_0.png 406,413,436,444,0
+../Dataset/WellDataset_2019_12/images/Wardha__21.12139533_78.54998036999996_0.png 36,310,62,335,0 331,384,361,415,0
+../Dataset/WellDataset_2019_12/images/Wardha_Navin Ashti_21.22708084_78.23395705999997_0.png 161,175,192,207,0
+../Dataset/WellDataset_2019_12/images/Wardha_Wadhona_20.99186453_78.34512586000005_0.png 415,420,461,466,0
+../Dataset/WellDataset_2019_12/images/Wardha_Wadhona_21.00127883_78.34233072999996_0.png 342,132,370,160,0 280,414,319,453,0
+../Dataset/WellDataset_2019_12/images/Yavatmal__19.60547662_78.18075942999997_0.png 335,310,367,342,0
+../Dataset/WellDataset_2019_12/images/Yavatmal__19.91543771_77.92110481999998_0.png 42,417,73,449,0 404,331,432,359,0
+../Dataset/WellDataset_2019_12/images/Yavatmal__19.95610823_78.01321917999996_0.png 203,373,235,405,0 367,57,402,92,0 335,134,373,172,0
+../Dataset/WellDataset_2019_12/images/Yavatmal__20.06148289_78.26012603999993_0.png 243,7,284,47,0 518,569,557,608,0
+../Dataset/WellDataset_2019_12/images/Yavatmal__20.15883117_78.78549249000002_0.png 357,362,399,404,0
+../Dataset/WellDataset_2019_12/images/Yavatmal__20.47109342_77.69811574999994_0.png 113,8,165,60,0 513,85,558,129,0 516,325,566,375,0
+../Dataset/WellDataset_2019_12/images/Yavatmal__20.54911136_78.12635036000006_0.png 84,112,135,164,0 24,344,55,376,0 408,364,446,402,0
+../Dataset/WellDataset_2019_12/images/Yavatmal__20.61235148_77.89338974999998_0.png 600,218,629,248,0 74,451,108,485,0
+../Dataset/WellDataset_2019_12/images/Yavatmal__20.67085347_78.23976735999997_0.png 584,527,618,561,0 44,150,70,176,0
+../Dataset/WellDataset_2019_12/images/Yavatmal_Amanpur_19.66577646_77.71297026000002_0.png 564,193,605,233,0 346,356,385,394,0 96,356,130,390,0
+../Dataset/WellDataset_2019_12/images/Yavatmal_Antargaon_20.38971983_78.59500226_0.png 399,316,433,350,0 240,354,276,390,0
+../Dataset/WellDataset_2019_12/images/Yavatmal_Antargaon_20.39033867_78.60237742999993_0.png 389,378,427,416,0
+../Dataset/WellDataset_2019_12/images/Yavatmal_Ashtona_20.22376613_78.77189483000006_0.png 361,142,427,208,0 154,519,207,571,0
+../Dataset/WellDataset_2019_12/images/Yavatmal_Bansi_20.00883141_77.54356957000005_0.png 436,186,466,216,0 199,291,236,328,0 295,498,326,529,0
+../Dataset/WellDataset_2019_12/images/Yavatmal_Belura Kh._19.91835879_77.30417849000003_0.png 384,75,418,109,0
+../Dataset/WellDataset_2019_12/images/Yavatmal_Chinchmandal_20.23907625_78.81236134000005_0.png 454,353,496,394,0
+../Dataset/WellDataset_2019_12/images/Yavatmal_Dagad Dhanora_19.70786473_77.49947657999996_0.png 397,230,440,274,0 383,402,426,445,0
+../Dataset/WellDataset_2019_12/images/Yavatmal_Gharfal_20.6547044_78.20195160000003_0.png 108,264,144,300,0 504,376,538,411,0
+../Dataset/WellDataset_2019_12/images/Yavatmal_Hanwat Kheda_19.91193216_77.37121350000007_0.png 314,308,358,352,0
+../Dataset/WellDataset_2019_12/images/Yavatmal_Kandali_19.99937169_77.79226981_0.png 484,452,517,486,0
+../Dataset/WellDataset_2019_12/images/Yavatmal_Malkapur_20.453072_78.34848184999998_0.png 235,359,271,395,0
+../Dataset/WellDataset_2019_12/images/Yavatmal_Mansal_19.86708693_77.49024226999995_0.png 272,301,307,335,0
+../Dataset/WellDataset_2019_12/images/Yavatmal_Mansal_19.88128261_77.48007053000003_0.png 292,352,322,382,0
+../Dataset/WellDataset_2019_12/images/Yavatmal_Mansal_19.88212139_77.49925454999993_0.png 346,391,395,439,0
+../Dataset/WellDataset_2019_12/images/Yavatmal_Mansal_19.8821749_77.50378113_0.png 292,324,330,362,0
+../Dataset/WellDataset_2019_12/images/Yavatmal_Morchandi_19.58100382_78.01385987000003_0.png 262,434,292,464,0
+../Dataset/WellDataset_2019_12/images/Yavatmal_Morchandi_19.58522717_77.99700101000008_0.png 95,386,125,416,0 402,507,436,541,0
+../Dataset/WellDataset_2019_12/images/Yavatmal_Morchandi_19.58829155_77.99700236000001_0.png 75,10,128,62,0 200,554,260,614,0
+../Dataset/WellDataset_2019_12/images/Yavatmal_Morchandi_19.58997921_77.99964165999995_0.png 251,292,295,336,0
+../Dataset/WellDataset_2019_12/images/Yavatmal_Mukindpur_20.45121709_77.84313508000002_0.png 308,300,332,323,0 427,437,456,467,0
+../Dataset/WellDataset_2019_12/images/Yavatmal_Padurna Kh_20.14767054_78.24266779999994_0.png 472,254,529,310,0 60,436,107,484,0
+../Dataset/WellDataset_2019_12/images/Yavatmal_Pahur_20.13624498_78.06652673000008_0.png 32,533,81,582,0 576,8,635,66,0
+../Dataset/WellDataset_2019_12/images/Yavatmal_Pahur_20.13705463_78.07525386999998_0.png 97,556,135,594,0 352,154,390,192,0
+../Dataset/WellDataset_2019_12/images/Yavatmal_Palu_19.80435944_77.63163467999993_0.png 403,191,466,253,0
+../Dataset/WellDataset_2019_12/images/Yavatmal_Parwa_19.99879106_77.40477370999997_0.png 355,306,387,338,0
+../Dataset/WellDataset_2019_12/images/Yavatmal_Ratchandana._20.32042003_78.19293775999995_0.png 425,117,473,165,0 105,514,153,562,0
+../Dataset/WellDataset_2019_12/images/Yavatmal_Renakapur_20.67276932_78.22769870000002_0.png 266,310,302,346,0
+../Dataset/WellDataset_2019_12/images/Yavatmal_Sarapdhari_20.41414444_78.34806457000002_0.png 101,135,154,189,0 253,418,295,460,0
+../Dataset/WellDataset_2019_12/images/Yavatmal_Subhanpur_20.50918759_78.19440172999998_0.png 357,119,392,153,0 62,512,95,545,0 430,450,467,486,0
+../Dataset/WellDataset_2019_12/images/Yavatmal_Yeldari_19.89145373_77.48555302_0.png 466,475,512,521,0

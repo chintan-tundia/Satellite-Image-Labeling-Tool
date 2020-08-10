@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+</head>
+<link rel="shortcut icon" type="image/png" href="{% static 'favicon.ico' %}"/>
+<title>Select Images</title>
+<style>
+
+.container {
+    display: block;
+    position: absolute;
+    height: auto;
+    bottom: 0;
+    top: 80px;
+    left: 20%;
+    right: 0;
+}
+
+.left {
+    width: calc(30% - 10px);
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    height: auto;
+    display: block;
+    margin: 10px 0 10px 10px;
+}
+
+.right {
+    border-left: 1px solid gray;
+    margin: 10px 10px 10px calc(30% + 10px);
+    padding-left: 10px;
+}
+#imageList, #description {
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    height: 70%;
+}
+
+</style>
+<script type="text/javascript">
+	//var image_name="Akola_Dry_1";
+	//var image_path="{% static '/Gmap/images/'%}/"+image_name+".jpg";
+</script>
+
+	<body>  
+
+    <center><h2>Select Image To Annotate</h2></center>    
+		<div class="container" id="container">
+            
+        	<div class="left">                
+				<label for="imageList"></label><select name="imageList" id="imageList" size="10" multiple></select>	
+                <div id="description">
+                    SHORTCUTS:
+                    <ul>
+                        <!-- <li>
+                            Mouse WHEEL - zoom in/out image
+                        </li> -->
+                        <!-- <li>
+                            Mouse RIGHT BUTTON - pan image
+                        </li> -->
+                        <!-- <li>
+                            Arrows LEFT and RIGHT - cycle images
+                        </li> -->
+                        <li>
+                            Arrows Up and DOWN - cycle images
+                        </li>
+                        <!-- <li>
+                            Key DELETE - remove selected Bbox
+                        </li> -->
+                    </ul>
+
+                    <!-- <p>Version: 0.2.3 |  Copyright © 2018 Draining Sun.</p> -->
+                </div>
+			</div>
+			 <div class="right" id="right">
+			 	<canvas id='canvas' width="640" height="640"></canvas>
+				<br/>
+				<form id='capture_form' name='capture_form' method="post"  action="ImageLabelingTool">
+		          <input name='imageName' placeholder='Enter Image Name' type="hidden" value="" id="imageName">
+                  <div style="height:50px">
+                    <div style="display:none;float:left;height:50px;">
+                        <p>Is Annotated? : <span id='is_annotated'> No </span> </p> 
+                    </div>
+                    <div style="float:left;height:50px;margin-left:30px;">
+                        <div style="float:left;margin-top:15px; margin-right:10px; height:17px;width:17px;border: 3px solid  #00FFFF;border-style: ridge;">
+                            
+                        </div> 
+                        <div style="float:left;height:10px;width:150px;border-color:red">
+                            <p> : Wet Farm Pond</p>
+                        </div>
+                    </div>
+                    <div style="float:left;height:50px;margin-left:1px;">
+                        <div style="float:left;margin-top:15px; margin-right:10px; height:17px;width:17px;border: 3px solid yellow;border-style: ridge;">
+                            
+                        </div> 
+                        <div style="float:left;height:10px;width:200px;">
+                            <p> : Dry Farm Pond</p>
+                        </div>
+                    </div>
+                  </div>
+                  <div style="height:30px;width:60px;margin-left:30px">
+		              <input type="submit" id="btnSave" value="Annotate"/>
+		              <input type="hidden" name='canvasImg64' id="canvasImg64">
+                  </div>
+		          <br>
+                  
+		        <!--  <div id="output"><h5>latlong</h5></div>    -->
+		        </form>
+
+				<!-- <input type="button" value="Check" id='check' onclick="b64()"> -->
+			 </div>
+		</div>
+			
+		
+		
+	</body>
+</html>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script type="text/javascript">	
+	var imageList = document.getElementById("imageList")
+	var canvas = document.getElementById("canvas");
+	var ctx = canvas.getContext("2d");
+	var imageListIndex=0;
+	canvas.width = 640;
+	canvas.height = 640;
+
+	function setCanvasBackground()
+	{
+		var background = new Image();
+        var txtAnn = document.getElementById("is_annotated");
+		selectedImgName=imageList.options[imageListIndex].innerHTML;
+        txtAnn.innerHTML=imageList.options[imageListIndex].getAttribute('data');
+		var image_path="{% static '/Gmap/images/'%}/"+selectedImgName;
+		background.src = image_path;
+		// Make sure the image is loaded first otherwise nothing will draw.
+		background.onload = function(){
+		    ctx.drawImage(background,0,0);   
+		    var canvasImg = canvas.toDataURL(); 
+		    var hidden = document.getElementById("canvasImg64");
+	        hidden.value=canvasImg;
+
+            var canvas1 = document.getElementById('canvas');
+            var ctx1 = canvas.getContext('2d');
+
+            $.ajax({
+                type:"POST",
+                    url: 'ajax/get_annotations',
+                    data: {                
+                        'image_name': selectedImgName               
+                    },
+                    dataType: 'json',
+                    success: function (data) {                
+                        annots=data.annotations;
+                        var wfp="Wet Farm Pond";
+                        var dfp="Dry Farm Pond";
+                        if (annots==-1) {
+                          alert("Image not in database");                                             
+                        }
+                        else{                            
+                            annotsp=JSON.parse(annots)   
+                            if(annotsp.length<=0){
+                                document.getElementById("btnSave").disabled = false;
+                            } 
+                            else{
+                                document.getElementById("btnSave").disabled = false; 
+                            }                        
+                            for(i=0;i<annotsp.length;i++){
+                                ctx.lineWidth = 3;
+                                if(annotsp[i].class_label==wfp){
+                                    ctx.strokeStyle = "#00FFFF";
+                                    ctx.strokeRect(annotsp[i].top_left_x, annotsp[i].top_left_y, annotsp[i].width, annotsp[i].height)
+                                } else{
+                                    ctx.strokeStyle = "yellow";
+                                    ctx.strokeRect(annotsp[i].top_left_x, annotsp[i].top_left_y, annotsp[i].width, annotsp[i].height)
+                                }
+
+                            }
+                            
+                        }
+                    },         
+                    error: function(xhr, textStatus, errorThrown) {
+                            alert("Something went wrong.");
+                    }
+            });
+                    
+            
+
+
+		}
+		
+		var nameEle = document.getElementById("imageName");
+	    nameEle.value=selectedImgName;
+	}
+	function initialize()
+	{
+		loadImageNames()
+		setCanvasBackground()
+		listenKeyboard()
+	}
+	
+    function loadImageNames()
+    {
+    	
+    	let i=0;
+    	let imgName="";
+    	let option=null;
+
+    	{% for img in images %}   
+    		imgName="{{ img.image_name }}";
+            isAnnotated="{{ img.is_annotated }}";
+    		option = document.createElement("option");
+    		option.value = imgName;
+            option.innerHTML = imgName;
+            if(isAnnotated=="True"){
+                option.setAttribute('data',"Yes")
+            }
+            else{
+                option.setAttribute('data',"No")   
+            }            
+            if (i === 0) {
+            	option.selected = true
+            }
+        	imageList.appendChild(option);
+       		i++;
+    	{% endfor %} 
+    	imageList.addEventListener("change", () => {
+            imageListIndex = imageList.selectedIndex
+            setCanvasBackground()            
+        }) 
+
+    }
+	function b64()
+	{
+		var canvastemp = document.getElementById('canvas');
+		alert(canvastemp.toDataURL())
+
+	}
+	const listenKeyboard = () => {
+        const imageList = document.getElementById("imageList")
+        const classList = document.getElementById("classList")
+
+        document.addEventListener("keydown", (event) => {
+            const key = event.keyCode || event.charCode            
+
+            if (key === 37) {
+                if (imageList.length > 1) {
+                    imageList.options[imageListIndex].selected = false
+
+                    if (imageListIndex === 0) {
+                        imageListIndex = imageList.length - 1
+                    } else {
+                        imageListIndex--
+                    }
+
+                    imageList.options[imageListIndex].selected = true
+                    imageList.selectedIndex = imageListIndex
+
+                    setCanvasBackground() 
+                    document.body.style.cursor = "default"
+                }
+
+                event.preventDefault()
+            }
+
+            if (key === 39) {
+                if (imageList.length > 1) {
+                    imageList.options[imageListIndex].selected = false
+
+                    if (imageListIndex === imageList.length - 1) {
+                        imageListIndex = 0
+                    } else {
+                        imageListIndex++
+                    }
+
+                    imageList.options[imageListIndex].selected = true
+                    imageList.selectedIndex = imageListIndex
+
+                   setCanvasBackground() 
+
+                    document.body.style.cursor = "default"
+                }
+
+                event.preventDefault()
+            }
+            
+        })
+    }
+	initialize();
+</script>

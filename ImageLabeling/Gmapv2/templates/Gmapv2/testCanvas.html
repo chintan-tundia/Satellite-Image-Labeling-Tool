@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<style>
+
+.container {
+    display: block;
+    position: absolute;
+    height: auto;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+.left {
+    width: calc(30% - 10px);
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    height: auto;
+    display: block;
+    margin: 10px 0 10px 10px;
+}
+
+.right {
+    border-left: 1px solid gray;
+    margin: 10px 10px 10px calc(30% + 10px);
+    padding-left: 10px;
+}
+
+
+#imageList, #description {
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    height: 70%;
+}
+
+</style>
+<script type="text/javascript">
+	//var image_name="Akola_Dry_1";
+	//var image_path="{% static '/Gmap/images/'%}/"+image_name+".jpg";
+</script>
+
+	<body>
+		<div class="container" id="container">
+        	<div class="left">
+				<label for="imageList"></label><select name="imageList" id="imageList" size="10" multiple></select>	
+				<div id="description">
+                    SHORTCUTS:
+                    <ul>
+                        <!-- <li>
+                            Mouse WHEEL - zoom in/out image
+                        </li> -->
+                        <!-- <li>
+                            Mouse RIGHT BUTTON - pan image
+                        </li> -->
+                        <!-- <li>
+                            Arrows LEFT and RIGHT - cycle images
+                        </li> -->
+                        <li>
+                            Arrows Up and DOWN - select images
+                        </li>
+                        <!-- <li>
+                            Key DELETE - remove selected Bbox
+                        </li> -->
+                    </ul>
+
+                    <!-- <p>Version: 0.2.3 |  Copyright © 2018 Draining Sun.</p> -->
+                </div>
+			</div>
+			 <div class="right" id="right">
+			 	<canvas id='canvas' width="640" height="640"></canvas>
+				<br/>
+				<form id='capture_form' name='capture_form' method="post"  action="ImageLabelingTool">
+		          <input name='imageName' placeholder='Enter Image Name' type="hidden" value="" id="imageName">
+		          <input type="submit" id="btnSave" value="Annotate"/>
+		          <input type="hidden" name='canvasImg64' id="canvasImg64">
+		          <br>          
+		        <!--  <div id="output"><h5>latlong</h5></div>    -->
+		        </form>
+
+				<!-- <input type="button" value="Check" id='check' onclick="b64()"> -->
+			 </div>
+		</div>
+			
+		
+		
+	</body>
+</html>
+<script type="text/javascript">	
+	var imageList = document.getElementById("imageList")
+	var canvas = document.getElementById("canvas");
+	var ctx = canvas.getContext("2d");
+	var imageListIndex=0;
+	canvas.width = 640;
+	canvas.height = 640;
+
+	function setCanvasBackground()
+	{
+		var background = new Image();
+		selectedImgName=imageList.options[imageListIndex].innerHTML;		
+		var image_path="{% static '/Gmap/images/'%}/"+selectedImgName;
+		background.src = image_path;
+		// Make sure the image is loaded first otherwise nothing will draw.
+		background.onload = function(){
+		    ctx.drawImage(background,0,0);   
+		    var canvasImg = canvas.toDataURL(); 
+		    var hidden = document.getElementById("canvasImg64");
+	        hidden.value=canvasImg;          
+		}
+		
+		var nameEle = document.getElementById("imageName");
+	    nameEle.value=selectedImgName;
+	}
+	function initialize()
+	{
+		loadImageNames()
+		setCanvasBackground()
+		listenKeyboard()
+	}
+	
+    function loadImageNames()
+    {
+    	
+    	let i=0;
+    	let imgName="";
+    	let option=null;
+
+    	{% for img in images %}   
+    		imgName="{{ img.image_name }}";
+    		option = document.createElement("option");
+    		option.value = imgName;
+            option.innerHTML = imgName;
+            if (i === 0) {
+            	option.selected = true
+            }
+        	imageList.appendChild(option);
+       		i++;
+    	{% endfor %} 
+    	imageList.addEventListener("change", () => {
+            imageListIndex = imageList.selectedIndex
+            setCanvasBackground()            
+        }) 
+
+    }
+	function b64()
+	{
+		var canvastemp = document.getElementById('canvas');
+		alert(canvastemp.toDataURL())
+
+	}
+	const listenKeyboard = () => {
+        const imageList = document.getElementById("imageList")
+        const classList = document.getElementById("classList")
+
+        document.addEventListener("keydown", (event) => {
+            const key = event.keyCode || event.charCode            
+
+            if (key === 37) {
+                if (imageList.length > 1) {
+                    imageList.options[imageListIndex].selected = false
+
+                    if (imageListIndex === 0) {
+                        imageListIndex = imageList.length - 1
+                    } else {
+                        imageListIndex--
+                    }
+
+                    imageList.options[imageListIndex].selected = true
+                    imageList.selectedIndex = imageListIndex
+
+                    setCanvasBackground() 
+                    document.body.style.cursor = "default"
+                }
+
+                event.preventDefault()
+            }
+
+            if (key === 39) {
+                if (imageList.length > 1) {
+                    imageList.options[imageListIndex].selected = false
+
+                    if (imageListIndex === imageList.length - 1) {
+                        imageListIndex = 0
+                    } else {
+                        imageListIndex++
+                    }
+
+                    imageList.options[imageListIndex].selected = true
+                    imageList.selectedIndex = imageListIndex
+
+                   setCanvasBackground() 
+
+                    document.body.style.cursor = "default"
+                }
+
+                event.preventDefault()
+            }
+            
+        })
+    }
+	initialize();
+</script>

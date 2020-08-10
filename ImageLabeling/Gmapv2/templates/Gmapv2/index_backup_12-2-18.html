@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Satellite Image Labelling Tool</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <style>
+    /* Set height of the grid so .sidenav can be 100% (adjust if needed) */
+    .row.content {height: 930px}
+    
+    /* Set gray background color and 100% height */
+    .sidenav {
+      background-color: #f1f1f1;
+      height: 100%;
+    }
+    
+    /* Set black background color, white text and some padding */
+    footer {
+      background-color: #555;
+      color: white;
+      padding: 15px;
+    }
+    
+    /* On small screens, set height to 'auto' for sidenav and grid */
+    @media screen and (max-width: 767px) {
+      .sidenav {
+        height: auto;
+        padding: 15px;
+      }
+      .row.content {height: auto;} 
+    }
+    html, body {
+     height: 100%;
+     margin: 0;
+    }
+    .grid2x2 {      
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: row;
+    }
+    .grid2x2 > div {
+      display: flex; 
+      flex-basis: calc(50% - 40px);  
+      justify-content: center;
+      flex-direction: column;
+    }
+    .grid2x2 > div > div {
+      display: flex;
+      justify-content: center;
+      flex-direction: row;
+    }
+
+    .box { margin: 10px; }
+    .box1 { background-color: red; }
+    .box2 { background-color: orange; }
+    .box3 { background-color: purple; }
+    .box4 { background-color: grey; }
+  </style>
+</head>
+<body>
+
+<div class="container-fluid">
+  <div class="row content">
+    <div class="col-sm-3 sidenav">
+      <h4>Map Controls</h4>
+     <!--  <ul class="nav nav-pills nav-stacked">
+        <li class="active"><a href="#section1">Home</a></li>
+        <li><a href="#section2">Friends</a></li>
+        <li><a href="#section3">Family</a></li>
+        <li><a href="#section3">Photos</a></li>
+      </ul><br> -->
+      <div class="input-group">        
+        <input id="inp_place" type="text" class="form-control" placeholder="Search Place on the Map">
+        <span class="input-group-btn">
+          <button class="btn btn-default" type="button"  onclick="searchPlace()">
+            <span class="glyphicon glyphicon-search"></span>
+          </button>
+        </span>
+      </div>
+      <div style="height:10px; width:inherit;margin:15px auto;"><small> OR </small></div>
+      <div class="input-group">        
+        <input type="text" class="form-control" id='inp_latlng' placeholder="Enter Latitude, Longitude">
+        <span class="input-group-btn">
+          <button class="btn btn-default" type="button" onclick="latlngchng()">
+            <span class="glyphicon glyphicon-search"></span>
+          </button>
+        </span>
+      </div>
+      <br>
+      <br>
+      <!-- <div id="MapControls" style='width:inherit;'> -->
+        <div class="grid2x2">
+          <div class="box"><div><input onclick="saveMarkers();" type="button" value="Save Markers"></div></div>
+          <div class="box"><div><input onclick="deleteMarkers();" type="button" value="Delete Markers">  </div></div>
+          <div class="box"><div><input onclick="showMarkers();"  type="button" value="Show All Markers"></div></div>
+          <div class="box"><div><input onclick="clearMarkers();" type="button" value="Hide Markers"></div></div>          
+        </div>        
+        <div class="grid" style='margin: 0px auto;height: 30px; width:50%'>
+          <form id='showAMForm' name='showAM_form' method="get" action='showAllMarkers'>	
+          	<div class="box"><div><input type="submit" value="Show All Saved Markers"></div></div>
+      	  </form>
+        </div>
+
+    </div>
+
+    <div class="col-sm-9">
+      <center><h4><big>Satellite Image Labelling Tool</big></h4></center>
+      <div id="MapContainer" style="width:670px;height:670px;margin:0px auto;">
+          <div id="googleMap" style="width:670px;height:670px;"></div>          
+      </div>
+      <div id='zoomLvl' style='height:10px; width:110px ;margin:10px auto;'><b>  Zoom Level: <span id='zoomLvlTxt'>18</span> </b></div>
+      <hr>
+      <center>
+        <form id='capture_form' name='capture_form' method="post" action='.'> <!--  action="ImageLabelingTool">-->
+          <input name='imageName' placeholder='Enter Image Name' type="text" id="imageName">
+          <input type="submit" id="btnSave" value="Capture Image and Annotate"/>
+          <br>
+          <b>Note:</b>Enter only name for the image, don't enter extension
+        <!--  <div id="output"><h5>latlong</h5></div>    -->
+        </form>
+    </center>      
+    </div>
+  </div>
+</div>
+
+<footer class="container-fluid">
+  <!-- <p>Footer Text</p> -->
+</footer>
+
+</body>
+</html>
+{% load static %} 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script type="text/javascript" src="{% static 'Gmap/js/html2canvas.js' %}"></script>
+<script src="http://maps.google.com/maps/api/js?key=AIzaSyDwYUReYvB5CFnmNxt8NJe7PjRXMmBspws
+&callback=myMap&libraries=places&dummy=.js"></script>
+<!-- <script src="http://maps.google.com/maps/api/js?callback=myMap&libraries=places&sensor=false&dummy=.js"></script> -->
+<script>
+/*function myMap() {
+var mapProp= {
+  center:new google.maps.LatLng(19.910915, 73.876757),
+  zoom:19,
+  disableDefaultUI: true,
+  mapTypeId: google.maps.MapTypeId.SATELLITE,
+};
+var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
+//var drawingManager = new google.maps.drawing.DrawingManager();
+//drawingManager.setMap(map);
+
+}*/
+
+// $(function() { 
+	var map;
+	var markers = [];
+	var latlng
+	function initialize(vlat,vlong){        
+    //var latlng = new google.maps.LatLng(19.910915, 73.876757);
+    latlng = new google.maps.LatLng(vlat,vlong);
+    var myOptions = {
+        zoom: 18,
+        center: latlng,
+        disableDefaultUI: true,
+        mapTypeId: google.maps.MapTypeId.SATELLITE,
+        scaleControl: true
+    };
+
+    map = new google.maps.Map(document.getElementById("googleMap"), myOptions); 
+    }
+    var vlat=20.779080;
+    var vlong=78.563808;//Somewhere in Wardha
+    initialize(vlat,vlong);
+    /*$("#googleMap").mouseover(function(){     
+       $("#output").html('<h5>'+map.getCenter()+'</h5>');
+  });*/
+    // $("#btnSave").click(function() { 
+    var done=false; 
+    $("#capture_form").submit(function(e) { 
+   	// $("#btnSave").click(function(e) { 
+
+      // if(done==true){
+      //   done=false;
+      //   return;
+      // }      
+      e.preventDefault();
+    clearMarkers();
+    //get transform value
+    var mapNodes = '.gm-style>div:first>div:first>div:last>div';      
+      var transformer = $(mapNodes).css('transform');
+      var comp = transformer.split(',');      
+      var mapLeft = parseFloat(comp[4]);
+      var mapTop = parseFloat(comp[5]);
+
+      $(mapNodes).css({
+      'transform': 'none',
+      'left': mapLeft,
+      'top': mapTop
+      });
+    html2canvas($('#googleMap')[0],
+    {
+      useCORS: true,          
+      backgroundColor: null,      
+     }).then(function(canvas){
+        /*var imageBase64= canvas.toDataURL('image/png');
+        //location.href=dataUrl //for testing I never get window.open to work
+        var img = document.createElement('img');
+            //var img = new Image();             
+            img.src = imageBase64; 
+            // Get base64URL*/
+          var base64URL = canvas.toDataURL('image/jpeg').replace('image/jpeg', 'image/octet-stream');
+          var filename = $('#imageName').val();           
+      $.ajax({
+        type:"POST",
+            url: 'ajax/save_image',
+            data: {
+                'imagesrc': base64URL,
+                'filename': filename                
+            },
+            dataType: 'json',
+            success: function (data) {                
+                if (data.status==1) {
+                  alert("Image is captured.");
+                  done=true; 
+                  location.reload();  
+                  //$('#capture_form').submit();//Uncomment for redirection to labeling                  
+                  //e.currentTarget.submit();               
+                }
+                else if(data.status==-1){
+                  alert("File with same name exists. Try some other name.");                
+                }
+                else{
+                  alert("Something went wrong.");
+                }
+            },
+            error: function(xhr, textStatus, errorThrown) {
+          alert("Something went wrong.");
+            }
+          });    
+    }); 
+
+  });
+
+  //For setting map based on lat long
+  function latlngchng(){
+  		var latlngtext=$('#inp_latlng').val()
+  		var str_array = latlngtext.split(',');
+  		var vlat=str_array[0] 
+  		var vlong=str_array[1]  
+  		latlng = new google.maps.LatLng(vlat,vlong);
+  		map.setCenter(latlng);
+  		//initialize(vlat, vlong);
+  }
+  function searchPlace(){
+  	var place=$('#inp_place').val()  	
+  	var request = {
+          query: place,
+          fields: ['name', 'geometry'],
+        };
+
+    service = new google.maps.places.PlacesService(map);
+
+    service.findPlaceFromQuery(request, function(results, status) {    	
+       if (status === google.maps.places.PlacesServiceStatus.OK) {
+            // for (var i = 0; i < results.length; i++) {
+            //   createMarker(results[i]);
+            // }            
+            map.setCenter(results[0].geometry.location);
+       }
+    });
+  }
+
+
+
+  //For adding marker
+  map.addListener('click', function(event) {
+          addMarker(event.latLng);
+    });
+  map.addListener('zoom_changed', function() {
+      zoomLevel = map.getZoom();
+      $('#zoomLvlTxt').text(zoomLevel);
+  });
+    
+
+    // Adds a marker to the map and push to the array.
+    function addMarker(location) {    	
+      var marker = new google.maps.Marker({
+        position: location,
+        map: map,
+        optimized: false
+      });
+      markers.push(marker);
+    }
+
+    // Sets the map on all markers in the array.
+    function setMapOnAll(map) {
+      for (var i = 0; i < markers.length; i++) {
+        markers[i].setMap(map);
+      }
+    }
+
+    // Removes the markers from the map, but keeps them in the array.
+    function clearMarkers() {
+      setMapOnAll(null);
+    }
+
+    // Shows any markers currently in the array.
+    function showMarkers() {
+      setMapOnAll(map);
+    }
+
+    // Deletes all markers in the array by removing references to them.
+    function deleteMarkers() {
+      clearMarkers();
+      markers = [];
+    }
+
+    // Save markers to database
+    function saveMarkers(){
+      var lat = latlng.lat();
+    var lng = latlng.lng(); 
+    var locations=[];
+    for (var i = 0; i < markers.length; i++) {
+        locations.push(markers[i].position);        
+      } 
+      markers_json=JSON.stringify(locations);   
+      $.ajax({
+        type:"POST",
+            url: 'ajax/save_markers',
+            data: {
+                'markers': markers_json               
+            },
+            dataType: 'json',
+            success: function (data) {                
+                if (data.status==1) {
+                  alert("Markers saved");                   
+                }
+          }         
+      });
+    }
+
+
+
+
+// }); 
+</script>
+
