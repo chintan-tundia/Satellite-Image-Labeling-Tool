@@ -99,6 +99,16 @@ def index(request):
         'allMarkers':allMarkers,        
     }    
     return HttpResponse(template.render(context, request))
+def labelWells(request):
+    template = loader.get_template('Gmapv2/labelWells.html')    
+    # allMarkers = GMapMarker.objects.all()
+    DISTRICTNAME_ENGLISH.sort()
+    context = {  
+        'districtNames':DISTRICTNAME_ENGLISH
+        #'allMarkers':allMarkers,        
+    }    
+    return HttpResponse(template.render(context, request)) 
+	
 def labelFarmPonds(request):
     template = loader.get_template('Gmapv2/labelFarmPonds.html')  
     print(template)  
@@ -109,6 +119,19 @@ def labelFarmPonds(request):
         #'allMarkers':allMarkers,        
     }    
     return HttpResponse(template.render(context, request))
+
+def labelCheckDams(request):
+    template = loader.get_template('Gmapv2/labelCheckDams.html')  
+    print(template)  
+    # allMarkers = GMapMarker.objects.all()
+    DISTRICTNAME_ENGLISH.sort()
+    context = {  
+        'districtNames':DISTRICTNAME_ENGLISH
+        #'allMarkers':allMarkers,        
+    }    
+    return HttpResponse(template.render(context, request))
+
+	
 def checkArea(request):    
     template = loader.get_template('Gmapv2/checkArea.html')        
     context = {          
@@ -165,15 +188,7 @@ def getMarkerFromId(request):
 
     return JsonResponse(data)    
 
-def labelWells(request):
-    template = loader.get_template('Gmapv2/labelWells.html')    
-    # allMarkers = GMapMarker.objects.all()
-    DISTRICTNAME_ENGLISH.sort()
-    context = {  
-        'districtNames':DISTRICTNAME_ENGLISH
-        #'allMarkers':allMarkers,        
-    }    
-    return HttpResponse(template.render(context, request))    
+   
 def getImageList(request):
     if request.method == 'POST':
         try:
@@ -263,6 +278,26 @@ def getImageList(request):
             }
 
     return JsonResponse(data)
+def displayImagesCD(request):
+    template = loader.get_template('Gmapv2/displayWells.html')    
+    # imgs = Image.objects.filter(is_annotated=False)
+    imgs = Image.objects.filter(annotation__class_label="Checkdam").distinct().extra(order_by = ['image_name']);
+    wells=Annotation.objects.filter(class_label="Checkdam").count();    
+    totalImages=imgs.count();
+    # imgs = Image.objects.all().extra(order_by = ['-captured_date']);
+    # imgs = imgs.extra(order_by = ['image_name']);
+    # img_sample = imgs.get(image_name="Ahmednagar_Wet_2.jpg")    
+    # print(img_sample)
+    # annotations=Annotation.objects.all()
+    # annotations_sample=annotations.filter(source_image=img_sample)
+    
+    context = {        
+        'images':imgs,
+        'wells':wells,
+        'totalImages':totalImages
+    }
+    return HttpResponse(template.render(context, request)) 
+	
 def displayImagesFP(request):
     template = loader.get_template('Gmapv2/displayFarmPonds.html')    
     # imgs = Image.objects.filter(is_annotated=False)
@@ -372,6 +407,17 @@ def get_jsmappedwork_district_wise(request):
                 total_img_district=Annotation.objects.filter(class_label='Well',\
                                 source_image__gmapmarker__district=districtName).\
                                 values('source_image').distinct().count()
+								
+            if(worktype=="checkdams"):
+                print("Checkdams")
+                print(dataOfYear)
+                print(districtName)
+                jsmappedworks=JSMappedWorks.objects.filter(Q(dataOfYear=dataOfYear),\
+                          Q(district__english_name=districtName),\
+                          Q(work_type__english_name='Earthern Nala Bandh'))
+                total_img_district=Annotation.objects.filter(class_label='Checkdam',\
+                                source_image__gmapmarker__district=districtName).\
+                                values('source_image').distinct().count()
 
             if(worktype=="farmponds"):
                 print("Farm Ponds")
@@ -427,6 +473,22 @@ def label_image(request):
         'encoded_string':encoded_string
     }
     return HttpResponse(template.render(context, request))
+
+def show_all_markers_cd(request):  
+	template = loader.get_template('Gmapv2/showAllMarkers.html')
+	allJSON=[];
+	objs = GMapMarker.objects.filter(Q(source_image__annotation__class_label="Checkdam"))
+	for obj in objs:
+	 allJSON.append(obj.geometryJSON)    
+	allMarkers={}
+	allMarkers['allJSON']=allJSON
+	allMarkers=json.dumps(allMarkers)
+	#print(allMarkers)
+	context = {  
+		'allMarkers':allMarkers,        
+	}
+	return HttpResponse(template.render(context, request))
+	
 
 def show_all_markers_fp(request):  
     template = loader.get_template('Gmapv2/showAllMarkers.html')

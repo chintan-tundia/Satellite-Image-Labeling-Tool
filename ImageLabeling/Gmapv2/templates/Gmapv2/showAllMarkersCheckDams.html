@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+  <link rel="shortcut icon" type="image/png" href="{% static 'favicon.ico' %}"/>
+  <title>Display All Markers</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <style>
+    /* Set height of the grid so .sidenav can be 100% (adjust if needed) */
+    .row.content {height: 930px}
+    
+    /* Set gray background color and 100% height */
+    .sidenav {
+      background-color: #f1f1f1;
+      height: 100%;
+    }
+    
+    /* Set black background color, white text and some padding */
+    footer {
+      background-color: #555;
+      color: white;
+      padding: 15px;
+    }
+    
+    /* On small screens, set height to 'auto' for sidenav and grid */
+    @media screen and (max-width: 767px) {
+      .sidenav {
+        height: auto;
+        padding: 15px;
+      }
+      .row.content {height: auto;} 
+    }
+    html, body {
+     height: 100%;
+     margin: 0;
+    }
+    .grid2x2 {      
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: row;
+    }
+    .grid2x2 > div {
+      display: flex; 
+      flex-basis: calc(50% - 40px);  
+      justify-content: center;
+      flex-direction: column;
+    }
+    .grid2x2 > div > div {
+      display: flex;
+      justify-content: center;
+      flex-direction: row;
+    }
+
+    .box { margin: 10px; }
+    .box1 { background-color: red; }
+    .box2 { background-color: orange; }
+    .box3 { background-color: purple; }
+    .box4 { background-color: grey; }
+  </style>
+</head>
+<body>
+
+<div class="container-fluid">
+  <div class="row content">  
+      <center><h4><big>All Geolocated Farm Ponds</big></h4></center> 
+      <div id="MapContainer" style="width:100%;height:900px;">
+          <div id="googleMap" style="width:100%;height:100%"></div>          
+      </div>
+      <!-- <div id='zoomLvl' style='height:10px; width:110px ;margin:10px auto;'><b>  Zoom Level: <span id='zoomLvlTxt'>18</span> </b></div> -->          
+  </div>
+</div>
+
+<footer class="container-fluid">
+  <!-- <p>Footer Text</p> -->
+</footer>
+
+</body>
+</html>
+{% load static %} 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script type="text/javascript" src="{% static 'Gmap/js/html2canvas.js' %}"></script>
+<script src="http://maps.google.com/maps/api/js?key=AIzaSyDwYUReYvB5CFnmNxt8NJe7PjRXMmBspws
+&callback=googleMap&libraries=places,drawing,geometry&dummy=.js"></script>
+<!-- <script src="http://maps.google.com/maps/api/js?callback=myMap&libraries=places&sensor=false&dummy=.js"></script> -->
+<script>
+/*function myMap() {
+var mapProp= {
+  center:new google.maps.LatLng(19.910915, 73.876757),
+  zoom:19,
+  disableDefaultUI: true,
+  mapTypeId: google.maps.MapTypeId.SATELLITE,
+};
+var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
+//var drawingManager = new google.maps.drawing.DrawingManager();
+//drawingManager.setMap(map);
+
+}*/
+
+// $(function() { 
+	var map;
+	var markers = [];
+	var latlng
+	function initialize(vlat,vlong){        
+    //var latlng = new google.maps.LatLng(19.910915, 73.876757);
+    latlng = new google.maps.LatLng(vlat,vlong);
+    var myOptions = {
+        zoom: 7.5,
+        center: latlng,
+        // disableDefaultUI: true,
+        // mapTypeId: google.maps.MapTypeId.SATELLITE,
+        scaleControl: true,
+        cursor: 'default'
+    };
+    map = new google.maps.Map(document.getElementById("googleMap"), myOptions); 
+    drawingManager = new google.maps.drawing.DrawingManager({
+          //drawingMode: google.maps.drawing.OverlayType.MARKER,
+          drawingControl: false,
+          drawingControlOptions: {
+            //position: google.maps.ControlPosition.TOP_CENTER,
+            //drawingModes: ['marker', 'circle', 'polygon', 'polyline', 'rectangle']
+            //drawingModes: ['circle','polygon','rectangle']
+            drawingModes:null
+          },          
+          circleOptions: {
+            fillColor: '#e6dc03',
+            fillOpacity: 0.5,
+            strokeWeight: 1,
+            clickable: true,
+            editable: true,
+            zIndex: 1
+          },
+          polygonOptions: {
+            fillOpacity:0.5,
+            fillColor: '#e6dc03',
+            strokeWeight: 1,
+            clickable: true,
+            draggable:true,
+            editable: true,
+            zIndex: 1
+
+          },
+          rectangleOptions: {
+            fillOpacity:0.5,
+            fillColor: '#e6dc03',
+            strokeWeight: 1,
+            clickable: true,
+            draggable:true,
+            editable: true,
+            zIndex: 1
+
+          }
+
+        })
+    drawingManager.setMap(map);
+    var geometryJSON= '{{allMarkers|escapejs}}'           
+    addMarkers(geometryJSON);
+  }
+  var vlat=20.779080;
+  var vlong=78.563808;//Somewhere in Wardha
+  initialize(vlat,vlong);
+  var done=false; 
+ 
+
+  function getPolygonCenter(latLngArray){
+    var lowx=Number.MAX_VALUE,lowy=Number.MAX_VALUE;
+    var highx=0,highy=0;
+    for (i=0;i<latLngArray.length;i++){
+      var latLng=latLngArray[i];
+      var lat=latLng.lat()
+      var lng=latLng.lng()
+      if(lowx>lat){lowx=lat;}
+      if(lowy>lng){lowy=lng;}
+      if(highx<lat){highx=lat;}
+      if(highy<lng){highy=lng;}      
+    }
+    var center_x = lowx + ((highx - lowx) / 2);
+    var center_y = lowy + ((highy - lowy) / 2);
+    var centerLatLng=new google.maps.LatLng(center_x,center_y)
+    return centerLatLng;
+
+  }
+  // Adds a marker to the map and push to the array.
+  function addMarkers(geometryJSON) {
+    arr=JSON.parse(geometryJSON);
+    allMarkers=arr['allJSON'];
+    var latLngArray=[];
+    var totalMarkers=allMarkers.length;
+    for(marker_i=0; marker_i<totalMarkers;marker_i++){
+      
+      obj=JSON.parse(allMarkers[marker_i])      
+      worldCoords=obj["worldCoords"]      
+      classNm=obj["classnm"]      
+      var centerLatLng;
+      latLngArray=[];
+      for(coord_i=0;coord_i<worldCoords.length;coord_i++){
+        lat=worldCoords[coord_i].lat
+        lng=worldCoords[coord_i].lng
+        latLng=new google.maps.LatLng(lat,lng)
+        latLngArray.push(latLng)      
+      }
+
+      centerLatLng=getPolygonCenter(latLngArray);
+      
+      var objPolygon=new google.maps.Polygon({
+          paths: latLngArray,          
+      });
+      var marker = new google.maps.Marker({
+        position: centerLatLng,
+        map: map,
+        optimized: true,        
+      });
+      var wfpl="Wet Farm Pond - Lined";
+      var wfpu="Wet Farm Pond - Unlined";
+      var dfpl="Dry Farm Pond - Lined";
+      var dfpu="Dry Farm Pond - Unlined";
+
+      if(classNm==wfpl){
+        objPolygon.setOptions({  
+          editable:false, 
+          fillColor: 'cyan',
+          strokeColor: 'cyan',
+          strokeWeight: 2, 
+        })
+        marker.setIcon("http://maps.google.com/mapfiles/ms/icons/blue-dot.png")
+      }else if(classNm==dfpl){
+        objPolygon.setOptions({  
+          editable:false, 
+          fillColor: 'red',
+          strokeColor: 'red',          
+          strokeWeight: 2,                      
+        })
+        marker.setIcon("http://maps.google.com/mapfiles/ms/icons/red-dot.png")
+      }
+      else if(classNm==wfpu){
+        objPolygon.setOptions({  
+          editable:false, 
+          fillColor: 'green',
+          strokeColor: 'green',                    
+          strokeWeight: 2,                      
+        })
+        marker.setIcon("http://maps.google.com/mapfiles/ms/icons/green-dot.png")
+      }
+      else if(classNm==dfpu){
+        objPolygon.setOptions({  
+          editable:false, 
+          fillColor: 'yellow',
+          strokeColor: 'yellow',                   
+          strokeWeight: 2,                      
+        })
+        marker.setIcon("http://maps.google.com/mapfiles/ms/icons/yellow-dot.png")
+      }
+      
+      var infoWindow = new google.maps.InfoWindow();
+      objPolygon.addListener('click', function() {        
+
+           infoWindow.setContent('<div><strong>' + classNm + '</strong></div>');
+           // infoWindow.open(map, this);  
+           infoWindow.open(map, marker)
+      });
+      markers.push(objPolygon)
+    }   
+    setMapOnAll(map)
+    map.setOptions({draggableCursor:'default'})
+  }
+
+    // Sets the map on all markers in the array.
+    function setMapOnAll(map) {
+      for (var i = 0; i < markers.length; i++) {
+        markers[i].setMap(map);
+      }
+    }
+
+    // Removes the markers from the map, but keeps them in the array.
+    function clearMarkers() {
+      setMapOnAll(null);
+    }
+
+    // Shows any markers currently in the array.
+    function showMarkers() {
+      setMapOnAll(map);
+    }
+
+    // Deletes all markers in the array by removing references to them.
+    function deleteMarkers() {
+      clearMarkers();
+      markers = [];
+    }
+
+  
+
+
+
+
+// }); 
+</script>
+

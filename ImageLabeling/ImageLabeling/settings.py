@@ -95,10 +95,10 @@ DATABASES = {
     'PORT': '5432',
     }
     ,
-    'gmapv2': {
-       'ENGINE': 'django.db.backends.sqlite3',
-       'NAME': os.path.join(BASE_DIR, 'db_gmapv2.sqlite3'),
-    }
+    # 'gmapv2': {
+       # 'ENGINE': 'django.db.backends.sqlite3',
+       # 'NAME': os.path.join(BASE_DIR, 'db_gmapv2.sqlite3'),
+    # }
  #    'default': {
  #        'ENGINE': 'django.db.backends.postgresql',
  #        'NAME': 'SatelliteImageLabeling',
