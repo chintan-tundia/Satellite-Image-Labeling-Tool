@@ -404,6 +404,7 @@ def get_jsmappedwork_district_wise(request):
                           Q(work_type__english_name='Well Deepening')|\
                           Q(work_type__english_name='Irrigation Well')|\
                           Q(work_type__english_name='KT Well Desilting'))
+                print(jsmappedworks.count())
                 total_img_district=Annotation.objects.filter(class_label='Well',\
                                 source_image__gmapmarker__district=districtName).\
                                 values('source_image').distinct().count()
@@ -414,7 +415,8 @@ def get_jsmappedwork_district_wise(request):
                 print(districtName)
                 jsmappedworks=JSMappedWorks.objects.filter(Q(dataOfYear=dataOfYear),\
                           Q(district__english_name=districtName),\
-                          Q(work_type__english_name='Earthern Nala Bandh'))
+                          Q(work_type__english_name='Old CNB'))
+                print("Total Checkdams: ", jsmappedworks.count())
                 total_img_district=Annotation.objects.filter(class_label='Checkdam',\
                                 source_image__gmapmarker__district=districtName).\
                                 values('source_image').distinct().count()
