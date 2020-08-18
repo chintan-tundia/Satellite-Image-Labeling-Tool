@@ -30,7 +30,7 @@
             zoom: 19,
             center: latlng,
             disableDefaultUI: true,
-            mapTypeId: google.maps.MapTypeId.HYBRID,
+            mapTypeId: google.maps.MapTypeId.SATELLITE,
             scaleControl: true            
         };        
         map = new google.maps.Map(document.getElementById("googleMap"), myOptions); 

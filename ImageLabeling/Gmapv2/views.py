@@ -415,7 +415,7 @@ def get_jsmappedwork_district_wise(request):
                 print(districtName)
                 jsmappedworks=JSMappedWorks.objects.filter(Q(dataOfYear=dataOfYear),\
                           Q(district__english_name=districtName),\
-                          Q(work_type__english_name='Old CNB'))
+                          Q(work_type__english_name='Cement Concrete Nala Bandh'))
                 print("Total Checkdams: ", jsmappedworks.count())
                 total_img_district=Annotation.objects.filter(class_label='Checkdam',\
                                 source_image__gmapmarker__district=districtName).\
