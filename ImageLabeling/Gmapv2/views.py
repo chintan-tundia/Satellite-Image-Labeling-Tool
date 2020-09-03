@@ -630,7 +630,7 @@ def save_image_checkdams(request):
         if(is_annotated_flag):
             location = 'static/Gmapv2/images/Checkdams/';
             if(zoom=="19"):
-                location = 'static/Gmapv2/images/Checkdams/zoom19/';
+                location = 'static/Gmapv2/images/Checkdams/zoom19/';                
         else:
             if(zoom=="19"):
                 location = 'static/Gmapv2/images/Checkdams/zoom19/';
@@ -692,6 +692,8 @@ def save_image_checkdams(request):
 
 
         # #Download Image on server 
+        if not os.path.exists(location):
+            os.makedirs(location)
         downloadImage(imgUrl,filepath)        
         if(ground_truthing_done=='true'):
             ground_truthing_done=True
