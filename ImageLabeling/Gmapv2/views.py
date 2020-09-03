@@ -125,9 +125,10 @@ def labelCheckDams(request):
     print(template)  
     # allMarkers = GMapMarker.objects.all()
     DISTRICTNAME_ENGLISH.sort()
+    allWorkTypes = list(WorkType.objects.all().order_by('pk').values_list('english_name', flat=True))         
     context = {  
-        'districtNames':DISTRICTNAME_ENGLISH
-        #'allMarkers':allMarkers,        
+        'districtNames':DISTRICTNAME_ENGLISH,
+        'allWorkTypes':allWorkTypes,        
     }    
     return HttpResponse(template.render(context, request))
 
@@ -212,8 +213,7 @@ def getImageList(request):
                 if(wfpl=='1'):
                     wfplr=Image.objects.filter(Q(annotation__class_label="Wet Farm Pond - Lined"),zoom_level=18)
                     results=results|wfplr
-                    wfplc=wfplr.count()
-                    print("YASS")
+                    wfplc=wfplr.count()                    
                 if(wfpu=='1'):
                     wfpur=Image.objects.filter(Q(annotation__class_label="Wet Farm Pond - Unlined"),zoom_level=18)
                     results=results|wfpur
@@ -278,10 +278,62 @@ def getImageList(request):
             }
 
     return JsonResponse(data)
+
+
+def getImageListCD(request):
+    if request.method == 'POST':
+        try:
+            wbc = request.POST.get('wbc')
+            gbc = request.POST.get('gbc')            
+            neg = request.POST.get('neg')                        
+            wbcc = 0;
+            gbcc = 0;            
+            negc = 0;  
+            results=Image.objects.none()            
+
+            
+            if(wbc=='1'):
+                wbcr = Image.objects.filter(annotation__class_label="Wall Based Checkdam")
+                results=results|wbcr
+                wbcc=wbcr.count()                    
+            if(gbc=='1'):
+                gbcr=Image.objects.filter(annotation__class_label="Gate Based Checkdam")
+                results=results|gbcr
+                gbcc=gbcr.count()			
+            if(neg=='1'):
+                negr=Image.objects.filter(is_annotated=False,zoom_level=19,image_location='static/Gmapv2/images/Checkdams/zoom19/')
+                results=results|negr
+                negc=negr.count()
+
+
+            #print(type(results))
+            results=results.distinct().order_by('image_name')
+
+            totalImages = results.count(); 
+            print(totalImages)                       
+            images_list = serializers.serialize('json', results,\
+                                                fields=('image_name','is_annotated','is_approved','image_location'))            
+
+            data={
+                'status':1,
+                'images':images_list,
+                'wbc':wbcc,
+                'gbc':gbcc,                
+                'negImgs':negc,
+                'totalImages':totalImages
+            }             
+        except Exception as e:
+            print(str(e))
+            data={
+                'status':-1
+            }
+
+    return JsonResponse(data)
+	
 def displayImagesCD(request):
-    template = loader.get_template('Gmapv2/displayWells.html')    
+    template = loader.get_template('Gmapv2/displayCheckDams.html')    
     # imgs = Image.objects.filter(is_annotated=False)
-    imgs = Image.objects.filter(annotation__class_label="Checkdam").distinct().extra(order_by = ['image_name']);
+    imgs = Image.objects.filter(Q(image_location='static/Gmapv2/images/Checkdams/zoom19/')|Q(annotation__class_label="Wall Based Checkdam")|Q(annotation__class_label="Gate Based Checkdam")).distinct().extra(order_by = ['image_name']);
     wells=Annotation.objects.filter(class_label="Checkdam").count();    
     totalImages=imgs.count();
     # imgs = Image.objects.all().extra(order_by = ['-captured_date']);
@@ -290,10 +342,14 @@ def displayImagesCD(request):
     # print(img_sample)
     # annotations=Annotation.objects.all()
     # annotations_sample=annotations.filter(source_image=img_sample)
-    
+    wbc=Annotation.objects.filter(class_label="Wall Based Checkdam").count();
+    gbc=Annotation.objects.filter(class_label="Gate Based Checkdam").count();
+    negImgs = Image.objects.filter(is_annotated=False,zoom_level=19,image_location='static/Gmapv2/images/Checkdams/zoom19/').count() 
     context = {        
         'images':imgs,
-        'wells':wells,
+        'wbc':wbc,
+		'gbc':gbc,
+		'negImgs':negImgs,
         'totalImages':totalImages
     }
     return HttpResponse(template.render(context, request)) 
@@ -415,7 +471,13 @@ def get_jsmappedwork_district_wise(request):
                 print(districtName)
                 jsmappedworks=JSMappedWorks.objects.filter(Q(dataOfYear=dataOfYear),\
                           Q(district__english_name=districtName),\
-                          Q(work_type__english_name='Cement Concrete Nala Bandh'))
+                          Q(work_type__english_name='Cement Concrete Nala Bandh')|\
+						  Q(work_type__english_name='Old CNB')|\
+                          Q(work_type__english_name='Cement Nala Bund Construction Desilting and Deepening')|\
+						  Q(work_type__english_name='Cement Nala Bund Deepening')|\
+						  Q(work_type__english_name='Cement Concrete Nala Bund Repair')|\
+						  Q(work_type__english_name='KT Weir / Storage Bandhara Repair')|\
+						  Q(work_type__english_name='Kolhapur Type Bandhara'));                
                 print("Total Checkdams: ", jsmappedworks.count())
                 total_img_district=Annotation.objects.filter(class_label='Checkdam',\
                                 source_image__gmapmarker__district=districtName).\
@@ -445,8 +507,8 @@ def get_jsmappedwork_district_wise(request):
             if(total_count>0):
                 percentage=(total_done_count/total_count) * 100;
             jsmappedworks_list = serializers.serialize('json', jsmapped_not_done,\
-                                                fields=('latitude','longitude'))            
-
+                                                fields=('latitude','longitude','work_type'))            
+            #print(jsmappedworks_list)
             data={
                 'status':1,
                 'total_samples':total_count,
@@ -534,7 +596,7 @@ def downloadImage(imgUrl,filepath): #taken from Debanjan's code
         shutil.copyfileobj(response.raw, out_file)
     del response
 
-def save_image_fps(request):
+def save_image_checkdams(request):
     data = {}
     if request.method == 'POST':        
         topLeftLat = request.POST.get('topLeftLat')
@@ -565,11 +627,294 @@ def save_image_fps(request):
             is_annotated_flag=True
         location='static/Gmapv2/images/';    
         if(is_annotated_flag):
-            location = 'static/Gmapv2/images/FarmPonds/';
+            location = 'static/Gmapv2/images/Checkdams/';
             if(zoom=="19"):
-                location = 'static/Gmapv2/images/FarmPonds/zoom19/';
+                location = 'static/Gmapv2/images/Checkdams/zoom19/';
         else:
-            location = 'static/Gmapv2/images/FarmPonds/';    
+            if(zoom=="19"):
+                location = 'static/Gmapv2/images/Checkdams/zoom19/';
+            else:	
+                location = 'static/Gmapv2/images/Checkdams/';       
+
+        key = 'AIzaSyDQrhuv_BxZGPpB1WGF-dLTKbumKYchpvo';
+        maptype = 'satellite';
+        size = '640x640';
+        url_center = centerLat+","+centerLng
+        imgUrl = "https://maps.googleapis.com/maps/api/staticmap?center="+url_center + '&size=' + size + '&zoom=' + zoom + '&maptype=' + maptype + '&key='+key        
+        newFileName=filename+"_z"+zoom+"_0.png";
+        filepath=location+newFileName;        
+        lastpos=len(filepath)-filepath.rfind('_')
+        filepathpattern=filepath[:-lastpos]
+        my_file = Path(filepath)
+        if my_file.exists():
+             files=glob.glob(filepathpattern+"*")
+             total=len(files)            
+             newFileName=filename+"_"+str(total)+".png"
+             filepath=location+newFileName;            
+        print(filepath)
+        if(derivedFromImageId!=None):
+            img=Image.objects.get(pk=derivedFromImageId)
+            #Save Image in Database
+            imgHeight=640;
+            imgWidth=640;        
+            saveImg = Image(image_name=newFileName,\
+                image_location=location,\
+                image_height=imgHeight,\
+                image_width=imgWidth,\
+                is_annotated=is_annotated_flag,\
+                centerLatitude=centerLat,\
+                centerLongitude=centerLng,\
+                zoom_level=zoom,\
+                derived_from_image=img) 
+            saveImg.save() 
+
+        else:    
+            img=Image.objects.filter(image_name=filename)
+
+            # if img.count() > 0:            
+            #     data ={
+            #         'status':-1
+            #     }
+            #     return JsonResponse(data)
+        
+            #Save Image in Database
+            imgHeight=640;
+            imgWidth=640;        
+            saveImg = Image(image_name=newFileName,\
+                image_location=location,\
+                image_height=imgHeight,\
+                image_width=imgWidth,\
+                is_annotated=is_annotated_flag,\
+                centerLatitude=centerLat,\
+                centerLongitude=centerLng,zoom_level=zoom) 
+            saveImg.save() 
+
+
+        # #Download Image on server 
+        downloadImage(imgUrl,filepath)        
+        if(ground_truthing_done=='true'):
+            ground_truthing_done=True
+        else:
+            ground_truthing_done=False
+
+        if(is_annotated_flag):            
+            #Save Marker to Database
+            if(gmapMarkerId==None):            
+                for marker_i in markers:                      
+                    json_marker_i=json.dumps(marker_i)                         
+                    saveMarker = GMapMarker(source_image=saveImg,locality=locality,district=district,\
+                                        geometryJSON=json_marker_i,ground_truthing_done=ground_truthing_done)
+                    saveMarker.save()    
+        
+            #Save Annotations on database                
+            print(len(annotations))            
+            for ann_i in annotations:            
+                classnm=''            
+                for key, value in ann_i.items():                                    
+                    if(key=='classnm'):
+                        classnm = value  
+                        json_ann_i=json.dumps(ann_i);                                  
+                saveAnnot = Annotation(source_image=saveImg,class_label=classnm,geometryJSON=json_ann_i)
+                saveAnnot.save()    
+
+            #Make a relationship between image saved and JSmapped work. 
+            #Thus to be removed from list of JSMapped work on interface
+            if(derivedFromImageId==None):
+                #Loop Thru District wise jsmappedworks and flag those which are covered in one image
+                mapBounds = Polygon.from_bbox((topLeftLat,topLeftLng,bottomRightLat,bottomRightLng))
+                print(district)           
+                jsmappedworks = JSMappedWorks.objects.filter(Q(district__english_name=district),
+                                   Q(work_type__english_name='Cement Concrete Nala Bandh')|\
+                                   Q(work_type__english_name='Old CNB')|\
+                                   Q(work_type__english_name='Cement Nala Bund Construction Desilting and Deepening')|\
+                                   Q(work_type__english_name='Cement Nala Bund Deepening')|\
+                                   Q(work_type__english_name='Cement Concrete Nala Bund Repair')|\
+                                   Q(work_type__english_name='KT Weir / Storage Bandhara Repair')|\
+                                   Q(work_type__english_name='Kolhapur Type Bandhara'));
+
+                #obj=jsmappedworks[0]
+                #print(obj)      
+                for obj in jsmappedworks:
+                    latlng=(obj.latitude,obj.longitude)
+                    point = Point(latlng)
+                    flag=mapBounds.contains(point)             
+                    if(flag):                         
+                        # print("-----------------")
+                        # print(obj)
+                        # print(obj.is_marked)
+                        obj.is_marked = True  # update record
+                        # print("Changed"+str(obj.is_marked))
+                        # print(obj)
+                        # print("**-----------------**")
+                        #obj.save()
+                        #Map Image(Dataset) with JSMappedWorks
+                        jsmappedworksimg=JSMappedWorksImage(jsmappedwork=obj,image=saveImg)
+                        jsmappedworksimg.save()
+                
+                #flag=mapBounds.contains(ls2)
+                # ls1=LineString(((19.85849090,75.51621409),(19.85849594,75.51662715),(19.85804186,75.51666470),(19.85803176,75.51624092)))    
+                # ls2=LineString(((19.85731082,75.50629352),(19.85728055,75.50688360),(19.85690719,75.50686215),(19.85696773,75.50631498)))
+                # bb1 = Polygon.from_bbox((19.86093151780648,75.5143893862305,19.85770246576097,75.51782261376957))
+                # ans=bb1.contains(ls2)
+                # print(ans)
+      
+
+        #Send success signal to the caller
+        data = {
+             'status': 1
+        }        
+        return JsonResponse(data)
+    return JsonResponse(data)
+	
+def save_image_wells(request):
+    data = {}
+    if request.method == 'POST':
+        topLeftLat = request.POST.get('topLeftLat')
+        topLeftLng = request.POST.get('topLeftLng')
+        bottomRightLat = request.POST.get('bottomRightLat')
+        bottomRightLng = request.POST.get('bottomRightLng')
+        centerLat = request.POST.get('centerLat') 
+        centerLng = request.POST.get('centerLng')        
+        district  = request.POST.get('district')
+        locality = request.POST.get('locality')             
+        markersJson = request.POST.get('markersJSON')
+        annotationsJson = request.POST.get('annotationJSON')
+        ground_truthing_done = request.POST.get('groundTruthingDone')
+        zoom =int(float(request.POST.get('zoom')))        
+        zoom = str(zoom)        
+        filename=str(district)+"_"+str(locality)+"_"+str(centerLat)+"_"+str(centerLng);
+        print(filename)
+        # data  = json.loads(markers_json)           
+        location = 'static/Gmapv2/images/Wells/';        
+        key = 'AIzaSyDQrhuv_BxZGPpB1WGF-dLTKbumKYchpvo';
+        maptype = 'satellite';
+        size = '640x640';
+        url_center = centerLat+","+centerLng
+        imgUrl = "https://maps.googleapis.com/maps/api/staticmap?center="+url_center + '&size=' + size + '&zoom=' + zoom + '&maptype=' + maptype + '&key='+key
+        print(imgUrl)
+        newFileName=filename+"_0.png";
+        filepath=location+newFileName;        
+        lastpos=len(filepath)-filepath.rfind('_')
+        filepathpattern=filepath[:-lastpos]
+        my_file = Path(filepath)
+        if my_file.exists():
+            files=glob.glob(filepathpattern+"*")
+            total=len(files)            
+            newFileName=filename+"_"+str(total)+".png"
+            filepath=location+newFileName;            
+    
+        # img=Image.objects.filter(image_name=filename)
+        # if img.count() > 0:            
+        #     data ={
+        #         'status':-1
+        #     }
+        #     return JsonResponse(data)
+        is_annotated_flag=False
+        if(len(annotationsJson)>0):
+            is_annotated_flag=True
+
+        #Save Image in Database
+        imgHeight=640;
+        imgWidth=640;        
+        saveImg = Image(image_name=newFileName,\
+            image_location=location,\
+            image_height=imgHeight,\
+            image_width=imgWidth,\
+            is_annotated=is_annotated_flag,\
+            centerLatitude=centerLat,\
+            centerLongitude=centerLng) 
+        saveImg.save() 
+
+
+        #Download Image on server 
+        downloadImage(imgUrl,filepath)        
+        if(ground_truthing_done=='true'):
+            ground_truthing_done=True
+        else:
+            ground_truthing_done=False
+
+        #Save Marker to Database
+        markers  = json.loads(markersJson)        
+        for marker_i in markers:                      
+            json_marker_i=json.dumps(marker_i)                         
+            saveMarker = GMapMarker(source_image=saveImg,locality=locality,district=district,\
+                                    geometryJSON=json_marker_i,ground_truthing_done=ground_truthing_done)
+            saveMarker.save()    
+        
+        #Save Annotations to Database    
+        annotations  = json.loads(annotationsJson)          
+        for ann_i in annotations:            
+            classnm=''            
+            for key, value in ann_i.items():                
+                if(key=='classnm'):
+                    classnm = value  
+                    json_ann_i=json.dumps(ann_i); 
+
+                    #print(json_ann_i)
+            saveAnnot = Annotation(source_image=saveImg,class_label=classnm,geometryJSON=json_ann_i)
+            saveAnnot.save()    
+
+
+        #Loop Thru District wise jsmappedworks and flag those which are covered in one image
+        mapBounds = Polygon.from_bbox((topLeftLat,topLeftLng,bottomRightLat,bottomRightLng))
+        #print(district)
+        jsmappedworks = JSMappedWorks.objects.filter(Q(district__english_name=district),\
+                          (Q(work_type__english_name='Well rehabilitation')|\
+                          Q(work_type__english_name='Vindhan Well rehabilitation')))
+        print(jsmappedworks.count())
+        #obj=jsmappedworks[0]        
+        for obj in jsmappedworks:
+            latlng=(obj.latitude,obj.longitude)
+            point = Point(latlng)
+            flag=mapBounds.contains(point)                         
+            if(flag):        
+                obj.is_marked = True  # update record
+                # print("Changed"+str(obj.is_marked))
+                # print(obj)
+                # print("**-----------------**")
+                obj.save()
+                #Map Image(Dataset) with JSMappedWorks
+                jsmappedworksimg=JSMappedWorksImage(jsmappedwork=obj,image=saveImg)
+                jsmappedworksimg.save()
+
+        #Send success signal to the caller
+        data = {
+             'status': 1
+        }
+        return JsonResponse(data)
+    return JsonResponse(data)
+	
+def save_image_fps(request):
+    data = {}
+    if request.method == 'POST':        
+        topLeftLat = request.POST.get('topLeftLat')
+        topLeftLng = request.POST.get('topLeftLng')
+        bottomRightLat = request.POST.get('bottomRightLat')
+        bottomRightLng = request.POST.get('bottomRightLng')
+        centerLat = request.POST.get('centerLat') 
+        centerLng = request.POST.get('centerLng')        
+        district  = request.POST.get('district')
+        locality = request.POST.get('locality')             
+        markersJson = request.POST.get('markersJSON')
+        annotationsJson = request.POST.get('annotationJSON')
+        ground_truthing_done = request.POST.get('groundTruthingDone')
+        gmapMarkerId=request.POST.get('gmapMarkerId')
+        derivedFromImageId = request.POST.get('derivedFromImageId')
+        zoom =int(float(request.POST.get('zoom')))        
+        zoom = str(zoom)  
+        if(gmapMarkerId!=None):
+            gmm=GMapMarker.objects.get(pk=gmapMarkerId)
+            district=gmm.district
+
+        filename=str(district)+"_"+str(locality)+"_"+str(centerLat)+"_"+str(centerLng);        
+        # data  = json.loads(markers_json)           
+        is_annotated_flag=False
+        markers  = json.loads(markersJson)
+        annotations  = json.loads(annotationsJson)          
+        if(len(annotations)>0):
+            is_annotated_flag=True
+        location='static/Gmapv2/images/';    
+        
 
         key = 'AIzaSyDQrhuv_BxZGPpB1WGF-dLTKbumKYchpvo';
         maptype = 'satellite';
@@ -700,124 +1045,7 @@ def save_image_fps(request):
         }        
         return JsonResponse(data)
     return JsonResponse(data)
-def save_image_wells(request):
-    data = {}
-    if request.method == 'POST':
-        topLeftLat = request.POST.get('topLeftLat')
-        topLeftLng = request.POST.get('topLeftLng')
-        bottomRightLat = request.POST.get('bottomRightLat')
-        bottomRightLng = request.POST.get('bottomRightLng')
-        centerLat = request.POST.get('centerLat') 
-        centerLng = request.POST.get('centerLng')        
-        district  = request.POST.get('district')
-        locality = request.POST.get('locality')             
-        markersJson = request.POST.get('markersJSON')
-        annotationsJson = request.POST.get('annotationJSON')
-        ground_truthing_done = request.POST.get('groundTruthingDone')
-        zoom =int(float(request.POST.get('zoom')))        
-        zoom = str(zoom)        
-        filename=str(district)+"_"+str(locality)+"_"+str(centerLat)+"_"+str(centerLng);
-        print(filename)
-        # data  = json.loads(markers_json)           
-        location = 'static/Gmapv2/images/Wells/';        
-        key = 'AIzaSyDQrhuv_BxZGPpB1WGF-dLTKbumKYchpvo';
-        maptype = 'satellite';
-        size = '640x640';
-        url_center = centerLat+","+centerLng
-        imgUrl = "https://maps.googleapis.com/maps/api/staticmap?center="+url_center + '&size=' + size + '&zoom=' + zoom + '&maptype=' + maptype + '&key='+key
-        print(imgUrl)
-        newFileName=filename+"_0.png";
-        filepath=location+newFileName;        
-        lastpos=len(filepath)-filepath.rfind('_')
-        filepathpattern=filepath[:-lastpos]
-        my_file = Path(filepath)
-        if my_file.exists():
-            files=glob.glob(filepathpattern+"*")
-            total=len(files)            
-            newFileName=filename+"_"+str(total)+".png"
-            filepath=location+newFileName;            
-    
-        # img=Image.objects.filter(image_name=filename)
-        # if img.count() > 0:            
-        #     data ={
-        #         'status':-1
-        #     }
-        #     return JsonResponse(data)
-        is_annotated_flag=False
-        if(len(annotationsJson)>0):
-            is_annotated_flag=True
-
-        #Save Image in Database
-        imgHeight=640;
-        imgWidth=640;        
-        saveImg = Image(image_name=newFileName,\
-            image_location=location,\
-            image_height=imgHeight,\
-            image_width=imgWidth,\
-            is_annotated=is_annotated_flag,\
-            centerLatitude=centerLat,\
-            centerLongitude=centerLng) 
-        saveImg.save() 
-
-
-        #Download Image on server 
-        downloadImage(imgUrl,filepath)        
-        if(ground_truthing_done=='true'):
-            ground_truthing_done=True
-        else:
-            ground_truthing_done=False
-
-        #Save Marker to Database
-        markers  = json.loads(markersJson)        
-        for marker_i in markers:                      
-            json_marker_i=json.dumps(marker_i)                         
-            saveMarker = GMapMarker(source_image=saveImg,locality=locality,district=district,\
-                                    geometryJSON=json_marker_i,ground_truthing_done=ground_truthing_done)
-            saveMarker.save()    
-        
-        #Save Annotations to Database    
-        annotations  = json.loads(annotationsJson)          
-        for ann_i in annotations:            
-            classnm=''            
-            for key, value in ann_i.items():                
-                if(key=='classnm'):
-                    classnm = value  
-                    json_ann_i=json.dumps(ann_i); 
-
-                    #print(json_ann_i)
-            saveAnnot = Annotation(source_image=saveImg,class_label=classnm,geometryJSON=json_ann_i)
-            saveAnnot.save()    
-
-
-        #Loop Thru District wise jsmappedworks and flag those which are covered in one image
-        mapBounds = Polygon.from_bbox((topLeftLat,topLeftLng,bottomRightLat,bottomRightLng))
-        #print(district)
-        jsmappedworks = JSMappedWorks.objects.filter(Q(district__english_name=district),\
-                          (Q(work_type__english_name='Well rehabilitation')|\
-                          Q(work_type__english_name='Vindhan Well rehabilitation')))
-        print(jsmappedworks.count())
-        #obj=jsmappedworks[0]        
-        for obj in jsmappedworks:
-            latlng=(obj.latitude,obj.longitude)
-            point = Point(latlng)
-            flag=mapBounds.contains(point)                         
-            if(flag):        
-                obj.is_marked = True  # update record
-                # print("Changed"+str(obj.is_marked))
-                # print(obj)
-                # print("**-----------------**")
-                obj.save()
-                #Map Image(Dataset) with JSMappedWorks
-                jsmappedworksimg=JSMappedWorksImage(jsmappedwork=obj,image=saveImg)
-                jsmappedworksimg.save()
-
-        #Send success signal to the caller
-        data = {
-             'status': 1
-        }
-        return JsonResponse(data)
-    return JsonResponse(data)
-
+	
 #Deletes image and annotation from database
 def deleteImage(request):
     data = {
@@ -1137,6 +1365,87 @@ def getMaxCoord(coordDict):
     maxCoord["x"]=x;
     maxCoord["y"]=y;
     return maxCoord;    
+def downloadDatasetCheckdams(request):
+    imgs = Image.objects.filter(Q(annotation__class_label="Wall Based Checkdam")|\
+                                Q(annotation__class_label="Gate Based Checkdam"),\
+                                Q(is_approved=True)).distinct().extra(order_by = ['image_name']);    
+
+   
+                                  
+    print(len(imgs))
+    filename="Dataset-Checkdams";
+    location="static/Gmapv2/zip/"
+    newZipFileName=filename+"_0.zip";
+    zipPath=location+newZipFileName;        
+    lastpos=len(zipPath)-zipPath.rfind('_')
+    filepathpattern=zipPath[:-lastpos]
+    my_file = Path(zipPath)
+    zipPath=os.path.join(location,newZipFileName)
+    if my_file.exists():
+        files=glob.glob(filepathpattern+"*")
+        total=len(files)            
+        newZipFileName=filename+"_"+str(total)+".zip"
+    zipPath=location+newZipFileName;            
+
+    allRows=[];
+    for img in imgs:
+        row={};        
+        image_name=img.image_name        
+        image_width=img.image_width
+        image_height=img.image_height
+        date_captured=img.captured_date
+        img_path=img.image_location
+        row["file_name"]=image_name;
+        row["width"]=int(image_width);
+        row["height"]=int(image_height);
+        row["date_captured"]=date_captured.strftime("%m/%d/%Y");
+        annots=Annotation.objects.filter(source_image=img)        
+        arrJson=[];
+        for annot in annots:
+            currAnnJson={}
+            geometryJSON = annot.geometryJSON;
+            data  = json.loads(geometryJSON)
+            currAnnJson['type'] = data['type']
+            currAnnJson['classnm'] = data['classnm']            
+            pixelCoords = data['pixelCoords']
+            currAnnJson['segmentation'] = pixelCoords
+            minCoord=getMinCoord(pixelCoords)
+            maxCoord=getMaxCoord(pixelCoords)
+            width=maxCoord["x"]-minCoord["x"]
+            height=maxCoord["y"]-minCoord["y"]
+            bbox={};
+            bbox["x"]=round(minCoord["x"]);
+            bbox["y"]=round(minCoord["y"]);
+            bbox["width"]=round(width);
+            bbox["height"]=round(height);
+            currAnnJson['bbox']=bbox;
+            arrJson.append(currAnnJson)        
+        row["annotations"]=arrJson
+        allRows.append(row);              
+        with zipfile.ZipFile(zipPath,'a', zipfile.ZIP_DEFLATED) as newzip:
+            path=img_path #"static/Gmapv2/images/FarmPonds/"
+            filename=image_name            
+            oldPath=os.path.join(path,filename)
+            if(not os.path.isfile(oldPath)):
+                print("Not Found : "+filename)
+            newPath="Images/"+filename
+            newzip.write(oldPath,newPath)
+
+    
+    finalJSON=json.dumps(allRows, separators=(',', ':'))
+    jsonFilename='dataset.json'
+    path=os.path.join("static/Gmapv2/json/",jsonFilename);    
+    with open(path, 'w') as f:
+        json.dump(finalJSON, f)            
+    with zipfile.ZipFile(zipPath,'a', zipfile.ZIP_DEFLATED) as newzip:        
+        newzip.write(path,jsonFilename)
+
+
+    context = {        
+    }      
+    response = HttpResponse(open(zipPath, 'rb'), content_type='application/zip')
+    response['Content-Disposition'] = 'attachment; filename=%s' % ("CheckdamDataset_"+dttm.today().strftime('%Y_%m_%d')+".zip")    
+    return response;
 
 def downloadDatasetFP(request):
     zoom_level = request.GET.get('zl') 

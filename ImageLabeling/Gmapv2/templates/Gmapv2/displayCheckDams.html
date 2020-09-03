@@ -60,10 +60,9 @@
 		<div class="container" id="container">
             
         	<div class="left"> 
-                <h4> <a href="labelfarmponds">< Go Back To Labeling</a> </h4>                
+                <h4> <a href="labelcheckdams">< Go Back To Labeling</a> </h4>                
 				<label for="imageList"></label><select name="imageList" id="imageList" size="10" multiple></select>	
-                <label class="checkbox-inline"><input id="cb_zl18" type="checkbox" onchange="changeImageList()" value="">Zoom Level-18</label>
-                <label class="checkbox-inline"><input id="cb_zl19" type="checkbox" onchange="changeImageList()" value="">Zoom Level-19</label>                
+                
                 <center><h5><b id="totalImages">Total Images: {{totalImages}}</b></h5></center>
                 <div id="description" style="display: none">
                     SHORTCUTS:
@@ -117,52 +116,14 @@
                   <div style="height:100px">
                     <div style="display:none;float:left;height:50px;">
                         <p>Is Annotated? : <span id='is_annotated'> No </span> </p> 
-                    </div>
-                    <!-- <div style="height:30px;margin:5px auto;">
-                        <div style="float:left; margin-right:10px; height:17px;width:17px;border: 3px solid  black;background-color:cyan;border-style: ridge;">
-                            
-                        </div> 
-                        <div style="float:left;height:10px;width:200px;margin-right: 20px">
-                            <p> : Wet Farm Pond - Lined ({{ wfpl }})</p>
-                        </div> -->
-                    <!-- </div>
-                    <div style="height:50px;margin-left:30px;"> -->
-                        <!-- <div style="float:left; margin-right:10px; height:17px;width:17px;border: 3px solid  black;background-color:green;border-style: ridge;">
-                            
-                        </div> 
-                        <div style="float:left;height:10px;width:250px;">
-                            <p> : Wet Farm Pond - Unlined ({{ wfpu }})</p>
-                        </div>
-                    </div> -->
-                    <!-- <div style="height:30px;margin-left:margin:5px auto;">
-                        <div style="float:left; margin-right:10px; height:17px;width:17px;border: 3px solid  black;background-color:red;border-style: ridge;">
-                            
-                        </div> 
-                        <div style="float:left;height:10px;width:200px;margin-right: 20px">
-                            <p> : Dry Farm Pond - Lined ({{ dfpl }})</p>
-                        </div>  -->                       
-                    <!-- </div>
-                    <div style="float:left;height:50px;margin-left:1px;"> -->
-                        <!-- <div style="float:left; margin-right:10px; height:17px;width:17px;border: 3px solid black;background-color:yellow;border-style: ridge;">
-                            
-                        </div> 
-                        <div style="float:left;height:10px;width:250px;">
-                            <p> : Dry Farm Pond - Unlined ({{ dfpu }}) </p>
-                        </div>
-                    </div>  -->                    
-                
+                    </div>                  
                     <div class="checkbox">
-                      <label><input id="cb_wfpl" type="checkbox" value="" checked onchange="changeImageList()">Wet Farm Pond - Lined ({{wfpl}} instances) &nbsp;<span style="color:cyan" class="glyphicon glyphicon-stop"></span></label>
+                      <label><input id="cb_wbc" type="checkbox" value="" checked onchange="changeImageList()">Wall Based Checkdam ({{wbc}} instances) &nbsp;<span style="color:yellow" class="glyphicon glyphicon-stop"></span></label>
                     </div>
                     <div class="checkbox">
-                      <label><input id="cb_wfpu" type="checkbox"  value="" checked onchange="changeImageList()">Wet Farm Pond - Unlined ({{wfpu}} instances)&nbsp;<span style="color:green" class="glyphicon glyphicon-stop"></span></label>
+                      <label><input id="cb_gbc" type="checkbox"  value="" checked onchange="changeImageList()">Gate Based Checkdam ({{gbc}} instances)&nbsp;<span style="color:orange" class="glyphicon glyphicon-stop"></span></label>
                     </div>
-                    <div class="checkbox">
-                      <label><input id="cb_dfpl" type="checkbox"  value="" checked onchange="changeImageList()">Dry Farm Pond - Lined ({{dfpl}} instances) &nbsp;<span style="color:red" class="glyphicon glyphicon-stop"></span></label>
-                    </div>
-                    <div class="checkbox">
-                      <label><input id="cb_dfpu" type="checkbox"  value="" checked onchange="changeImageList()">Dry Farm Pond - Unlined ({{dfpu}} instances) &nbsp;<span style="color:yellow" class="glyphicon glyphicon-stop"></span></label>
-                    </div>
+                    
 
                     <div class="checkbox">
                       <label><input id="cb_neg" type="checkbox" value="" checked onchange="changeImageList()">Negative Images ({{negImgs}}) </label>
@@ -223,9 +184,9 @@
         txtAnn.innerHTML=imageList.options[imageListIndex].getAttribute('data');
         imgLocation=imageList.options[imageListIndex].getAttribute('image_location');
                 
-        str="{% static 'Gmapv2/images/FarmPonds/' %}"+selectedImgName;
+        str="{% static 'Gmapv2/images/Checkdams/' %}"+selectedImgName;
         if(selectedImgName.includes("z19")){
-            str="{% static 'Gmapv2/images/FarmPonds/zoom19/' %}"+selectedImgName;    
+            str="{% static 'Gmapv2/images/Checkdams/zoom19/' %}"+selectedImgName;    
         }
 		var image_path=str; 
 		background.src = image_path;
@@ -271,51 +232,26 @@
 	}
 	function changeImageList(){                
         var neg ='0'
-        var wfpl='0'
-        var wfpu='0'
-        var dfpl='0'
-        var dfpu='0'
-        var zl18='0'
-        var zl19='0'
+        var wbc='0'
+        var gbc='0'
 
-        if(!$('#cb_zl18').is(":checked")&&
-           !$('#cb_zl19').is(":checked")){
-           $('#imageList').empty()
-           ctx.clearRect(0, 0, canvas.width, canvas.height)
-           return;
-        }
-        if(!$('#cb_wfpl').is(":checked")&&
-           !$('#cb_wfpu').is(":checked")&&
-           !$('#cb_dfpl').is(":checked")&&
-           !$('#cb_dfpu').is(":checked")&&
+        
+        if(!$('#cb_wbc').is(":checked")&&
+           !$('#cb_gbc').is(":checked")&&           
            !$('#cb_neg').is(":checked")
             ){
            ctx.clearRect(0, 0, canvas.width, canvas.height)
            $('#imageList').empty()
            return;
-        }
-        if($('#cb_zl18').is(":checked")){
-            zl18='1'
-        }
-        if($('#cb_zl19').is(":checked")){
-            zl19='1'
-        }
-        if ($('#cb_wfpl').is(":checked"))
+        }        
+        if ($('#cb_wbc').is(":checked"))
         {
-          wfpl='1'         
+          wbc='1'         
         }
-        if ($('#cb_wfpu').is(":checked"))
+        if ($('#cb_gbc').is(":checked"))
         {
-          wfpu='1'
-        }
-        if ($('#cb_dfpl').is(":checked"))
-        {
-          dfpl='1'         
-        }
-        if ($('#cb_dfpu').is(":checked"))
-        {
-          dfpu='1'
-        }
+          gbc='1'
+        }        
         if ($('#cb_neg').is(":checked"))
         {
           neg='1'
@@ -323,15 +259,11 @@
         
         $.ajax({
                 type:"POST",
-                    url: 'ajax/get_image_list',
+                    url: 'ajax/get_image_list_cd',
                     data: {                
                         'neg':neg,
-                        'wfpl':wfpl,
-                        'wfpu':wfpu,
-                        'dfpl':dfpl,
-                        'dfpu':dfpu, 
-                        'zl18':zl18,
-                        'zl19':zl19            
+                        'wbc':wbc,
+                        'gbc':gbc
                     },
                     dataType: 'json',
                     success: function (data) {                                                                
@@ -351,7 +283,7 @@
     function loadImageNamesbyJSON(json_imageList){
         //console.log(json_imageList)                
         $('#imageList').find('option').remove()
-        var imageList = document.getElementById("imageList")
+        var imageList = document.getElementById("imageList")        
         arr_imageList=JSON.parse(json_imageList)        
         let i=0;        
         let option=null;
@@ -493,10 +425,8 @@
         })
     }
     function setAnnotations(){
-        var wfpl="Wet Farm Pond - Lined";
-        var wfpu="Wet Farm Pond - Unlined";
-        var dfpl="Dry Farm Pond - Lined";
-        var dfpu="Dry Farm Pond - Unlined";
+        var wbc="Wall Based Checkdam";
+        var gbc="Gate Based Checkdam";       
         if (annots==-1) {
           alert("Image not in database");                                             
         }
@@ -514,30 +444,18 @@
         
                 for(i=0;i<annotsp.length;i++){
                     ctx.lineWidth = 3;                    
-                    if(annotsp[i].class_label==wfpl){
-                        ctx.strokeStyle = "cyan";
+                    if(annotsp[i].class_label==wbc){
+                        ctx.strokeStyle = "yellow";
                         //ctx.fillStyle = "rgba(00,255,255,0.1)";
                         ctx.lineWidth = 2;
                         // ctx.strokeRect(annotsp[i].top_left_x, annotsp[i].top_left_y, annotsp[i].width, annotsp[i].height)
                     } 
-                    if(annotsp[i].class_label==wfpu){
-                        ctx.strokeStyle = "green";
+                    if(annotsp[i].class_label==gbc){
+                        ctx.strokeStyle = "orange";
                         //ctx.fillStyle = "rgba(00,255,00,0.1)";
                         ctx.lineWidth = 2;
                         // ctx.strokeRect(annotsp[i].top_left_x, annotsp[i].top_left_y, annotsp[i].width, annotsp[i].height)
-                    } 
-                    if(annotsp[i].class_label==dfpl){
-                        ctx.strokeStyle = "red";
-                        //ctx.fillStyle = "rgba(255,00,00,0.1)";
-                        ctx.lineWidth = 2;
-                        // ctx.strokeRect(annotsp[i].top_left_x, annotsp[i].top_left_y, annotsp[i].width, annotsp[i].height)
-                    } 
-                    if(annotsp[i].class_label==dfpu){
-                        ctx.strokeStyle = "yellow";
-                        //ctx.fillStyle = "rgba(255,255,00,0.1)";
-                        ctx.lineWidth = 2;
-                        // ctx.strokeRect(annotsp[i].top_left_x, annotsp[i].top_left_y, annotsp[i].width, annotsp[i].height)
-                    } 
+                    }                    
 
                     ctx.beginPath();
                     geometryJSON=JSON.parse(annotsp[i].geometryJSON)
@@ -640,45 +558,19 @@
         setAnnotations();
     })
     $('#selall').click(function(e){        
-        $('#cb_wfpl').prop('checked',true)
-        $('#cb_wfpu').prop('checked',true)
-        $('#cb_dfpl').prop('checked',true)
-        $('#cb_dfpu').prop('checked',true)
+        $('#cb_gbc').prop('checked',true)
+        $('#cb_wbc').prop('checked',true)        
         $('#cb_neg').prop('checked',true)        
         changeImageList()
     })
     $('#clrall').click(function(e){          
-        $('#cb_wfpl').prop('checked',false)
-        $('#cb_wfpu').prop('checked',false)
-        $('#cb_dfpl').prop('checked',false)
-        $('#cb_dfpu').prop('checked',false)
+        $('#cb_gbc').prop('checked',false)
+        $('#cb_wbc').prop('checked',false)        
         $('#cb_neg').prop('checked',false)
         changeImageList()
     })
     $('#downloadDataset').click(function(e){
-        var zl18=0;
-        var zl19=0;
-        if(!$('#cb_zl18').is(":checked")&&
-           !$('#cb_zl19').is(":checked")){
-            return;
-        }
-        if($('#cb_zl18').is(":checked")){
-            zl18='1';
-            var href = "/Gmapv2/downloaddatasetfarmponds?zl=18";
-            //var href = "/Gmapv2/downloaddatasetfarmpondscsv?zl=18";
-        }
-        if($('#cb_zl19').is(":checked")){
-            zl19='1';
-            var href = "/Gmapv2/downloaddatasetfarmponds?zl=19";
-            //var href = "/Gmapv2/downloaddatasetfarmpondscsv?zl=19";
-        }
-        if($('#cb_zl18').is(":checked")&&
-           $('#cb_zl19').is(":checked")){            
-           //var href = "/Gmapv2/downloaddatasetfarmponds?zl=18_19";
-           var href = "/Gmapv2/downloaddatasetfarmpondscsv?zl=18_19";
-        }
-        
-            
+        var href = "/Gmapv2/downloaddatasetcheckdams";
         window.location.href = href
     })
     /*-------Event Listeners End--------*/

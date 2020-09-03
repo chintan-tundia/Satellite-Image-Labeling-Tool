@@ -1,6 +1,5 @@
 
 //Global variable Initializations
-	var map;
 	var markers = [];
   var allOldMarkers = [];
 	var latlng;
@@ -9,23 +8,25 @@
   var totalObjects=0;
   var allIds=[];
   allLocs=[];
+  var workTypeIds=[];
   var drawingManager;
-  var zoomLevel=18;  
+  var zoomLevel=19;  
   var vlat = 19.859317;
   var vlong = 75.516106;//Somewhere in Kubephal,Aurangabad
-  initialize(vlat,vlong); 
+  //initialize(vlat,vlong); 
 
 
 /*-------Functions--------*/  
 	function initialize(vlat,vlong){  
-        
+        var vlat = 19.859317;
+		var vlong = 75.516106;
         $('#btnPolygon').hide() 
         $('#btnCircle').hide() 
         $('#btnReset').hide()
         $('#inform').hide()     
         
         //var latlng = new google.maps.LatLng(19.910915, 73.876757);
-        latlng = new google.maps.LatLng(vlat,vlong);
+        latlng = new google.maps.LatLng(vlat,vlong);		
         var myOptions = {
             zoom: 19,
             center: latlng,
@@ -139,13 +140,20 @@
                 allIds.push(idName)
                 
                 //Adding label
-                var ptsStr=getPoints(newShape)                
+                var ptsStr=getPoints(newShape)
+                var dropdownStr="<form><div class='form-group'>"+ 
+                                  //"<p>"+ptsStr+"</p><br>"+                 
+                                  "<select id='"+idSelect+"' class='form-control'>"+
+                                    "<option>Select Class</option>"+
+                                    "<option>Wall Based Checkdam</option>"+
+                                    "<option>Gate Based Checkdam</option>"+                    
+                                  "</select>"+         
+                                "</div></form>";
                 var htmlCont="<div id='"+idName+"' class='panel panel-info'>"+
                                 "<div class='panel-heading'>"+
                                    "<b> Annotation "+(objNo+1)+"</b>"+
                                  "</div>"+
-                                 "<div class='panel-body'>"+
-                                    "<p>Object Class :<b> Checkdam </b></p>"                                   
+                                 "<div class='panel-body'>"+dropdownStr+                                    
                                     "<a id='btnDelete' type='button' class='btn btn-danger'>"+
                                     "<span class='glyphicon glyphicon-minus-sign'></span>"+
                                     " Remove Annotation"+
@@ -364,7 +372,7 @@
                         var Arrjsmapped=JSON.parse(json_jsmapped_list);
                         //console.log(Arrjsmapped[0]['fields'])                        
                         var total=Arrjsmapped.length
-                        allLocs=[];                        
+                        allLocs=[];  						
                         for(var i=0;i<total;i++){
                           //var fieldll = jsmapped.fields;
                           //console.log(Arrjsmapped[i]['fields'])
@@ -373,11 +381,13 @@
                           loc.push(lat)
                           var lat=parseFloat(lat).toFixed(8);
                           var lng=Arrjsmapped[i]['fields']['longitude'];
+						  var worktypeid=Arrjsmapped[i]['fields']['work_type'];
                           loc.push(lng)
+						  loc.push(worktypeid)
                           var lng=parseFloat(lng).toFixed(8);
                           var str = '<option value="'+i+'">'+lat+' , '+lng+'</option>';
                           $('#SelDistrictLoc').append(str); 
-                          allLocs.push(loc)
+                          allLocs.push(loc)						  						  
                           var perc=parseFloat(data.done_percentage).toFixed(2) + "%"                                                    
                           $('#total_samples').text(data.total_samples);
                           $('#total_done_samples').text(data.total_done_samples);
@@ -455,6 +465,7 @@
 
 
 /*-------Event Listeners--------*/
+$(document).ready(function(){
   map.addListener('zoom_changed', function() {
       zoomLevel = map.getZoom();
       $('#zoomLvlTxt').text(zoomLevel);
@@ -534,7 +545,7 @@
           var topLeftLng = ne.lng().toFixed(8);
           var bottomRightLat = ne.lat().toFixed(8);
           var bottomRightLng = sw.lng().toFixed(8);
-          var zoomLevel = map.getZoom().toFixed(8);
+          var zoomLevel = map.getZoom().toFixed(8);		  
           var groundTruthingDone = true;
           var selectedClass;
           var jsonGmapMarker='';
@@ -553,59 +564,20 @@
             //var idxStr=allIds[i];
             var idxStr=key;
             var idx=idxStr.substring(3, idxStr.length);;                    
-            selectedClass="Checkdam";
-            //var currentShape = allObjects[i];
-            var currentShape = allObjects[key];
-           
-            //For circle
-            if(currentShape.type == google.maps.drawing.OverlayType.CIRCLE)
-            {
-              var center=currentShape.getCenter()
-              var radius=currentShape.getRadius()
-              var bboxsw=currentShape.getBounds().getSouthWest();
-              var bboxne=currentShape.getBounds().getNorthEast();              
-              var bboxn=bboxne.lat().toFixed(8);
-              var bboxs=bboxsw.lat().toFixed(8);              
-              var bboxe=bboxne.lng().toFixed(8);
-              var bboxw=bboxsw.lng().toFixed(8);
-              var latlngNEPix=getPixelCoords(bboxn,bboxe);
-              var latlngNWPix=getPixelCoords(bboxn,bboxw);              
-              var circlePixX=(latlngNEPix[0]+latlngNWPix[0])/2;
-              var circlePixY=latlngNEPix[1];
-              var latCenter=center.lat().toFixed(8);
-              var lngCenter=center.lng().toFixed(8);                          
-              var latlngCenterPix=getPixelCoords(latCenter,lngCenter);
-              var radiusPix=latlngCenterPix[1]-circlePixY
-              var annotation = {};
-              var gmapmarker = {};
-              var centerPixelCoords={};
-              var centerWorldCoords={};
-              centerPixelCoords["x"] = latlngCenterPix[0];      
-              centerPixelCoords["y"] = latlngCenterPix[1];
-              centerWorldCoords["lat"] = latCenter; 
-              centerWorldCoords["lng"] = lngCenter;              
-
-              annotation ["type"] = "circle";
-              gmapmarker ["type"] = "circle";
-              annotation ["objectNo"] = i;
-              gmapmarker ["objectNo"] = i;
-              annotation ["radius"] = radiusPix;
-              gmapmarker ["radius"] = radius;  
-              annotation ["center"] = centerPixelCoords;
-              gmapmarker ["center"] = centerWorldCoords;  
-              annotation ["classnm"] = selectedClass;
-              gmapmarker ["classnm"] = selectedClass;              
-              arrAnnotations.push(annotation);
-              arrGmapMarker.push(gmapmarker);              
+            selectedClass=$('#sel'+idx).val();
+            if(selectedClass=='Select Class'){
+              flag=0;
+              alert("Please select class for each annotation.");
+              break;
             }
-            if(currentShape.type == google.maps.drawing.OverlayType.POLYGON)
-            {
-              var arrPixelCoords=[];
-              var arrWorldCoords=[];
+            else{          
+              //var currentShape = allObjects[i];
+              var currentShape = allObjects[key];
               path=currentShape.getPath();
               var len = path.getLength();
               var lat,lng,latlngPix,lt,ln;
-              
+              var arrPixelCoords=[];
+              var arrWorldCoords=[];
               for(var j=0;j<len;j++)
               {
                 var pixelCoords={};
@@ -623,7 +595,7 @@
                 arrPixelCoords.push(pixelCoords);
                 arrWorldCoords.push(worldCoords);
               }
-
+    
               var annotation = {};
               var gmapmarker = {};
               annotation ["type"] = "polygon";
@@ -637,11 +609,11 @@
               arrAnnotations.push(annotation);
               arrGmapMarker.push(gmapmarker);
             }
-                            
-            i++;             
+            i++;
+
           }
           
-          if(totalObj>0 && flag){
+          if(flag){
             finalItem = {}
             var mapCenterArr={};
             mapCenterArr["lat"] = centerLat;      
@@ -650,10 +622,11 @@
             finalItem ["annotations"] = arrAnnotations;
             finalItem ["gmapmarker"] = arrGmapMarker;
             finalArray.push(finalItem);
+            //arrPixelCoords.push(pixelCoords);
             jsonGmapMarker=JSON.stringify(arrGmapMarker);
             jsonAnnotations=JSON.stringify(arrAnnotations);
             finalJson=JSON.stringify(finalArray);            
-            //alert(finalJson)
+          
     
           //District_Locality_Lat_Long.png(Akola_Balapur_20.688889_76.789942.png)
           var filename='';
@@ -707,8 +680,8 @@
                             //alert("Image is captured and annotations are saved.");   
                             //var selIndex=$("#SelDistrictLoc").prop('selectedIndex');
                             resetMapCanvas();
-                            var districtName=$('#SelDistrict option:selected').val()    
-                            var dataOfYear=$('#SelYear option:selected').val()
+                            var districtName=$('#SelDistrict option:selected').val() 
+                            var dataOfYear=$('#SelYear option:selected').val()                                 
                             getJSMappedWorksDistrictAjax(districtName,dataOfYear)
                             $('#btnReset').trigger('click');
                             $('#SelDistrictLoc :nth-child(1)').prop('selected', true);
@@ -756,8 +729,20 @@
     if(loc){
       var lat=allLocs[loc][0]
       var lng=allLocs[loc][1] 
+	  var worktype = allWorkTypes[allLocs[loc][2]-1]
       var ll=new google.maps.LatLng(lat,lng);
       map.setCenter(ll);
+	  $('#centerLatLng').text(lat+", "+lng)	  	  	  
+	  //var ArrWorktype=JSON.parse(allWorkTypes);	  
+	  $('#jsworktype').text(worktype)	  
     }
   })
+  map.addListener('center_changed', function() {
+      var clatlng=map.getCenter()
+      var lat=clatlng.lat()
+      var lng=clatlng.lng()
+      $('#centerLatLng').text(lat+", "+lng)
+    
+  });
+})  
 /*-------Event Listeners End--------*/

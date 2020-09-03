@@ -6,6 +6,7 @@
   <title>Satellite Image Labelling Tool</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/png" href="{% static 'Gmapv2/icons/iitb.png' %}"/>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
@@ -193,7 +194,7 @@
       </div>
         <div class="row">          
           <div id="MapContainer" class="col-sm-9"> 
-            <div id='zoomLvl' style='height:10px; width:110px ;margin:10px auto;'><b>  Zoom Level: <span id='zoomLvlTxt'>18</span> </b></div>
+            <div id='zoomLvl' style='height:10px; width:110px ;margin:10px auto;'><b>  Zoom Level: <span id='zoomLvlTxt'>19</span> </b></div>
             <div id="googleMap" style="margin:0px auto;width:640px;height:640px;"></div>          
             <div style="height:40px;width:100%; margin:5px auto">
               <!-- <input type="image" style="margin:0px 2px" height="30px" width="30px" src="{% static 'Gmapv2/icons/circle.png' %}" id='btnCircle'> -->
@@ -202,7 +203,8 @@
               <!-- <a id='btnCircle' href="#" class="btn btn-default">                   
                   <span class="icon-large icon-vector-path-circle" style="background: "></span> Circle 
               </a> -->
-              <center><h6> Center : <span id="centerLatLng"></span></h6></center>              
+              <center><h6><b> Center : </b> <span id="centerLatLng"></span></h6></center>              
+			  <center><h6><b> JS WorkType : </b> <span id="jsworktype"></span></h6></center>              
               <center>                
               <a id='btnPolygon' href="#" class="btn btn-primary" style="hidden:true">                   
                   <!-- <span class="icon-large icon-vector-path-circle"></span> --> 
@@ -259,10 +261,17 @@
 
 </body>
 </html>
-
-<script src="http://maps.google.com/maps/api/js?key=AIzaSyDwYUReYvB5CFnmNxt8NJe7PjRXMmBspws
-&callback=googleMap&libraries=places,drawing,geometry"></script>
+<script>
+allWorkTypes  = "{{allWorkTypes|safe}}";
+var len_awt = allWorkTypes.length
+allWorkTypes = allWorkTypes.substr(2, len_awt-4);
+allWorkTypes = allWorkTypes.split("', '");
+//console.log(allWorkTypes)
+</script>
 <script type="text/javascript" src="{% static 'Gmapv2/js/labelcheckdams.js' %}"></script>
+<script src="http://maps.google.com/maps/api/js?key=AIzaSyDwYUReYvB5CFnmNxt8NJe7PjRXMmBspws
+&callback=googleMap&libraries=places,drawing,geometry&callback=initialize"></script>
+
 <!-- <script type="text/javascript" src="{% static 'Gmapv2/js/html2canvas.js' %}"></script> -->
 
 <!-- <script src="http://maps.google.com/maps/api/js?callback=myMap&libraries=places&sensor=false&dummy=.js"></script> -->
