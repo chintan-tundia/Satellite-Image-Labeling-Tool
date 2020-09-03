@@ -539,9 +539,10 @@ def label_image(request):
     return HttpResponse(template.render(context, request))
 
 def show_all_markers_cd(request):  
-	template = loader.get_template('Gmapv2/showAllMarkers.html')
+	template = loader.get_template('Gmapv2/showAllMarkersCheckDams.html')
 	allJSON=[];
-	objs = GMapMarker.objects.filter(Q(source_image__annotation__class_label="Checkdam"))
+	objs = GMapMarker.objects.filter(Q(source_image__annotation__class_label="Wall Based Checkdam")|\
+                                     Q(source_image__annotation__class_label="Gate Based Checkdam"))
 	for obj in objs:
 	 allJSON.append(obj.geometryJSON)    
 	allMarkers={}

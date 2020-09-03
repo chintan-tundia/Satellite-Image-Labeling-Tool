@@ -66,7 +66,7 @@
 
 <div class="container-fluid">
   <div class="row content">  
-      <center><h4><big>All Geolocated Farm Ponds</big></h4></center> 
+      <center><h4><big>All Geolocated Checkdams</big></h4></center> 
       <div id="MapContainer" style="width:100%;height:900px;">
           <div id="googleMap" style="width:100%;height:100%"></div>          
       </div>
@@ -83,8 +83,7 @@
 {% load static %} 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script type="text/javascript" src="{% static 'Gmap/js/html2canvas.js' %}"></script>
-<script src="http://maps.google.com/maps/api/js?key=AIzaSyDwYUReYvB5CFnmNxt8NJe7PjRXMmBspws
-&callback=googleMap&libraries=places,drawing,geometry&dummy=.js"></script>
+
 <!-- <script src="http://maps.google.com/maps/api/js?callback=myMap&libraries=places&sensor=false&dummy=.js"></script> -->
 <script>
 /*function myMap() {
@@ -104,7 +103,12 @@ var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
 	var map;
 	var markers = [];
 	var latlng
-	function initialize(vlat,vlong){        
+  var vlat=20.779080;
+  var vlong=78.563808;//Somewhere in Wardha
+  //initialize(vlat,vlong);
+  var done=false; 
+
+	function initialize(){        
     //var latlng = new google.maps.LatLng(19.910915, 73.876757);
     latlng = new google.maps.LatLng(vlat,vlong);
     var myOptions = {
@@ -159,10 +163,7 @@ var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
     var geometryJSON= '{{allMarkers|escapejs}}'           
     addMarkers(geometryJSON);
   }
-  var vlat=20.779080;
-  var vlong=78.563808;//Somewhere in Wardha
-  initialize(vlat,vlong);
-  var done=false; 
+  
  
 
   function getPolygonCenter(latLngArray){
@@ -213,46 +214,28 @@ var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
         map: map,
         optimized: true,        
       });
-      var wfpl="Wet Farm Pond - Lined";
-      var wfpu="Wet Farm Pond - Unlined";
-      var dfpl="Dry Farm Pond - Lined";
-      var dfpu="Dry Farm Pond - Unlined";
+      var wbc="Wall Based Checkdam";
+      var gbc="Gate Based Checkdam";
+      
 
-      if(classNm==wfpl){
-        objPolygon.setOptions({  
-          editable:false, 
-          fillColor: 'cyan',
-          strokeColor: 'cyan',
-          strokeWeight: 2, 
-        })
-        marker.setIcon("http://maps.google.com/mapfiles/ms/icons/blue-dot.png")
-      }else if(classNm==dfpl){
-        objPolygon.setOptions({  
-          editable:false, 
-          fillColor: 'red',
-          strokeColor: 'red',          
-          strokeWeight: 2,                      
-        })
-        marker.setIcon("http://maps.google.com/mapfiles/ms/icons/red-dot.png")
-      }
-      else if(classNm==wfpu){
-        objPolygon.setOptions({  
-          editable:false, 
-          fillColor: 'green',
-          strokeColor: 'green',                    
-          strokeWeight: 2,                      
-        })
-        marker.setIcon("http://maps.google.com/mapfiles/ms/icons/green-dot.png")
-      }
-      else if(classNm==dfpu){
+      if(classNm==wbc){
         objPolygon.setOptions({  
           editable:false, 
           fillColor: 'yellow',
-          strokeColor: 'yellow',                   
+          strokeColor: 'yellow',
+          strokeWeight: 2, 
+        })        
+        marker.setIcon("http://maps.google.com/mapfiles/ms/icons/yellow-dot.png")
+      }else if(classNm==gbc){
+        objPolygon.setOptions({  
+          editable:false, 
+          fillColor: 'orange',
+          strokeColor: 'orange',          
           strokeWeight: 2,                      
         })
-        marker.setIcon("http://maps.google.com/mapfiles/ms/icons/yellow-dot.png")
+        marker.setIcon("http://maps.google.com/mapfiles/ms/icons/orange-dot.png")
       }
+      
       
       var infoWindow = new google.maps.InfoWindow();
       objPolygon.addListener('click', function() {        
@@ -298,3 +281,5 @@ var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
 // }); 
 </script>
 
+<script src="http://maps.google.com/maps/api/js?key=AIzaSyDwYUReYvB5CFnmNxt8NJe7PjRXMmBspws
+&callback=googleMap&libraries=places,drawing,geometry&callback=initialize"></script>
