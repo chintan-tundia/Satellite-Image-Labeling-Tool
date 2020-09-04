@@ -13,11 +13,11 @@
   var zoomLevel=18;  
   var vlat = 19.859317;
   var vlong = 75.516106;//Somewhere in Kubephal,Aurangabad
-  initialize(vlat,vlong); 
+  //initialize(vlat,vlong); 
 
 
 /*-------Functions--------*/  
-	function initialize(vlat,vlong){  
+	function initialize(){  
         
         $('#btnPolygon').hide() 
         $('#btnReset').hide()
@@ -368,10 +368,13 @@
                 dataType: 'json',
                 success: function (data) {                
                     if (data.status==1) {                        
-                        var json_jsmapped_list = data.records;                        
+                        var json_jsmapped_list = data.records;   
+                        var json_jsmappeddone_list = data.done_records                     
                         var Arrjsmapped=JSON.parse(json_jsmapped_list);
+                        var Arrjsmappeddone=JSON.parse(json_jsmappeddone_list);
                         //console.log(Arrjsmapped[0]['fields'])                        
-                        var total=Arrjsmapped.length                        
+                        var total=Arrjsmapped.length      
+                        var totaldone=Arrjsmappeddone.length                  
                         allLocs=[]; 
                                              
                         for(var i=0;i<total;i++){
@@ -384,7 +387,18 @@
                           var lng=Arrjsmapped[i]['fields']['longitude'];
                           loc.push(lng)
                           var lng=parseFloat(lng).toFixed(8);
-                          var str = '<option value="'+i+'">'+lat+' , '+lng+'</option>';
+                          var str = '<option value="'+i+'">'+lat+' , '+lng+'</option>';                          
+                          for(var idone=0;idone<totaldone;idone++){                             
+                             var latdone=Arrjsmappeddone[idone]['fields']['latitude']; 
+                             var lngdone=Arrjsmappeddone[idone]['fields']['longitude']; 
+                             var latdone=parseFloat(latdone).toFixed(8);
+                             var lngdone=parseFloat(lngdone).toFixed(8);
+                             //console.log(lat+"-->"+latdone+", "+lng+"-->"+lngdone)                             
+                             if(latdone==lat && lngdone==lng){                              
+                              str = '<option style="background-color:#32CD32" value="'+i+'">'+lat+' , '+lng+'</option>';
+                             }
+
+                          } 
                           $('#SelDistrictLoc').append(str); 
                           allLocs.push(loc)
                           var perc=parseFloat(data.done_percentage).toFixed(2) + "%"                                                    
@@ -464,6 +478,7 @@
 
 
 /*-------Event Listeners--------*/
+$(document).ready(function(){
   map.addListener('zoom_changed', function() {
       zoomLevel = map.getZoom();
       $('#zoomLvlTxt').text(zoomLevel);
@@ -760,4 +775,5 @@
       $('#centerLatLng').text(lat+", "+lng)
     
   });
+})   
 /*-------Event Listeners End--------*/

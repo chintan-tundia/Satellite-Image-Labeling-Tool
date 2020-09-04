@@ -450,25 +450,35 @@ def get_jsmappedwork_district_wise(request):
         dataOfYear=request.POST.get('dataOfYear')         
         try:
             if(worktype=="wells"):
-                print("Wells")
-                print(dataOfYear)
-                print(districtName)
+                print("Object: Wells")
+                print("Year: ",dataOfYear)
+                print("District: ",districtName)
                 jsmappedworks=JSMappedWorks.objects.filter(Q(dataOfYear=dataOfYear),\
                           Q(district__english_name=districtName),\
                           Q(work_type__english_name='Well rehabilitation')|\
                           Q(work_type__english_name='Vindhan Well rehabilitation')|\
                           Q(work_type__english_name='Well Deepening')|\
                           Q(work_type__english_name='Irrigation Well')|\
-                          Q(work_type__english_name='KT Well Desilting'))
-                print(jsmappedworks.count())
-                total_img_district=Annotation.objects.filter(class_label='Well',\
-                                source_image__gmapmarker__district=districtName).\
-                                values('source_image').distinct().count()
+                          Q(work_type__english_name='KT Well Desilting'))                
+
+                print("Total Wells: ", jsmappedworks.count())                            
+                annot_src_img = Annotation.objects.filter(class_label='Well').values('source_image').distinct()
+                jsmi_done_of_district1= GMapMarker.objects.filter(district=districtName,source_image__in=annot_src_img).\
+                                values('source_image').distinct()                                
+                print("Total already done: ",jsmi_done_of_district1.count())                
+                jsmi_done_of_district = JSMappedWorksImage.objects.filter(image_id__in=jsmi_done_of_district1).\
+                                        values('jsmappedwork_id').distinct()
+                jsw_done_of_district = JSMappedWorks.objects.filter(id__in=jsmi_done_of_district,\
+                                                   dataOfYear=dataOfYear,\
+                                                   district__english_name=districtName)              
+                total_img_district=jsmi_done_of_district1.count()
+
+                
 								
             if(worktype=="checkdams"):
-                print("Checkdams")
-                print(dataOfYear)
-                print(districtName)
+                print("Object: Checkdams")
+                print("Year: ",dataOfYear)
+                print("District: ",districtName)
                 jsmappedworks=JSMappedWorks.objects.filter(Q(dataOfYear=dataOfYear),\
                           Q(district__english_name=districtName),\
                           Q(work_type__english_name='Cement Concrete Nala Bandh')|\
@@ -479,43 +489,66 @@ def get_jsmappedwork_district_wise(request):
 						  Q(work_type__english_name='KT Weir / Storage Bandhara Repair')|\
 						  Q(work_type__english_name='Kolhapur Type Bandhara'));                
                 print("Total Checkdams: ", jsmappedworks.count())
-                total_img_district=Annotation.objects.filter(class_label='Checkdam',\
-                                source_image__gmapmarker__district=districtName).\
-                                values('source_image').distinct().count()
+                
+                annot_src_img = Annotation.objects.filter(Q(class_label="Wall Based Checkdam")|\
+                                Q(class_label="Gate Based Checkdam")).values('source_image').distinct()                            
+                jsmi_done_of_district1= GMapMarker.objects.filter(district=districtName,source_image__in=annot_src_img).\
+                                values('source_image').distinct()                                
+                print("Total already done: ",jsmi_done_of_district1.count())                
+                jsmi_done_of_district = JSMappedWorksImage.objects.filter(image_id__in=jsmi_done_of_district1).\
+                                        values('jsmappedwork_id').distinct()
+                jsw_done_of_district = JSMappedWorks.objects.filter(id__in=jsmi_done_of_district,\
+                                                                   dataOfYear=dataOfYear,\
+                                                                   district__english_name=districtName)
+                total_img_district=jsmi_done_of_district1.count()
 
             if(worktype=="farmponds"):
-                print("Farm Ponds")
+                print("Object: Farm Ponds")
+                print("Year: ",dataOfYear)
+                print("District: ",districtName)
                 jsmappedworks=JSMappedWorks.objects.filter(dataOfYear=dataOfYear,\
                           district__english_name=districtName,\
                           work_type__english_name='Farm Pond')
 
-                print(jsmappedworks.count())
-                total_img_district=Annotation.objects.filter(Q(class_label="Wet Farm Pond - Lined")|\
+                print("Total FarmPonds: ", jsmappedworks.count())
+                
+                annot_src_img = Annotation.objects.filter(Q(class_label="Wet Farm Pond - Lined")|\
                                 Q(class_label="Wet Farm Pond - Unlined")|\
                                 Q(class_label="Dry Farm Pond - Lined")|\
                                 Q(class_label="Dry Farm Pond - Unlined"),\
                                 Q(source_image__gmapmarker__district=districtName)).\
-                                values('source_image').distinct().count()
+                                values('source_image').distinct()
+
+                jsmi_done_of_district1= GMapMarker.objects.filter(district=districtName,source_image__in=annot_src_img).\
+                                values('source_image').distinct()                                
+                print("Total already done: ",jsmi_done_of_district1.count())                
+                jsmi_done_of_district = JSMappedWorksImage.objects.filter(image_id__in=jsmi_done_of_district1).\
+                                        values('jsmappedwork_id').distinct()
+                jsw_done_of_district = JSMappedWorks.objects.filter(id__in=jsmi_done_of_district,\
+                                                   dataOfYear=dataOfYear,\
+                                                   district__english_name=districtName) 
+                total_img_district=jsmi_done_of_district1.count()                                                                   
                
                 
-
-            total_count=jsmappedworks.count()
-            jsmapped_done=jsmappedworks.filter(is_marked=True);
-            jsmapped_not_done=jsmappedworks.filter(is_marked=False); 
-            total_done_count=jsmapped_done.count()
-            percentage=0
+            total_count = jsmappedworks.count()
+            jsmapped_done = jsmappedworks.filter(is_marked=True);
+            jsmapped_not_done = jsmappedworks.filter(is_marked=False); 
+            total_done_count = jsw_done_of_district.count()
+            percentage = 0
             if(total_count>0):
                 percentage=(total_done_count/total_count) * 100;
-            jsmappedworks_list = serializers.serialize('json', jsmapped_not_done,\
+            jsmappedworks_list = serializers.serialize('json', jsmappedworks,\
                                                 fields=('latitude','longitude','work_type'))            
-            #print(jsmappedworks_list)
+            jsmappedworksdone_list = serializers.serialize('json', jsw_done_of_district,\
+                                                fields=('latitude','longitude','work_type'))            
             data={
                 'status':1,
                 'total_samples':total_count,
                 'total_done_samples':total_done_count,
                 'total_img_district':total_img_district,
                 'done_percentage':percentage,
-                'records':jsmappedworks_list
+                'records':jsmappedworks_list,
+                'done_records':jsmappedworksdone_list
             }      
         except Exception as e:
             print(str(e))
@@ -752,6 +785,7 @@ def save_image_checkdams(request):
                         #obj.save()
                         #Map Image(Dataset) with JSMappedWorks
                         jsmappedworksimg=JSMappedWorksImage(jsmappedwork=obj,image=saveImg)
+                        print("Duplicate Flagged: ",latlng)
                         jsmappedworksimg.save()
                 
                 #flag=mapBounds.contains(ls2)

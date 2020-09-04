@@ -176,8 +176,9 @@
             <b>Percentage labeled(GT): <span id="percentage"></span> </b><br>
             <b>Total Images of this district: <span id="total_img_district"></span></b><br>
             <label for="sel2">Select a sample: </label>
-            <select multiple class="form-control" id="SelDistrictLoc" style="height:300px;overflow-y: scroll">           
-            </select>
+            <select multiple class="form-control" id="SelDistrictLoc" style="height:300px;overflow-y: scroll"></select>
+            <br>
+            <b>Note: </b> The ones highlighted with <span style='color:#32CD32'> <b>Green</b> </span> are already labelled
           </center>
         </div>
     </div>
@@ -262,10 +263,9 @@
 
 </body>
 </html>
-
-<script src="http://maps.google.com/maps/api/js?key=AIzaSyDwYUReYvB5CFnmNxt8NJe7PjRXMmBspws
-&callback=googleMap&libraries=places,drawing,geometry"></script>
 <!-- <script type="text/javascript" src="{% static 'Gmapv2/js/html2canvas.js' %}"></script> -->
 
 <!-- <script src="http://maps.google.com/maps/api/js?callback=myMap&libraries=places&sensor=false&dummy=.js"></script> -->
 <script type="text/javascript" src="{% static 'Gmapv2/js/labelwells.js' %}"></script>
+<script src="http://maps.google.com/maps/api/js?key=AIzaSyDwYUReYvB5CFnmNxt8NJe7PjRXMmBspws
+&callback=googleMap&libraries=places,drawing,geometry&callback=initialize"></script>

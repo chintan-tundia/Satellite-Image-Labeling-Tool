@@ -153,7 +153,7 @@
             <div class="box"><input class="btn btn-default" type="submit" style='float: left' value="Check Dataset"></div>
           </form>
         </div>
-
+        <br>
         <div class="grid" style='margin: 40px auto;height: 30px;'>       
           <center>
             <label for="sel2">Select year: </label>
@@ -172,14 +172,22 @@
                   <option value="{{ district }}">{{ district }}</option>
                 {% endfor %}     
               </select>
-            </div>                
-            <b>Total Samples(GT): <span id="total_samples"></span> </b><br>
-            <b>Total Samples Labeled(GT): <span id="total_done_samples"></span> </b><br>
-            <b>Percentage labeled(GT): <span id="percentage"></span> </b><br>
-            <b>Total Images of this district: <span id="total_img_district"></span></b><br>
-            <label for="sel2">Select a sample: </label>
+            </div>   
+            <div id="default_stat"> 
+              <h2>Loading...</h2>
+            </div>
+            <div id="loaded_stat"> 
+              <b>Total Samples:</b> <span id="total_samples"></span> <br>
+              <b>Total Samples Labeled:</b> <span id="total_done_samples"></span><br>
+              <b>Percentage labeled:</b> <span id="percentage"></span> <br>              
+              <b>Overall Total Images of this district labeled:</b> <span id="total_img_district"></span><br>
+            </div>             
+            
+            <label for="sel2" style="margin-top:5px">Select a sample: </label>
             <select multiple class="form-control" id="SelDistrictLoc" style="height:280px">           
             </select>
+            <br>
+            <b>Note: </b> The ones highlighted with <span style='color:#32CD32'> <b>Green</b> </span> are already labelled
           </center>
         </div>
     </div>
@@ -242,9 +250,14 @@
               <form id='capture_form' name='capture_form' method="post" action='#'>  <!-- action="ImageLabelingTool" -->
                <!--  <input name='imageName' placeholder='Enter Image Name' type="text" id="imageName"> -->
                 <!-- <input class="btn btn-success" type="submit" id="btnSave" value="Save Image and Annotations"/> -->
-                <a id='btnSave' href="#" class="btn btn-success">                   
-                    <span class="glyphicon glyphicon-floppy-disk"></span> Save Image and Annotations
-                </a>
+                <div id="default_submit">
+                  <a id='btnSave' href="#" class="btn btn-success">                   
+                      <span class="glyphicon glyphicon-floppy-disk"></span> Save Image and Annotations
+                  </a>
+                </div>
+                <div id="saving_submit" style="display:none">
+                  <h2>Saving...</h2>
+                </div>  
                 <input type="hidden" name='canvasImg64' id="canvasImg64">
                 <!-- <br> -->
                 <!-- <b>Note:</b>Enter only name for the image, don't enter extension -->

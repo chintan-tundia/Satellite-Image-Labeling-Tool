@@ -351,11 +351,14 @@
     map.setOptions(restrictionJson)
   }
   function getJSMappedWorksDistrictAjax(districtName,dataOfYear){
+
     $('#SelDistrictLoc').empty()
     $('#total_samples').text("0");
     $('#total_done_samples').text("0");
     $('#percentage').text("0%");
     $('#total_img_district').text("0");
+    $('#default_stat').css("display","block")
+    $('#loaded_stat').css("display","none")    
     $.ajax({
             type:"POST",
                 url: 'ajax/get_jsmapped_work',
@@ -369,9 +372,12 @@
                     if (data.status==1) {
                        
                         var json_jsmapped_list = data.records;
+                        var json_jsmappeddone_list = data.done_records
                         var Arrjsmapped=JSON.parse(json_jsmapped_list);
+                        var Arrjsmappeddone=JSON.parse(json_jsmappeddone_list);
                         //console.log(Arrjsmapped[0]['fields'])                        
                         var total=Arrjsmapped.length
+                        var totaldone=Arrjsmappeddone.length
                         allLocs=[];  						
                         for(var i=0;i<total;i++){
                           //var fieldll = jsmapped.fields;
@@ -381,21 +387,35 @@
                           loc.push(lat)
                           var lat=parseFloat(lat).toFixed(8);
                           var lng=Arrjsmapped[i]['fields']['longitude'];
-						  var worktypeid=Arrjsmapped[i]['fields']['work_type'];
+						              var worktypeid=Arrjsmapped[i]['fields']['work_type'];
                           loc.push(lng)
-						  loc.push(worktypeid)
-                          var lng=parseFloat(lng).toFixed(8);
-                          var str = '<option value="'+i+'">'+lat+' , '+lng+'</option>';
+						              loc.push(worktypeid)
+                          var lng=parseFloat(lng).toFixed(8);                          
+                          var str = '<option value="'+i+'">'+lat+' , '+lng+'</option>';                          
+                          for(var idone=0;idone<totaldone;idone++){                             
+                             var latdone=Arrjsmappeddone[idone]['fields']['latitude']; 
+                             var lngdone=Arrjsmappeddone[idone]['fields']['longitude']; 
+                             var latdone=parseFloat(latdone).toFixed(8);
+                             var lngdone=parseFloat(lngdone).toFixed(8);
+                             //console.log(lat+"-->"+latdone+", "+lng+"-->"+lngdone)                             
+                             if(latdone==lat && lngdone==lng){                              
+                              str = '<option style="background-color:#32CD32" value="'+i+'">'+lat+' , '+lng+'</option>';
+                             }
+
+                          }  
+                          
                           $('#SelDistrictLoc').append(str); 
-                          allLocs.push(loc)						  						  
-                          var perc=parseFloat(data.done_percentage).toFixed(2) + "%"                                                    
-                          $('#total_samples').text(data.total_samples);
-                          $('#total_done_samples').text(data.total_done_samples);
-                          $('#percentage').text(perc);
-                          $('#total_img_district').text(data.total_img_district);
-                          $('#SelDistrictLoc :nth-child(1)').prop('selected', true);
-                          $('#SelDistrictLoc').trigger('change');
+                          allLocs.push(loc)						  						                            
                         }
+                        var perc=parseFloat(data.done_percentage).toFixed(2) + "%"                                                    
+                        $('#total_samples').text(data.total_samples);
+                        $('#total_done_samples').text(data.total_done_samples);
+                        $('#percentage').text(perc);
+                        $('#total_img_district').text(data.total_img_district);
+                        $('#SelDistrictLoc :nth-child(1)').prop('selected', true);
+                        $('#SelDistrictLoc').trigger('change');                          
+                        $('#default_stat').css("display","none")
+                        $('#loaded_stat').css("display","block")
                     }                                      
                 },
                 error: function(xhr, textStatus, errorThrown) {
@@ -657,6 +677,8 @@ $(document).ready(function(){
                     }
                 }
                 var district=$('#SelDistrict option:selected').val() //only for JS
+                $('#default_submit').css("display","none")
+                $('#saving_submit').css("display","block") 
                 $.ajax({
                   type:"POST",
                       url: 'ajax/save_image_checkdams',
@@ -686,7 +708,8 @@ $(document).ready(function(){
                             $('#btnReset').trigger('click');
                             $('#SelDistrictLoc :nth-child(1)').prop('selected', true);
                             $('#SelDistrictLoc').trigger('change');
-                            
+                            $('#default_submit').css("display","block")
+                            $('#saving_submit').css("display","none") 
                           }
                           else if(data.status==-1){
                             alert("File with same name exists. Try some other name.");                

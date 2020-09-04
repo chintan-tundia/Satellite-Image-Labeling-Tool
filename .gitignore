@@ -1,5 +1,8 @@
 ImageLabeling/static/Gmapv2/images
+ImageLabeling/static/Gmapv2/zip/
+ImageLabeling/static/Gmapv2/json/
 ImageLabeling/Gmapv2/templates/Gmapv2/All HTMLS
 ImageLabeling/Gmapv2/templates/Gmapv2/done 2015-16
 ImageLabeling/Gmapv2/templates/Gmapv2/done 2016-17
 *__pycache__*
+
