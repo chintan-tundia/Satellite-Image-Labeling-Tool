@@ -90,7 +90,7 @@ DATABASES = {
     'ENGINE': 'django.db.backends.postgresql',
     'NAME': 'SatelliteImageLabeling',
     'USER': 'postgres',
-    'PASSWORD': 'password',
+    'PASSWORD': '1027',
     'HOST': 'localhost',
     'PORT': '5432',
     }
