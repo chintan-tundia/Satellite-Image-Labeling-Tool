@@ -479,15 +479,25 @@ def get_jsmappedwork_district_wise(request):
                 print("Object: Checkdams")
                 print("Year: ",dataOfYear)
                 print("District: ",districtName)
+                workTypeQueries = Q(work_type__english_name='KT Weir / Storage Bandhara Repair')|\
+                          Q(work_type__english_name='Kolhapur Type Bandhara')|\
+                          Q(work_type__english_name='Storage Bandhara')|\
+                          Q(work_type__english_name='Storage Bandhara Repair')
+
+                #Q(work_type__english_name='Cement Concrete Nala Bandh')|\
+                #         Q(work_type__english_name='Old CNB')|\
+                          #Q(work_type__english_name='Cement Nala Bund Construction Desilting and Deepening')|\
+                #         Q(work_type__english_name='Cement Nala Bund Deepening')|\
+                #         Q(work_type__english_name='Cement Concrete Nala Bund Repair')|\
+                          
+
+
                 jsmappedworks=JSMappedWorks.objects.filter(Q(dataOfYear=dataOfYear),\
-                          Q(district__english_name=districtName),\
-                          Q(work_type__english_name='Cement Concrete Nala Bandh')|\
-						  Q(work_type__english_name='Old CNB')|\
-                          Q(work_type__english_name='Cement Nala Bund Construction Desilting and Deepening')|\
-						  Q(work_type__english_name='Cement Nala Bund Deepening')|\
-						  Q(work_type__english_name='Cement Concrete Nala Bund Repair')|\
-						  Q(work_type__english_name='KT Weir / Storage Bandhara Repair')|\
-						  Q(work_type__english_name='Kolhapur Type Bandhara'));                
+                          Q(district__english_name=districtName),workTypeQueries); 
+                #jsmappedworks=JSMappedWorks.objects.filter(Q(dataOfYear=dataOfYear),\
+        #   Q(district__english_name=districtName),\
+        #   Q(work_type__english_name='KT Weir / Storage Bandhara Repair')|\
+        #   Q(work_type__english_name='Kolhapur Type Bandhara'));                
                 print("Total Checkdams: ", jsmappedworks.count())
                 
                 annot_src_img = Annotation.objects.filter(Q(class_label="Wall Based Checkdam")|\
@@ -497,9 +507,10 @@ def get_jsmappedwork_district_wise(request):
                 print("Total already done: ",jsmi_done_of_district1.count())                
                 jsmi_done_of_district = JSMappedWorksImage.objects.filter(image_id__in=jsmi_done_of_district1).\
                                         values('jsmappedwork_id').distinct()
-                jsw_done_of_district = JSMappedWorks.objects.filter(id__in=jsmi_done_of_district,\
-                                                                   dataOfYear=dataOfYear,\
-                                                                   district__english_name=districtName)
+                jsw_done_of_district = JSMappedWorks.objects.filter(Q(id__in=jsmi_done_of_district),\
+                                                                   Q(dataOfYear=dataOfYear),\
+                                                                   Q(district__english_name=districtName),\
+                                                                   workTypeQueries)
                 total_img_district=jsmi_done_of_district1.count()
 
             if(worktype=="farmponds"):
@@ -766,7 +777,11 @@ def save_image_checkdams(request):
                                    Q(work_type__english_name='Cement Nala Bund Deepening')|\
                                    Q(work_type__english_name='Cement Concrete Nala Bund Repair')|\
                                    Q(work_type__english_name='KT Weir / Storage Bandhara Repair')|\
-                                   Q(work_type__english_name='Kolhapur Type Bandhara'));
+                                   Q(work_type__english_name='Kolhapur Type Bandhara')|\
+                                   Q(work_type__english_name='Storage Bandhara')|\
+                                   Q(work_type__english_name='Storage Bandhara Repair')); 
+
+                                   
 
                 #obj=jsmappedworks[0]
                 #print(obj)      

@@ -13,6 +13,7 @@
   var zoomLevel=19;  
   var vlat = 19.859317;
   var vlong = 75.516106;//Somewhere in Kubephal,Aurangabad
+  var selIdx=0
   //initialize(vlat,vlong); 
 
 
@@ -412,10 +413,11 @@
                         $('#total_done_samples').text(data.total_done_samples);
                         $('#percentage').text(perc);
                         $('#total_img_district').text(data.total_img_district);
-                        $('#SelDistrictLoc :nth-child(1)').prop('selected', true);
+                        $('#SelDistrictLoc :nth-child('+(selIdx+1)+')').prop('selected', true); 
                         $('#SelDistrictLoc').trigger('change');                          
                         $('#default_stat').css("display","none")
                         $('#loaded_stat').css("display","block")
+                        
                     }                                      
                 },
                 error: function(xhr, textStatus, errorThrown) {
@@ -485,7 +487,7 @@
 
 
 /*-------Event Listeners--------*/
-$(document).ready(function(){
+$(document).ready(function(){ 
   map.addListener('zoom_changed', function() {
       zoomLevel = map.getZoom();
       $('#zoomLvlTxt').text(zoomLevel);
@@ -539,7 +541,8 @@ $(document).ready(function(){
     var totalObj=Object.keys(allObjects).length    
     var zoomLevel = map.getZoom();
     var okFlag = true;
-    var zoomFlag = true;
+    var zoomFlag = true; 
+    selIdx = $('#SelDistrictLoc').prop('selectedIndex')   
     if(zoomLevel!=19){
       alert("Set Zoom Level to 19 and save.");      
       zoomFlag=false;
@@ -706,10 +709,11 @@ $(document).ready(function(){
                             var dataOfYear=$('#SelYear option:selected').val()                                 
                             getJSMappedWorksDistrictAjax(districtName,dataOfYear)
                             $('#btnReset').trigger('click');
-                            $('#SelDistrictLoc :nth-child(1)').prop('selected', true);
+                            $('#SelDistrictLoc :nth-child('+(selIdx+1)+')').prop('selected', true); 
                             $('#SelDistrictLoc').trigger('change');
                             $('#default_submit').css("display","block")
-                            $('#saving_submit').css("display","none") 
+                            $('#saving_submit').css("display","none")
+
                           }
                           else if(data.status==-1){
                             alert("File with same name exists. Try some other name.");                

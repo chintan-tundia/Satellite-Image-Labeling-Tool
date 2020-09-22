@@ -103,7 +103,6 @@
       background-position: center center;              /* optional, center the image */      
       
   } 
-
   </style>  
 </head>
 <body>
@@ -177,10 +176,10 @@
               <h2>Loading...</h2>
             </div>
             <div id="loaded_stat"> 
-              <b>Total Samples:</b> <span id="total_samples"></span> <br>
-              <b>Total Samples Labeled:</b> <span id="total_done_samples"></span><br>
-              <b>Percentage labeled:</b> <span id="percentage"></span> <br>              
-              <b>Overall Total Images of this district labeled:</b> <span id="total_img_district"></span><br>
+              <b>#Samples:</b> <span id="total_samples"></span> <br>
+              <b>#Samples Labeled:</b> <span id="total_done_samples"></span><br>
+              <b>Percentage labeled:</b> <span id="percentage"></span> <br>
+              <b>#Images in dataset:</b> <span id="total_img_district"></span><br>
             </div>             
             
             <label for="sel2" style="margin-top:5px">Select a sample: </label>
@@ -282,7 +281,7 @@ allWorkTypes = allWorkTypes.split("', '");
 //console.log(allWorkTypes)
 </script>
 <script type="text/javascript" src="{% static 'Gmapv2/js/labelcheckdams.js' %}"></script>
-<script src="http://maps.google.com/maps/api/js?key=AIzaSyDwYUReYvB5CFnmNxt8NJe7PjRXMmBspws
+<script src="http://maps.google.com/maps/api/js?key=AIzaSyC61MLyQ00dcfVHEG60iOlELqooDPUrRow
 &callback=googleMap&libraries=places,drawing,geometry&callback=initialize"></script>
 
 <!-- <script type="text/javascript" src="{% static 'Gmapv2/js/html2canvas.js' %}"></script> -->
